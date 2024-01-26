@@ -1,0 +1,3 @@
+obj\Debug\net8.0\Protos/Customer.cs \
+obj\Debug\net8.0\Protos/CustomerGrpc.cs: C:/Users/nguyen/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/empty.proto\
+ Protos/customer.proto

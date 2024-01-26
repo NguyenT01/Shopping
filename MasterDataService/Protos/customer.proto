@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "MasterDataService";
+
+package customer;
+
+service CustomerProto{
+	rpc GetCustomerById (CustomerIdRequest) returns (CustomerResponse);
+}
+
+message ErrorResponse{
+    int32 ErrorCode = 1;
+    string Message = 2;
+}
+
+message CustomerResponse{
+	string CustomerId = 1;
+    string FirstName = 2 ;
+    string LastName = 3;
+    string Email = 4; 
+    string Address = 5;
+}
+
+message CustomerIdRequest{
+    string CustomerId = 1;
+    bool tracking = 2;
+}
