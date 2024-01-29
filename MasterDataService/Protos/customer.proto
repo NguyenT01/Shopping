@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
 
 option csharp_namespace = "MasterDataService";
 
@@ -8,6 +9,30 @@ package customer;
 
 service CustomerProto{
 	rpc GetCustomerById (CustomerIdRequest) returns (CustomerResponse);
+    rpc CreateCustomer (CustomerCreationRequest) returns (CustomerResponse);
+    rpc DeleteCustomer (CustomerIdRequest) returns (google.protobuf.Empty);
+    rpc UpdateCustomer (CustomerUpdateRequest) returns (google.protobuf.Empty);
+    rpc GetCustomerList (google.protobuf.Empty) returns (CustomerListResponse);
+}
+
+message CustomerListResponse{
+    repeated CustomerResponse Customers = 1;
+}
+
+message CustomerUpdateRequest{
+	string CustomerId = 1;
+    google.protobuf.StringValue FirstName = 2 ;
+    google.protobuf.StringValue LastName = 3;
+    google.protobuf.StringValue Email = 4; 
+    google.protobuf.StringValue Address = 5;
+    bool tracking = 6;
+}
+
+message CustomerCreationRequest{
+    string FirstName = 1;
+    string LastName = 2;
+    string Email = 3;
+    string Address = 4;
 }
 
 message ErrorResponse{

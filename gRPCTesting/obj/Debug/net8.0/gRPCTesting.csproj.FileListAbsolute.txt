@@ -19,3 +19,4 @@ C:\Users\nguyen\source\repos\Shopping\gRPCTesting\obj\Debug\net8.0\refint\gRPCTe
 C:\Users\nguyen\source\repos\Shopping\gRPCTesting\obj\Debug\net8.0\gRPCTesting.pdb
 C:\Users\nguyen\source\repos\Shopping\gRPCTesting\obj\Debug\net8.0\gRPCTesting.genruntimeconfig.cache
 C:\Users\nguyen\source\repos\Shopping\gRPCTesting\obj\Debug\net8.0\ref\gRPCTesting.dll
+C:\Users\nguyen\source\repos\Shopping\gRPCTesting\obj\Debug\net8.0\gRPCTesting.sourcelink.json

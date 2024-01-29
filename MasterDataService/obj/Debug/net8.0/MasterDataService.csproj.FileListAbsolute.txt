@@ -138,3 +138,4 @@ C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Debug\net8.0\MasterD
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Debug\net8.0\ref\MasterDataService.dll
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Debug\net8.0\MasterDataService.sourcelink.json

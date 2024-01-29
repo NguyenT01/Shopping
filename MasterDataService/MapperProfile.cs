@@ -10,5 +10,10 @@ public class MapperProfile : Profile
         CreateMap<Customer, CustomerResponse>()
             .ForMember(d => d.CustomerId, opt => opt.MapFrom(x => x.CustomerId.ToString()));
 
+        CreateMap<CustomerCreationRequest, Customer>();
+
+        CreateMap<CustomerUpdateRequest, Customer>()
+            .ForMember(d => d.CustomerId, opt => opt.MapFrom(x => Guid.Parse(x.CustomerId)))
+            .ForAllMembers(opts => opts.Condition((src, dest, srcMembers) => srcMembers != null));
     }
 }

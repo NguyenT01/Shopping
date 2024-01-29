@@ -9,4 +9,6 @@ public interface ICustomerRepository
     void CreateCustomer(Customer customer);
     void DeleteCustomer(Customer customer);
 
+    void Update(Customer customer);
+
 }

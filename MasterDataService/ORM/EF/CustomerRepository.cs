@@ -16,6 +16,9 @@ public class CustomerRepository : MasterDataRepositoryBase<Customer>, ICustomerR
     public void DeleteCustomer(Customer customer)
         => Delete(customer);
 
+    public void UpdateCustomer(Customer customer)
+       => Update(customer);
+
     public async Task<IEnumerable<Customer>> GetAllCustomersAsync(bool tracking)
         => await FindAll(tracking)
                 .OrderBy(cus => cus.FirstName)

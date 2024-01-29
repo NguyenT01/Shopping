@@ -49,6 +49,14 @@ namespace MasterDataService {
     static readonly grpc::Marshaller<global::MasterDataService.CustomerIdRequest> __Marshaller_customer_CustomerIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MasterDataService.CustomerIdRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::MasterDataService.CustomerResponse> __Marshaller_customer_CustomerResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MasterDataService.CustomerResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::MasterDataService.CustomerCreationRequest> __Marshaller_customer_CustomerCreationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MasterDataService.CustomerCreationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::MasterDataService.CustomerUpdateRequest> __Marshaller_customer_CustomerUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MasterDataService.CustomerUpdateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::MasterDataService.CustomerListResponse> __Marshaller_customer_CustomerListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::MasterDataService.CustomerListResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::MasterDataService.CustomerIdRequest, global::MasterDataService.CustomerResponse> __Method_GetCustomerById = new grpc::Method<global::MasterDataService.CustomerIdRequest, global::MasterDataService.CustomerResponse>(
@@ -57,6 +65,38 @@ namespace MasterDataService {
         "GetCustomerById",
         __Marshaller_customer_CustomerIdRequest,
         __Marshaller_customer_CustomerResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::MasterDataService.CustomerCreationRequest, global::MasterDataService.CustomerResponse> __Method_CreateCustomer = new grpc::Method<global::MasterDataService.CustomerCreationRequest, global::MasterDataService.CustomerResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCustomer",
+        __Marshaller_customer_CustomerCreationRequest,
+        __Marshaller_customer_CustomerResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::MasterDataService.CustomerIdRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCustomer = new grpc::Method<global::MasterDataService.CustomerIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCustomer",
+        __Marshaller_customer_CustomerIdRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::MasterDataService.CustomerUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UpdateCustomer = new grpc::Method<global::MasterDataService.CustomerUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCustomer",
+        __Marshaller_customer_CustomerUpdateRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::MasterDataService.CustomerListResponse> __Method_GetCustomerList = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::MasterDataService.CustomerListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCustomerList",
+        __Marshaller_google_protobuf_Empty,
+        __Marshaller_customer_CustomerListResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -74,6 +114,30 @@ namespace MasterDataService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::MasterDataService.CustomerResponse> CreateCustomer(global::MasterDataService.CustomerCreationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomer(global::MasterDataService.CustomerIdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UpdateCustomer(global::MasterDataService.CustomerUpdateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::MasterDataService.CustomerListResponse> GetCustomerList(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -82,7 +146,11 @@ namespace MasterDataService {
     public static grpc::ServerServiceDefinition BindService(CustomerProtoBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetCustomerById, serviceImpl.GetCustomerById).Build();
+          .AddMethod(__Method_GetCustomerById, serviceImpl.GetCustomerById)
+          .AddMethod(__Method_CreateCustomer, serviceImpl.CreateCustomer)
+          .AddMethod(__Method_DeleteCustomer, serviceImpl.DeleteCustomer)
+          .AddMethod(__Method_UpdateCustomer, serviceImpl.UpdateCustomer)
+          .AddMethod(__Method_GetCustomerList, serviceImpl.GetCustomerList).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -93,6 +161,10 @@ namespace MasterDataService {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CustomerProtoBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetCustomerById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::MasterDataService.CustomerIdRequest, global::MasterDataService.CustomerResponse>(serviceImpl.GetCustomerById));
+      serviceBinder.AddMethod(__Method_CreateCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::MasterDataService.CustomerCreationRequest, global::MasterDataService.CustomerResponse>(serviceImpl.CreateCustomer));
+      serviceBinder.AddMethod(__Method_DeleteCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::MasterDataService.CustomerIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCustomer));
+      serviceBinder.AddMethod(__Method_UpdateCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::MasterDataService.CustomerUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UpdateCustomer));
+      serviceBinder.AddMethod(__Method_GetCustomerList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::MasterDataService.CustomerListResponse>(serviceImpl.GetCustomerList));
     }
 
   }
