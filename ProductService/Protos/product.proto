@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "ProductService.Protos";
+
+package product;
+
+service ProductProto{
+	rpc GetProductById (ProductIdRequest) returns (ProductResponse);
+}
+
+message ProductResponse{
+	string ProductId = 1; 
+    google.protobuf.StringValue Name = 2; 
+    google.protobuf.StringValue Description = 3;
+}
+
+message ProductIdRequest{
+	string ProductId = 1;
+	bool tracking = 2;
+}

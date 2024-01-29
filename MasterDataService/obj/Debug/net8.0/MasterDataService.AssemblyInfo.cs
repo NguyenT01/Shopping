@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MasterDataService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01f8ec70b1c8d88364487c11604d4866a2f503ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3987852bbcb5060d5b681f972a1c2d5b458f986a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MasterDataService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MasterDataService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
