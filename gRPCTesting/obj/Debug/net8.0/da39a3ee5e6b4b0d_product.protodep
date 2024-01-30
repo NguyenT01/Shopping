@@ -1,0 +1,4 @@
+obj\Debug\net8.0/Product.cs \
+obj\Debug\net8.0/ProductGrpc.cs: C:/Users/nguyen/.nuget/packages/grpc.tools/2.60.0/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/nguyen/.nuget/packages/grpc.tools/2.60.0/build/native/include/google/protobuf/empty.proto\
+ product.proto

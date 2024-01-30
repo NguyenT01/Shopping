@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ProductService.Migrations
+namespace ProductServiceNamespace.Migrations
 {
     /// <inheritdoc />
     public partial class InitProductDB1 : Migration

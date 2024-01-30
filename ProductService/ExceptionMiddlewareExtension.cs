@@ -1,4 +1,4 @@
-﻿namespace ProductService;
+﻿namespace ProductServiceNamespace;
 
 public static class ExceptionMiddlewareExtension
 {/*

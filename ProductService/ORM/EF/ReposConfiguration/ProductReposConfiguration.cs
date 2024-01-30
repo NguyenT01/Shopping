@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ProductService.ORM.EF.Model;
+using ProductServiceNamespace.ORM.EF.Model;
 
-namespace ProductService.ORM.EF.ReposConfiguration
+namespace ProductServiceNamespace.ORM.EF.ReposConfiguration
 {
     public class ProductReposConfiguration : IEntityTypeConfiguration<Product>
     {

@@ -1,4 +1,4 @@
-﻿namespace ProductService.ORM.EF.Interface
+﻿namespace ProductServiceNamespace.ORM.EF.Interface
 {
     public interface IRepositoryManager
     {

@@ -1,4 +1,4 @@
-﻿namespace ProductService.ErrorModel
+﻿namespace ProductServiceNamespace.ErrorModel
 {
     public sealed class ProductNotFoundException : NotFoundException
     {
