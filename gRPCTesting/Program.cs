@@ -3,6 +3,125 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Net.Client;
 using gRPCTesting;
 
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+var channel = GrpcChannel.ForAddress("https://localhost:7102");
+var client = new ProductProto.ProductProtoClient(channel);
+
+var IdRequest = new ProductIdRequest
+{
+    ProductId = "BCDA33A3-476E-40A0-B558-0C14E7C70ED0",
+    Tracking = false
+};
+
+var product = new AddProductRequest
+{
+    Name = "Táo",
+    Description = " Táo là 1 loại quả"
+};
+
+var productIdDelete = new DeleteProductRequest
+{
+    ProductId = "A838D111-0964-4934-7EAC-08DC213F301F"
+};
+
+var updateProduct = new UpdateProductRequest
+{
+    ProductId = "BCDA33A3-476E-40A0-B558-0C14E7C70ED0",
+    Name = "Khoai tây"
+};
+
+#region GET MANY
+try
+{
+    var serverReplyList = await client.GetProductListAsync(new Empty());
+    foreach (var serverReply in serverReplyList.Products)
+    {
+        Console.WriteLine($"{serverReply.ProductId} | {serverReply.Name} | {serverReply.Description}");
+    }
+    Console.ReadLine();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+
+#endregion
+
+#region UPDATE 1
+/*
+try
+{
+    await client.UpdateProductAsync(updateProduct);
+    Console.WriteLine($"ProductID {updateProduct.ProductId} updated successfully");
+    Console.ReadLine();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+*/
+#endregion
+
+#region DELETE 1
+/*
+try
+{
+    var serverReply = await client.DeleteProductAsync(productIdDelete);
+    Console.WriteLine($"ProductID {productIdDelete.ProductId} deleted successfully");
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+*/
+#endregion
+
+#region CREATE 1
+/*
+try
+{
+    var serverReply = await client.AddProductAsync(product);
+    Console.WriteLine($"{serverReply.ProductId} | {serverReply.Name} | {serverReply.Description}");
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+*/
+#endregion
+
+#region GET 1
+/*
+try
+{
+    var serverReply = await client.GetProductByIdAsync(IdRequest);
+    Console.WriteLine($"{serverReply.ProductId} | {serverReply.Name} | {serverReply.Description}");
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+*/
+#endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------
+#region Customer Init
+/*
 var id = new CustomerIdRequest
 {
     CustomerId = "41D1726C-86F0-4C8C-B715-5CB5ED6E238C",
@@ -27,8 +146,11 @@ var customerUpdate = new CustomerUpdateRequest
     Email = "pltk453@gmail.com",
     Tracking = true
 };
+*/
+#endregion
 
 #region GET MANY
+/*
 try
 {
     var response = await client.GetCustomerListAsync(new Empty());
@@ -43,6 +165,7 @@ catch (Exception e)
 {
     Console.WriteLine(e.Message);
 }
+*/
 #endregion
 
 #region UPDATE 1
@@ -88,7 +211,8 @@ try
 catch (Exception e)
 {
     Console.WriteLine(e.Message);
-}*/
+}
+*/
 #endregion
 
 #region GET 1

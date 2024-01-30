@@ -1,9 +1,9 @@
-syntax = "proto3";
+﻿syntax = "proto3";
 
 import "google/protobuf/wrappers.proto";
 import "google/protobuf/empty.proto";
 
-option csharp_namespace = "ProductServiceNamespace.Protos";
+option csharp_namespace = "gRPCTesting";
 
 package product;
 

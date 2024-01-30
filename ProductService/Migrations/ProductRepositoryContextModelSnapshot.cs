@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProductService.ORM.EF;
+using ProductServiceNamespace.ORM.EF;
 
 #nullable disable
 
-namespace ProductService.Migrations
+namespace ProductServiceNamespace.Migrations
 {
-    [DbContext(typeof(ProductRepositoryContext))]
+    [DbContext(typeof(ProductContext))]
     partial class ProductRepositoryContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

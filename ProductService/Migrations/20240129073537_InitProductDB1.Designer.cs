@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProductService.ORM.EF;
+using ProductServiceNamespace.ORM.EF;
 
 #nullable disable
 
-namespace ProductService.Migrations
+namespace ProductServiceNamespace.Migrations
 {
-    [DbContext(typeof(ProductRepositoryContext))]
+    [DbContext(typeof(ProductContext))]
     [Migration("20240129073537_InitProductDB1")]
     partial class InitProductDB1
     {

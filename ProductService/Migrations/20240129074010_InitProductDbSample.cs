@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ProductService.Migrations
+namespace ProductServiceNamespace.Migrations
 {
     /// <inheritdoc />
     public partial class InitProductDbSample : Migration

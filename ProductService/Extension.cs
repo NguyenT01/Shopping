@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductService.ORM.EF;
+using ProductServiceNamespace.ORM.EF;
 
-namespace ProductService;
+namespace ProductServiceNamespace;
 
 public static class ServiceExtension
 {
@@ -11,7 +11,7 @@ public static class ServiceExtension
         string? ConnectionString = config["sqlConnection"];
         ConnectionString = ConnectionString!.Replace("??????", machineName);
 
-        services.AddDbContext<ProductRepositoryContext>(opts =>
+        services.AddDbContext<ProductContext>(opts =>
             opts.UseSqlServer(ConnectionString));
     }
 }

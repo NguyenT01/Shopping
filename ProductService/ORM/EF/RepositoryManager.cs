@@ -1,13 +1,13 @@
-﻿using ProductService.ORM.EF.Interface;
+﻿using ProductServiceNamespace.ORM.EF.Interface;
 
-namespace ProductService.ORM.EF
+namespace ProductServiceNamespace.ORM.EF
 {
     public class RepositoryManager : IRepositoryManager
     {
-        private readonly ProductRepositoryContext _repositoryContext;
+        private readonly ProductContext _repositoryContext;
         private readonly IProductRepository _productRepository;
 
-        public RepositoryManager(ProductRepositoryContext context)
+        public RepositoryManager(ProductContext context)
         {
             _repositoryContext = context;
             _productRepository = new ProductRepository(context);

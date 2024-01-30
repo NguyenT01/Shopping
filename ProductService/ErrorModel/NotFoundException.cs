@@ -1,4 +1,4 @@
-﻿namespace ProductService.ErrorModel
+﻿namespace ProductServiceNamespace.ErrorModel
 {
     public abstract class NotFoundException : Exception
     {

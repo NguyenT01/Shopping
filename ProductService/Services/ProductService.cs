@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using ProductService.ErrorModel;
-using ProductService.ORM.EF.Interface;
-using ProductService.ORM.EF.Model;
-using ProductService.Protos;
+using ProductServiceNamespace.ErrorModel;
+using ProductServiceNamespace.ORM.EF.Interface;
+using ProductServiceNamespace.ORM.EF.Model;
+using ProductServiceNamespace.Protos;
 
-namespace ProductService.Services
+namespace ProductServiceNamespace.Services
 {
     public class ProductService : ProductProto.ProductProtoBase
     {
@@ -20,14 +21,52 @@ namespace ProductService.Services
             _repository = repository;
         }
 
+        public override async Task<ProductListResponse> GetProductList(Empty request, ServerCallContext context)
+        {
+            var productEntityList = await _repository.Product.GetAllProducts(false);
+            var productList = _mapper.Map<IEnumerable<ProductResponse>>(productEntityList);
+
+            var response = new ProductListResponse();
+            response.Products.AddRange(productList);
+
+            return response;
+        }
+
+        public override async Task<Empty> UpdateProduct(UpdateProductRequest request, ServerCallContext context)
+        {
+            var productEntity = await checkProductIdAsync(parseToGuid(request.ProductId), true);
+            _mapper.Map(request, productEntity);
+            await _repository.SaveAsync();
+
+            return new Empty();
+        }
+
+        public override async Task<Empty> DeleteProduct(DeleteProductRequest request, ServerCallContext context)
+        {
+            var productEntity = await checkProductIdAsync(parseToGuid(request.ProductId), true);
+            _repository.Product.DeleteProduct(productEntity);
+            await _repository.SaveAsync();
+
+            return new Empty();
+        }
+
+        public override async Task<ProductResponse> AddProduct(AddProductRequest request, ServerCallContext context)
+        {
+            var productEntity = _mapper.Map<Product>(request);
+            _repository.Product.CreateProduct(productEntity);
+            await _repository.SaveAsync();
+
+            var productReturn = _mapper.Map<ProductResponse>(productEntity);
+            return productReturn;
+        }
+
         public override async Task<ProductResponse> GetProductById(ProductIdRequest request, ServerCallContext context)
         {
             Guid id = parseToGuid(request.ProductId);
             var product = await checkProductIdAsync(id, request.Tracking);
 
-
-
-            return null;
+            var productResponse = _mapper.Map<ProductResponse>(product);
+            return productResponse;
         }
 
         // PRIVATE METHODS

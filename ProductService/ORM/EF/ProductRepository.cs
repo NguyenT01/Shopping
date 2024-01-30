@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductService.ORM.EF.Interface;
-using ProductService.ORM.EF.Model;
+using ProductServiceNamespace.ORM.EF.Interface;
+using ProductServiceNamespace.ORM.EF.Model;
 
-namespace ProductService.ORM.EF
+namespace ProductServiceNamespace.ORM.EF
 {
     public class ProductRepository : ProductRepositoryBase<Product>, IProductRepository
     {
-        public ProductRepository(ProductRepositoryContext context) : base(context) { }
+        public ProductRepository(ProductContext context) : base(context) { }
 
         public void CreateProduct(Product product)
             => Add(product);

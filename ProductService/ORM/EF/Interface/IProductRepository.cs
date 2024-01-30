@@ -1,6 +1,6 @@
-﻿using ProductService.ORM.EF.Model;
+﻿using ProductServiceNamespace.ORM.EF.Model;
 
-namespace ProductService.ORM.EF.Interface
+namespace ProductServiceNamespace.ORM.EF.Interface
 {
     public interface IProductRepository
     {

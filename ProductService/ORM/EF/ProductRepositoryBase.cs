@@ -1,24 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductService.ORM.EF.Interface;
+using ProductServiceNamespace.ORM.EF.Interface;
 using System.Linq.Expressions;
 
-namespace ProductService.ORM.EF
+namespace ProductServiceNamespace.ORM.EF
 {
     public class ProductRepositoryBase<T> : IProductRepositoryBase<T> where T : class
     {
-        protected readonly ProductRepositoryContext ProductRepositoryContext;
+        protected readonly ProductContext ProductRepositoryContext;
 
-        public ProductRepositoryBase(ProductRepositoryContext context)
+        public ProductRepositoryBase(ProductContext context)
         {
             ProductRepositoryContext = context;
         }
 
-
         public void Add(T entity)
-            => Add(entity);
+             => ProductRepositoryContext.Set<T>().Add(entity);
 
         public void Delete(T entity)
-            => Delete(entity);
+            => ProductRepositoryContext.Set<T>().Remove(entity);
 
         public IQueryable<T> FindAll(bool tracking)
         {
