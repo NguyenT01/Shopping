@@ -1,0 +1,4 @@
+Scaffold-DbContext -UseDatabasenames "Server=DESKTOP-STBRGUF\\SQLEXPRESS;Initial Catalog=EShopping;Persist Security Info=False;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+Scaffold-DbContext "Server=DESKTOP-STBRGUF\SQLEXPRESS;Database=EShopping;Persist Security Info=False;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
