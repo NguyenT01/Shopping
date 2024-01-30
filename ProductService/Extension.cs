@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductServiceNamespace.ORM.EF;
+using ProductService.ORM.EF;
 
-namespace ProductServiceNamespace;
+namespace ProductService;
 
 public static class ServiceExtension
 {

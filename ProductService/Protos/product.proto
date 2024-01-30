@@ -1,37 +1,13 @@
 syntax = "proto3";
 
 import "google/protobuf/wrappers.proto";
-import "google/protobuf/empty.proto";
 
-option csharp_namespace = "ProductServiceNamespace.Protos";
+option csharp_namespace = "ProductService.Protos";
 
 package product;
 
 service ProductProto{
 	rpc GetProductById (ProductIdRequest) returns (ProductResponse);
-	rpc AddProduct (AddProductRequest) returns (ProductResponse);
-	rpc DeleteProduct (DeleteProductRequest) returns (google.protobuf.Empty);
-	rpc UpdateProduct (UpdateProductRequest) returns (google.protobuf.Empty);
-	rpc GetProductList (google.protobuf.Empty) returns (ProductListResponse);
-}
-
-message ProductListResponse{
-	repeated ProductResponse Products = 1;
-}
-
-message UpdateProductRequest{
-	string ProductId = 1;
-	google.protobuf.StringValue Name = 2;
-	google.protobuf.StringValue Description = 3;
-}
-
-message DeleteProductRequest{
-	string ProductId = 1;
-}
-
-message AddProductRequest{
-	google.protobuf.StringValue Name = 1;
-	google.protobuf.StringValue Description = 2;
 }
 
 message ProductResponse{

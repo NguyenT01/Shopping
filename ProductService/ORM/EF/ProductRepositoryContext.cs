@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductServiceNamespace.ORM.EF.Model;
-using ProductServiceNamespace.ORM.EF.ReposConfiguration;
+using ProductService.ORM.EF.Model;
+using ProductService.ORM.EF.ReposConfiguration;
 
-namespace ProductServiceNamespace.ORM.EF
+namespace ProductService.ORM.EF
 {
     public class ProductRepositoryContext : DbContext
     {

@@ -1,6 +1,6 @@
-﻿using ProductServiceNamespace.ORM.EF.Interface;
+﻿using ProductService.ORM.EF.Interface;
 
-namespace ProductServiceNamespace.ORM.EF
+namespace ProductService.ORM.EF
 {
     public class RepositoryManager : IRepositoryManager
     {

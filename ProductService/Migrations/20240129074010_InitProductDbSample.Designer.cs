@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProductServiceNamespace.ORM.EF;
+using ProductService.ORM.EF;
 
 #nullable disable
 
-namespace ProductServiceNamespace.Migrations
+namespace ProductService.Migrations
 {
     [DbContext(typeof(ProductRepositoryContext))]
     [Migration("20240129074010_InitProductDbSample")]

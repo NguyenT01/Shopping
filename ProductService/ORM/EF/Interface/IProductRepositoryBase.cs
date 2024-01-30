@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace ProductServiceNamespace.ORM.EF.Interface
+namespace ProductService.ORM.EF.Interface
 {
     public interface IProductRepositoryBase<T>
     {

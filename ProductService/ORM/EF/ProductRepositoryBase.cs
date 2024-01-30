@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductServiceNamespace.ORM.EF.Interface;
+using ProductService.ORM.EF.Interface;
 using System.Linq.Expressions;
 
-namespace ProductServiceNamespace.ORM.EF
+namespace ProductService.ORM.EF
 {
     public class ProductRepositoryBase<T> : IProductRepositoryBase<T> where T : class
     {
@@ -13,11 +13,12 @@ namespace ProductServiceNamespace.ORM.EF
             ProductRepositoryContext = context;
         }
 
+
         public void Add(T entity)
-            => ProductRepositoryContext.Set<T>().Add(entity);
+            => Add(entity);
 
         public void Delete(T entity)
-            => ProductRepositoryContext.Set<T>().Remove(entity);
+            => Delete(entity);
 
         public IQueryable<T> FindAll(bool tracking)
         {

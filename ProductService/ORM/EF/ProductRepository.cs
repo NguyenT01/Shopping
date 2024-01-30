@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductServiceNamespace.ORM.EF.Interface;
-using ProductServiceNamespace.ORM.EF.Model;
+using ProductService.ORM.EF.Interface;
+using ProductService.ORM.EF.Model;
 
-namespace ProductServiceNamespace.ORM.EF
+namespace ProductService.ORM.EF
 {
     public class ProductRepository : ProductRepositoryBase<Product>, IProductRepository
     {
