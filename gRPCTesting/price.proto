@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "ProductServiceNamespace.Protos";
+
+package price;
+
+service PriceProto{
+	rpc GetPrice(PriceIdRequest) returns (PriceResponse);
+}
+
+message PriceIdRequest{
+	string PriceId = 1;
+}
+
+message PriceResponse{
+	string PriceId = 1;
+	string ProductId = 2;
+	double PriceValue = 3;
+	google.protobuf.Timestamp StartDate = 4;
+	google.protobuf.Timestamp EndDate = 5;
+}

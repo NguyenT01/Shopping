@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="customer.proto" />
+    <None Remove="price.proto" />
     <None Remove="product.proto" />
   </ItemGroup>
 
@@ -23,6 +24,7 @@
 
   <ItemGroup>
     <Protobuf Include="customer.proto" GrpcServices="Client" />
+    <Protobuf Include="price.proto" GrpcServices="Client" />
     <Protobuf Include="product.proto" GrpcServices="Client" />
   </ItemGroup>
 

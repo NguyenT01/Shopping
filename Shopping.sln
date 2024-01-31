@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterDataService", "Master
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gRPCTesting", "gRPCTesting\gRPCTesting.csproj", "{1357D1E9-4207-4CB6-8D81-FF58204A9992}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{2CD462FF-B457-4E08-A13C-C99FA27F2A33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService", "ProductService\ProductService.csproj", "{2CD462FF-B457-4E08-A13C-C99FA27F2A33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

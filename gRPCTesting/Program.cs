@@ -1,5 +1,46 @@
-﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
+﻿using Grpc.Net.Client;
+using ProductServiceNamespace.Protos;
 
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+#region PRICE INIT
+var priceId = new PriceIdRequest
+{
+    PriceId = "58000B10-9F32-44BF-B93D-DDEB22D991A9"
+};
+
+var channel = GrpcChannel.ForAddress("https://localhost:7102");
+var client = new PriceProto.PriceProtoClient(channel);
+
+#endregion
+
+#region GET 1 BY PRICE ID
+try
+{
+    var serverReply = await client.GetPriceAsync(priceId);
+    Console.WriteLine($"{serverReply.PriceId} | {serverReply.ProductId} | {serverReply.PriceValue} " +
+        $"| {serverReply.StartDate} | {serverReply.EndDate}");
+    Console.WriteLine(serverReply.StartDate.ToDateTime());
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+
+
+#endregion
+
+
+
+
+
+
+
+
+
+
+// -----------
 #region Product Init
 /*
 var channel = GrpcChannel.ForAddress("https://localhost:7102");

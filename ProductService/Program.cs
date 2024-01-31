@@ -20,6 +20,6 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 
 app.MapGrpcService<ProductService>();
-
+app.MapGrpcService<PriceService>();
 
 app.Run();

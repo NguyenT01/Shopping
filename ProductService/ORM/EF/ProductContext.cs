@@ -92,7 +92,7 @@ namespace ProductServiceNamespace.ORM.EF
         }
 
         public DbSet<Product> Products { get; set; }
-
+        public DbSet<Price> Prices { get; set; }
 
 
     }
