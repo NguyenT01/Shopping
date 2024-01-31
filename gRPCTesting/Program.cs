@@ -1,10 +1,7 @@
-﻿
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Net.Client;
-using gRPCTesting;
+﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-Console.OutputEncoding = System.Text.Encoding.UTF8;
-
+#region Product Init
+/*
 var channel = GrpcChannel.ForAddress("https://localhost:7102");
 var client = new ProductProto.ProductProtoClient(channel);
 
@@ -30,8 +27,11 @@ var updateProduct = new UpdateProductRequest
     ProductId = "BCDA33A3-476E-40A0-B558-0C14E7C70ED0",
     Name = "Khoai tây"
 };
+*/
+#endregion
 
 #region GET MANY
+/*
 try
 {
     var serverReplyList = await client.GetProductListAsync(new Empty());
@@ -45,7 +45,7 @@ catch (Exception e)
 {
     Console.WriteLine(e.Message);
 }
-
+*/
 #endregion
 
 #region UPDATE 1
@@ -105,18 +105,6 @@ catch (Exception e)
 }
 */
 #endregion
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //--------

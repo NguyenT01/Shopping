@@ -4,10 +4,10 @@ namespace MasterDataService.ORM.EF;
 
 public class RepositoryManager : IRepositoryManager
 {
-    private readonly MasterDataRepositoryContext _repositoryContext;
+    private readonly MasterDataContext _repositoryContext;
     private readonly ICustomerRepository _customerRepository;
 
-    public RepositoryManager(MasterDataRepositoryContext context)
+    public RepositoryManager(MasterDataContext context)
     {
         _repositoryContext = context;
         _customerRepository = new CustomerRepository(context);

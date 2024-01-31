@@ -11,7 +11,7 @@ public static class ServiceExtension
         string? ConnectionString = config["sqlConnection"];
         ConnectionString = ConnectionString!.Replace("??????", machineName);
 
-        services.AddDbContext<MasterDataRepositoryContext>(opts =>
+        services.AddDbContext<MasterDataContext>(opts =>
             opts.UseSqlServer(ConnectionString));
     }
 }

@@ -7,7 +7,7 @@ namespace MasterDataService.ORM.EF;
 public class CustomerRepository : MasterDataRepositoryBase<Customer>, ICustomerRepository
 {
     // CONTRUCTOR
-    public CustomerRepository(MasterDataRepositoryContext context) : base(context) { }
+    public CustomerRepository(MasterDataContext context) : base(context) { }
 
     //METHODS
     public void CreateCustomer(Customer customer)

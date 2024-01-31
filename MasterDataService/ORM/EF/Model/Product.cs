@@ -1,4 +1,4 @@
-﻿namespace ProductServiceNamespace.ORM.EF.Model;
+﻿namespace MasterDataService.ORM.EF.Model;
 
 public partial class Product
 {

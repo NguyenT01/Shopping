@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MasterDataService.Migrations
 {
-    [DbContext(typeof(MasterDataRepositoryContext))]
+    [DbContext(typeof(MasterDataContext))]
     [Migration("20240126040129_InitDB1")]
     partial class InitDB1
     {

@@ -1,4 +1,4 @@
-﻿namespace MasterDataService.ORM.EF.Model;
+﻿namespace ProductServiceNamespace.ORM.EF.Model;
 
 public partial class Customer
 {

@@ -6,8 +6,8 @@ namespace MasterDataService.ORM.EF;
 
 public class MasterDataRepositoryBase<T> : IMasterDataRepositoryBase<T> where T : class
 {
-    protected readonly MasterDataRepositoryContext MasterDataRepositoryContext;
-    public MasterDataRepositoryBase(MasterDataRepositoryContext MasterDataRepositoryContext)
+    protected readonly MasterDataContext MasterDataRepositoryContext;
+    public MasterDataRepositoryBase(MasterDataContext MasterDataRepositoryContext)
     {
         this.MasterDataRepositoryContext = MasterDataRepositoryContext;
     }

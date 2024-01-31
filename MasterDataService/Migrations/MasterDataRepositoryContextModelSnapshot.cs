@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MasterDataService.Migrations
 {
-    [DbContext(typeof(MasterDataRepositoryContext))]
+    [DbContext(typeof(MasterDataContext))]
     partial class MasterDataRepositoryContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
