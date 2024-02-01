@@ -1,9 +1,35 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using Grpc.Net.Client;
-using ProductServiceNamespace.Protos;
+﻿using Grpc.Net.Client;
+using gRPCTesting;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
+#region GET 1 ORDER
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderProto.OrderProtoClient(channel);
+
+var orderRequest = new OrderIdRequest
+{
+    OrderId = "4C91274B-25A6-4F76-9E5E-AA4C07623052"
+};
+
+try
+{
+    var serverReply = await client.GetOrderAsync(orderRequest);
+    Console.WriteLine($"{serverReply.OrderId} | {serverReply.CustomerId} | {serverReply.OrderDate}");
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+
+#endregion
+
+
+
+
+//--------------
 #region GET 1 BY PRICE ID
 /*
 var priceId = new PriceIdRequest
@@ -173,7 +199,7 @@ catch (Exception e)
 #endregion
 
 #region UPDATE PRICE
-
+/*
 var channel = GrpcChannel.ForAddress("https://localhost:7102");
 var client = new PriceProto.PriceProtoClient(channel);
 var itemPrice = new PriceUpdateRequest
@@ -193,7 +219,7 @@ catch (Exception e)
     Console.WriteLine(e);
     Console.ReadLine();
 }
-
+*/
 #endregion
 
 // -----------
