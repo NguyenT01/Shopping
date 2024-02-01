@@ -49,6 +49,18 @@ namespace ProductServiceNamespace.Protos {
     static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceIdRequest> __Marshaller_price_PriceIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceIdRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceResponse> __Marshaller_price_PriceResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.SingleProductIdRequest> __Marshaller_price_SingleProductIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.SingleProductIdRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceListResponse> __Marshaller_price_PriceListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceListResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceRangeTimeRequest> __Marshaller_price_PriceRangeTimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceRangeTimeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceCreationRequest> __Marshaller_price_PriceCreationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceCreationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceUpdateRequest> __Marshaller_price_PriceUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceUpdateRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceIdRequest, global::ProductServiceNamespace.Protos.PriceResponse> __Method_GetPrice = new grpc::Method<global::ProductServiceNamespace.Protos.PriceIdRequest, global::ProductServiceNamespace.Protos.PriceResponse>(
@@ -57,6 +69,54 @@ namespace ProductServiceNamespace.Protos {
         "GetPrice",
         __Marshaller_price_PriceIdRequest,
         __Marshaller_price_PriceResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::ProductServiceNamespace.Protos.PriceListResponse> __Method_GetHistoryPriceListOfProduct = new grpc::Method<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::ProductServiceNamespace.Protos.PriceListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetHistoryPriceListOfProduct",
+        __Marshaller_price_SingleProductIdRequest,
+        __Marshaller_price_PriceListResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceRangeTimeRequest, global::ProductServiceNamespace.Protos.PriceListResponse> __Method_GetPriceByRangeTime = new grpc::Method<global::ProductServiceNamespace.Protos.PriceRangeTimeRequest, global::ProductServiceNamespace.Protos.PriceListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPriceByRangeTime",
+        __Marshaller_price_PriceRangeTimeRequest,
+        __Marshaller_price_PriceListResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::ProductServiceNamespace.Protos.PriceResponse> __Method_GetCurrentPrice = new grpc::Method<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::ProductServiceNamespace.Protos.PriceResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCurrentPrice",
+        __Marshaller_price_SingleProductIdRequest,
+        __Marshaller_price_PriceResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceCreationRequest, global::ProductServiceNamespace.Protos.PriceResponse> __Method_CreateNewPrice = new grpc::Method<global::ProductServiceNamespace.Protos.PriceCreationRequest, global::ProductServiceNamespace.Protos.PriceResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateNewPrice",
+        __Marshaller_price_PriceCreationRequest,
+        __Marshaller_price_PriceResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceIdRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeletePrice = new grpc::Method<global::ProductServiceNamespace.Protos.PriceIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePrice",
+        __Marshaller_price_PriceIdRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UpdatePrice = new grpc::Method<global::ProductServiceNamespace.Protos.PriceUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePrice",
+        __Marshaller_price_PriceUpdateRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -110,6 +170,126 @@ namespace ProductServiceNamespace.Protos {
       public virtual grpc::AsyncUnaryCall<global::ProductServiceNamespace.Protos.PriceResponse> GetPriceAsync(global::ProductServiceNamespace.Protos.PriceIdRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPrice, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ProductServiceNamespace.Protos.PriceListResponse GetHistoryPriceListOfProduct(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetHistoryPriceListOfProduct(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ProductServiceNamespace.Protos.PriceListResponse GetHistoryPriceListOfProduct(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetHistoryPriceListOfProduct, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ProductServiceNamespace.Protos.PriceListResponse> GetHistoryPriceListOfProductAsync(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetHistoryPriceListOfProductAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ProductServiceNamespace.Protos.PriceListResponse> GetHistoryPriceListOfProductAsync(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetHistoryPriceListOfProduct, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ProductServiceNamespace.Protos.PriceListResponse GetPriceByRangeTime(global::ProductServiceNamespace.Protos.PriceRangeTimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPriceByRangeTime(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ProductServiceNamespace.Protos.PriceListResponse GetPriceByRangeTime(global::ProductServiceNamespace.Protos.PriceRangeTimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPriceByRangeTime, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ProductServiceNamespace.Protos.PriceListResponse> GetPriceByRangeTimeAsync(global::ProductServiceNamespace.Protos.PriceRangeTimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPriceByRangeTimeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ProductServiceNamespace.Protos.PriceListResponse> GetPriceByRangeTimeAsync(global::ProductServiceNamespace.Protos.PriceRangeTimeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPriceByRangeTime, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ProductServiceNamespace.Protos.PriceResponse GetCurrentPrice(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCurrentPrice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ProductServiceNamespace.Protos.PriceResponse GetCurrentPrice(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCurrentPrice, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ProductServiceNamespace.Protos.PriceResponse> GetCurrentPriceAsync(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCurrentPriceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ProductServiceNamespace.Protos.PriceResponse> GetCurrentPriceAsync(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCurrentPrice, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ProductServiceNamespace.Protos.PriceResponse CreateNewPrice(global::ProductServiceNamespace.Protos.PriceCreationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNewPrice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::ProductServiceNamespace.Protos.PriceResponse CreateNewPrice(global::ProductServiceNamespace.Protos.PriceCreationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateNewPrice, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ProductServiceNamespace.Protos.PriceResponse> CreateNewPriceAsync(global::ProductServiceNamespace.Protos.PriceCreationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNewPriceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::ProductServiceNamespace.Protos.PriceResponse> CreateNewPriceAsync(global::ProductServiceNamespace.Protos.PriceCreationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateNewPrice, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePrice(global::ProductServiceNamespace.Protos.PriceIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePrice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePrice(global::ProductServiceNamespace.Protos.PriceIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeletePrice, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePriceAsync(global::ProductServiceNamespace.Protos.PriceIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePriceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePriceAsync(global::ProductServiceNamespace.Protos.PriceIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeletePrice, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UpdatePrice(global::ProductServiceNamespace.Protos.PriceUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePrice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UpdatePrice(global::ProductServiceNamespace.Protos.PriceUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdatePrice, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UpdatePriceAsync(global::ProductServiceNamespace.Protos.PriceUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePriceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UpdatePriceAsync(global::ProductServiceNamespace.Protos.PriceUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdatePrice, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

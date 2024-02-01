@@ -53,6 +53,14 @@ namespace ProductServiceNamespace.Protos {
     static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.SingleProductIdRequest> __Marshaller_price_SingleProductIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.SingleProductIdRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceListResponse> __Marshaller_price_PriceListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceListResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceRangeTimeRequest> __Marshaller_price_PriceRangeTimeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceRangeTimeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceCreationRequest> __Marshaller_price_PriceCreationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceCreationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ProductServiceNamespace.Protos.PriceUpdateRequest> __Marshaller_price_PriceUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ProductServiceNamespace.Protos.PriceUpdateRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceIdRequest, global::ProductServiceNamespace.Protos.PriceResponse> __Method_GetPrice = new grpc::Method<global::ProductServiceNamespace.Protos.PriceIdRequest, global::ProductServiceNamespace.Protos.PriceResponse>(
@@ -69,6 +77,46 @@ namespace ProductServiceNamespace.Protos {
         "GetHistoryPriceListOfProduct",
         __Marshaller_price_SingleProductIdRequest,
         __Marshaller_price_PriceListResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceRangeTimeRequest, global::ProductServiceNamespace.Protos.PriceListResponse> __Method_GetPriceByRangeTime = new grpc::Method<global::ProductServiceNamespace.Protos.PriceRangeTimeRequest, global::ProductServiceNamespace.Protos.PriceListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPriceByRangeTime",
+        __Marshaller_price_PriceRangeTimeRequest,
+        __Marshaller_price_PriceListResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::ProductServiceNamespace.Protos.PriceResponse> __Method_GetCurrentPrice = new grpc::Method<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::ProductServiceNamespace.Protos.PriceResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCurrentPrice",
+        __Marshaller_price_SingleProductIdRequest,
+        __Marshaller_price_PriceResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceCreationRequest, global::ProductServiceNamespace.Protos.PriceResponse> __Method_CreateNewPrice = new grpc::Method<global::ProductServiceNamespace.Protos.PriceCreationRequest, global::ProductServiceNamespace.Protos.PriceResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateNewPrice",
+        __Marshaller_price_PriceCreationRequest,
+        __Marshaller_price_PriceResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceIdRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeletePrice = new grpc::Method<global::ProductServiceNamespace.Protos.PriceIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePrice",
+        __Marshaller_price_PriceIdRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.PriceUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UpdatePrice = new grpc::Method<global::ProductServiceNamespace.Protos.PriceUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePrice",
+        __Marshaller_price_PriceUpdateRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -92,6 +140,36 @@ namespace ProductServiceNamespace.Protos {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ProductServiceNamespace.Protos.PriceListResponse> GetPriceByRangeTime(global::ProductServiceNamespace.Protos.PriceRangeTimeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ProductServiceNamespace.Protos.PriceResponse> GetCurrentPrice(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ProductServiceNamespace.Protos.PriceResponse> CreateNewPrice(global::ProductServiceNamespace.Protos.PriceCreationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeletePrice(global::ProductServiceNamespace.Protos.PriceIdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UpdatePrice(global::ProductServiceNamespace.Protos.PriceUpdateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -101,7 +179,12 @@ namespace ProductServiceNamespace.Protos {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetPrice, serviceImpl.GetPrice)
-          .AddMethod(__Method_GetHistoryPriceListOfProduct, serviceImpl.GetHistoryPriceListOfProduct).Build();
+          .AddMethod(__Method_GetHistoryPriceListOfProduct, serviceImpl.GetHistoryPriceListOfProduct)
+          .AddMethod(__Method_GetPriceByRangeTime, serviceImpl.GetPriceByRangeTime)
+          .AddMethod(__Method_GetCurrentPrice, serviceImpl.GetCurrentPrice)
+          .AddMethod(__Method_CreateNewPrice, serviceImpl.CreateNewPrice)
+          .AddMethod(__Method_DeletePrice, serviceImpl.DeletePrice)
+          .AddMethod(__Method_UpdatePrice, serviceImpl.UpdatePrice).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -113,6 +196,11 @@ namespace ProductServiceNamespace.Protos {
     {
       serviceBinder.AddMethod(__Method_GetPrice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.PriceIdRequest, global::ProductServiceNamespace.Protos.PriceResponse>(serviceImpl.GetPrice));
       serviceBinder.AddMethod(__Method_GetHistoryPriceListOfProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::ProductServiceNamespace.Protos.PriceListResponse>(serviceImpl.GetHistoryPriceListOfProduct));
+      serviceBinder.AddMethod(__Method_GetPriceByRangeTime, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.PriceRangeTimeRequest, global::ProductServiceNamespace.Protos.PriceListResponse>(serviceImpl.GetPriceByRangeTime));
+      serviceBinder.AddMethod(__Method_GetCurrentPrice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::ProductServiceNamespace.Protos.PriceResponse>(serviceImpl.GetCurrentPrice));
+      serviceBinder.AddMethod(__Method_CreateNewPrice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.PriceCreationRequest, global::ProductServiceNamespace.Protos.PriceResponse>(serviceImpl.CreateNewPrice));
+      serviceBinder.AddMethod(__Method_DeletePrice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.PriceIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeletePrice));
+      serviceBinder.AddMethod(__Method_UpdatePrice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.PriceUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UpdatePrice));
     }
 
   }

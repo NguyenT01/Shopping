@@ -1,7 +1,10 @@
-﻿namespace ProductServiceNamespace.ORM.EF.Model;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ProductServiceNamespace.ORM.EF.Model;
 
 public partial class Price
 {
+    [Column("PriceId")]
     public Guid PriceId { get; set; }
 
     public Guid? ProductId { get; set; }

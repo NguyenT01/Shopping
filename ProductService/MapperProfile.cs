@@ -26,7 +26,18 @@ namespace ProductServiceNamespace
                 .ForMember(d => d.StartDate, opts => opts.MapFrom(s => Timestamp.FromDateTime(DateTime.SpecifyKind(s.StartDate!.Value, DateTimeKind.Utc))))
                 .ForMember(d => d.EndDate, opts => opts.MapFrom(s => Timestamp.FromDateTime(DateTime.SpecifyKind(s.EndDate!.Value, DateTimeKind.Utc))));
 
+            CreateMap<PriceCreationRequest, Price>()
+                .ForMember(d => d.StartDate, opts => opts.MapFrom(s => s.StartDate.ToDateTime()))
+                .ForMember(d => d.EndDate, opts => opts.MapFrom(s => s.EndDate.ToDateTime()))
+                .ForMember(d => d.PriceId, opts => opts.MapFrom(s => Guid.NewGuid()));
+
+            CreateMap<PriceUpdateRequest, Price>()
+                .ForMember(d => d.PriceId, opts => opts.MapFrom(s => Guid.Parse(s.PriceId)))
+                .ForMember(d => d.StartDate, opts => opts.MapFrom(s => s.StartDate.ToDateTime()))
+                .ForMember(d => d.EndDate, opts => opts.MapFrom(s => s.EndDate.ToDateTime()))
+                .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
 
         }
     }
+
 }

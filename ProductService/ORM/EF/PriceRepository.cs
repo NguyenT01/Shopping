@@ -16,8 +16,8 @@ namespace ProductServiceNamespace.ORM.EF
 
         public async Task<IEnumerable<Price>> GetPriceByRangeTime(Guid productId, bool tracking, DateTime startDate,
                     DateTime endDate)
-            => await FindByCondition(price => price.ProductId.Equals(productId) && startDate >= price.StartDate
-                                && endDate <= price.EndDate, tracking)
+            => await FindByCondition(price => price.ProductId.Equals(productId) && (startDate <= price.StartDate
+                                || endDate >= price.EndDate), tracking)
                             .OrderBy(price => price.StartDate)
                             .ThenBy(price => price.EndDate)
                             .ToListAsync();
@@ -34,11 +34,12 @@ namespace ProductServiceNamespace.ORM.EF
 
         public async Task<Price?> GetCurrentPrice(Guid productId, bool tracking)
         {
-            var currentDate = DateTime.Now;
+            var currentDate = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc);
 
-            return await FindByCondition(price => price.ProductId.Equals(productId) && currentDate >= price.StartDate
-                                && currentDate <= price.EndDate, tracking)
-                .OrderByDescending(price => price.StartDate)
+            return await FindByCondition(price => price.ProductId.Equals(productId) && (currentDate >= price.StartDate
+                                && currentDate <= price.EndDate), tracking)
+                .OrderBy(price => price.EndDate)
+                .ThenByDescending(price => price.StartDate)
                 .FirstOrDefaultAsync();
         }
     }
