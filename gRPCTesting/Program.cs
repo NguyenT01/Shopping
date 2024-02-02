@@ -4,6 +4,7 @@ using gRPCTestings;
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 #region GET 1 ORDER ITEM
+/*
 var channel = GrpcChannel.ForAddress("https://localhost:7103");
 var client = new OrderItemProto.OrderItemProtoClient(channel);
 
@@ -24,9 +25,172 @@ catch (Exception e)
     Console.WriteLine(e.Message);
     Console.ReadKey();
 }
-
+*/
 #endregion
 
+#region GET ITEM LIST FROM 1 ORDER
+/*
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderItemProto.OrderItemProtoClient(channel);
+
+var orderItemRequest = new OrderItemIdRequest
+{
+    OrderId = "4C91274B-25A6-4F76-9E5E-AA4C07623052",
+};
+
+try
+{
+    var serverReplies = await client.GetItemsFromOrderAsync(orderItemRequest);
+    foreach (var serverReply in serverReplies.Items)
+    {
+        Console.WriteLine($"{serverReply.OrderId} | {serverReply.ProductId} | {serverReply.Quantity}");
+
+    }
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+*/
+#endregion
+
+#region ADD 1
+/*
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderItemProto.OrderItemProtoClient(channel);
+
+var orderItemRequest = new OrderItemCreationRequest
+{
+    OrderId = "4C91274B-25A6-4F76-9E5E-AA4C07623052",
+    ProductId = "DE2018FD-4E94-4A9C-83F4-E41B5114064C",
+    Quantity = 55
+};
+
+try
+{
+    var serverReply = await client.CreateOrderItemAsync(orderItemRequest);
+
+    Console.WriteLine($"{serverReply.OrderId} has been created");
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+*/
+#endregion
+
+#region DELETE 1
+/*
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderItemProto.OrderItemProtoClient(channel);
+
+var itemDeletRequest = new OrderItemDeletionRequest
+{
+    OrderId = "4C91274B-25A6-4F76-9E5E-AA4C07623052",
+    ProductId = "DE2018FD-4E94-4A9C-83F4-E41B5114064C"
+};
+
+try
+{
+    var serverReply = await client.DeleteOrderItemAsync(itemDeletRequest);
+
+    Console.WriteLine($"{itemDeletRequest.OrderId} - {itemDeletRequest.OrderId} has been delete");
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+*/
+#endregion
+
+#region UPDATE 1
+/*
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderItemProto.OrderItemProtoClient(channel);
+
+var itemUpdate = new OrderItemUpdateRequest
+{
+    OrderId = "4C91274B-25A6-4F76-9E5E-AA4C07623052",
+    ProductId = "BCDA33A3-476E-40A0-B558-0C14E7C70ED0",
+    Quantity = 13
+};
+
+try
+{
+    var serverReply = await client.UpdateOrderItemAsync(itemUpdate);
+
+    Console.WriteLine($"{itemUpdate.OrderId} - {itemUpdate.OrderId} has been updated");
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+*/
+#endregion
+
+#region INCREASE QUANTITY BY 1
+/*
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderItemProto.OrderItemProtoClient(channel);
+
+var itemUpdateBy1 = new ItemRequest
+{
+    OrderId = "4C91274B-25A6-4F76-9E5E-AA4C07623052",
+    ProductId = "BCDA33A3-476E-40A0-B558-0C14E7C70ED0"
+};
+
+try
+{
+    var serverReply = await client.IncreaseQuantityOrderItemBy1Async(itemUpdateBy1);
+
+    Console.WriteLine($"{serverReply.OrderId} | {serverReply.ProductId} | {serverReply.Quantity}");
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+*/
+#endregion
+
+#region DECREASE QUANTITY BY 1
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderItemProto.OrderItemProtoClient(channel);
+
+var itemUpdateBy1 = new ItemRequest
+{
+    OrderId = "4C91274B-25A6-4F76-9E5E-AA4C07623052",
+    ProductId = "E2A85F91-DDAB-427D-91EB-4C8C74A487FF"
+};
+
+try
+{
+    var serverReply = await client.DecreaseQuantityOrderItemBy1Async(itemUpdateBy1);
+
+    if (serverReply.IsNull)
+        Console.WriteLine($"{itemUpdateBy1.OrderId} | {itemUpdateBy1.ProductId} has been deleted");
+    else
+        Console.WriteLine($"{serverReply.OrderId} | {serverReply.ProductId} | {serverReply.Quantity}");
+
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+
+#endregion
+//GetItemsFromOrder
 
 //------------
 #region GET 1 ORDER

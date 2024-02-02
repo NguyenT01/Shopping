@@ -14,7 +14,17 @@ namespace OrderingService
                 .ForMember(d => d.OrderId, opts => opts.MapFrom(s => s.OrderId.ToString()))
                 .ForMember(d => d.ProductId, opts => opts.MapFrom(s => s.ProductId.ToString()));
 
+            CreateMap<OrderItemCreationRequest, OrderItem>()
+                .ForMember(d => d.OrderId, opts => opts.MapFrom(s => Guid.Parse(s.OrderId)))
+                .ForMember(d => d.ProductId, opts => opts.MapFrom(s => Guid.Parse(s.ProductId)));
 
+            CreateMap<OrderItemUpdateRequest, OrderItem>()
+                .ForMember(d => d.OrderId, opts => opts.Ignore())
+                .ForMember(d => d.ProductId, opts => opts.Ignore());
+
+            CreateMap<OrderItem, ItemDecrementResponse>()
+                .ForMember(d => d.OrderId, opts => opts.MapFrom(s => s.OrderId.ToString()))
+                .ForMember(d => d.ProductId, opts => opts.MapFrom(s => s.ProductId.ToString()));
             #endregion
 
             #region ORDER

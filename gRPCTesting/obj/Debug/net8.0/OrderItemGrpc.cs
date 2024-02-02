@@ -49,6 +49,22 @@ namespace gRPCTestings {
     static readonly grpc::Marshaller<global::gRPCTestings.GetItemRequest> __Marshaller_orderItem_GetItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRPCTestings.GetItemRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::gRPCTestings.ItemResponse> __Marshaller_orderItem_ItemResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRPCTestings.ItemResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::gRPCTestings.OrderItemIdRequest> __Marshaller_orderItem_OrderItemIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRPCTestings.OrderItemIdRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::gRPCTestings.ItemListResponse> __Marshaller_orderItem_ItemListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRPCTestings.ItemListResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::gRPCTestings.OrderItemCreationRequest> __Marshaller_orderItem_OrderItemCreationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRPCTestings.OrderItemCreationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::gRPCTestings.OrderItemDeletionRequest> __Marshaller_orderItem_OrderItemDeletionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRPCTestings.OrderItemDeletionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::gRPCTestings.OrderItemUpdateRequest> __Marshaller_orderItem_OrderItemUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRPCTestings.OrderItemUpdateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::gRPCTestings.ItemRequest> __Marshaller_orderItem_ItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRPCTestings.ItemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::gRPCTestings.ItemDecrementResponse> __Marshaller_orderItem_ItemDecrementResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::gRPCTestings.ItemDecrementResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::gRPCTestings.GetItemRequest, global::gRPCTestings.ItemResponse> __Method_GetItem = new grpc::Method<global::gRPCTestings.GetItemRequest, global::gRPCTestings.ItemResponse>(
@@ -57,6 +73,54 @@ namespace gRPCTestings {
         "GetItem",
         __Marshaller_orderItem_GetItemRequest,
         __Marshaller_orderItem_ItemResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::gRPCTestings.OrderItemIdRequest, global::gRPCTestings.ItemListResponse> __Method_GetItemsFromOrder = new grpc::Method<global::gRPCTestings.OrderItemIdRequest, global::gRPCTestings.ItemListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetItemsFromOrder",
+        __Marshaller_orderItem_OrderItemIdRequest,
+        __Marshaller_orderItem_ItemListResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::gRPCTestings.OrderItemCreationRequest, global::gRPCTestings.ItemResponse> __Method_CreateOrderItem = new grpc::Method<global::gRPCTestings.OrderItemCreationRequest, global::gRPCTestings.ItemResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateOrderItem",
+        __Marshaller_orderItem_OrderItemCreationRequest,
+        __Marshaller_orderItem_ItemResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::gRPCTestings.OrderItemDeletionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteOrderItem = new grpc::Method<global::gRPCTestings.OrderItemDeletionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteOrderItem",
+        __Marshaller_orderItem_OrderItemDeletionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::gRPCTestings.OrderItemUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UpdateOrderItem = new grpc::Method<global::gRPCTestings.OrderItemUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateOrderItem",
+        __Marshaller_orderItem_OrderItemUpdateRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::gRPCTestings.ItemRequest, global::gRPCTestings.ItemResponse> __Method_IncreaseQuantityOrderItemBy1 = new grpc::Method<global::gRPCTestings.ItemRequest, global::gRPCTestings.ItemResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IncreaseQuantityOrderItemBy1",
+        __Marshaller_orderItem_ItemRequest,
+        __Marshaller_orderItem_ItemResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::gRPCTestings.ItemRequest, global::gRPCTestings.ItemDecrementResponse> __Method_DecreaseQuantityOrderItemBy1 = new grpc::Method<global::gRPCTestings.ItemRequest, global::gRPCTestings.ItemDecrementResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DecreaseQuantityOrderItemBy1",
+        __Marshaller_orderItem_ItemRequest,
+        __Marshaller_orderItem_ItemDecrementResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -110,6 +174,126 @@ namespace gRPCTestings {
       public virtual grpc::AsyncUnaryCall<global::gRPCTestings.ItemResponse> GetItemAsync(global::gRPCTestings.GetItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetItem, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::gRPCTestings.ItemListResponse GetItemsFromOrder(global::gRPCTestings.OrderItemIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetItemsFromOrder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::gRPCTestings.ItemListResponse GetItemsFromOrder(global::gRPCTestings.OrderItemIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetItemsFromOrder, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::gRPCTestings.ItemListResponse> GetItemsFromOrderAsync(global::gRPCTestings.OrderItemIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetItemsFromOrderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::gRPCTestings.ItemListResponse> GetItemsFromOrderAsync(global::gRPCTestings.OrderItemIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetItemsFromOrder, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::gRPCTestings.ItemResponse CreateOrderItem(global::gRPCTestings.OrderItemCreationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateOrderItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::gRPCTestings.ItemResponse CreateOrderItem(global::gRPCTestings.OrderItemCreationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateOrderItem, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::gRPCTestings.ItemResponse> CreateOrderItemAsync(global::gRPCTestings.OrderItemCreationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateOrderItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::gRPCTestings.ItemResponse> CreateOrderItemAsync(global::gRPCTestings.OrderItemCreationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateOrderItem, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteOrderItem(global::gRPCTestings.OrderItemDeletionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteOrderItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteOrderItem(global::gRPCTestings.OrderItemDeletionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteOrderItem, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOrderItemAsync(global::gRPCTestings.OrderItemDeletionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteOrderItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOrderItemAsync(global::gRPCTestings.OrderItemDeletionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteOrderItem, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UpdateOrderItem(global::gRPCTestings.OrderItemUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOrderItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UpdateOrderItem(global::gRPCTestings.OrderItemUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateOrderItem, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UpdateOrderItemAsync(global::gRPCTestings.OrderItemUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateOrderItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UpdateOrderItemAsync(global::gRPCTestings.OrderItemUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateOrderItem, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::gRPCTestings.ItemResponse IncreaseQuantityOrderItemBy1(global::gRPCTestings.ItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IncreaseQuantityOrderItemBy1(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::gRPCTestings.ItemResponse IncreaseQuantityOrderItemBy1(global::gRPCTestings.ItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IncreaseQuantityOrderItemBy1, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::gRPCTestings.ItemResponse> IncreaseQuantityOrderItemBy1Async(global::gRPCTestings.ItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IncreaseQuantityOrderItemBy1Async(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::gRPCTestings.ItemResponse> IncreaseQuantityOrderItemBy1Async(global::gRPCTestings.ItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IncreaseQuantityOrderItemBy1, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::gRPCTestings.ItemDecrementResponse DecreaseQuantityOrderItemBy1(global::gRPCTestings.ItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DecreaseQuantityOrderItemBy1(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::gRPCTestings.ItemDecrementResponse DecreaseQuantityOrderItemBy1(global::gRPCTestings.ItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DecreaseQuantityOrderItemBy1, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::gRPCTestings.ItemDecrementResponse> DecreaseQuantityOrderItemBy1Async(global::gRPCTestings.ItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DecreaseQuantityOrderItemBy1Async(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::gRPCTestings.ItemDecrementResponse> DecreaseQuantityOrderItemBy1Async(global::gRPCTestings.ItemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DecreaseQuantityOrderItemBy1, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

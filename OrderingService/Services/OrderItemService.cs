@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using OrderingService.ErrorModel;
 using OrderingService.ORM.EF.Interface;
@@ -18,6 +19,67 @@ namespace OrderingService.Services
             _repository = repository;
         }
 
+        public override async Task<ItemDecrementResponse> DecreaseQuantityOrderItemBy1(ItemRequest request, ServerCallContext context)
+        {
+            var itemEntity = await _checkAndGetItem(request.OrderId, request.ProductId, true);
+            if (itemEntity.Quantity == 1)
+            {
+                _repository.OrderItem.DeleteItem(itemEntity);
+                await _repository.SaveAsync();
+                var response = new ItemDecrementResponse
+                {
+                    IsNull = true,
+                };
+                return response;
+            }
+            else
+            {
+                itemEntity.Quantity--;
+            }
+
+            await _repository.SaveAsync();
+            var res = _mapper.Map<ItemDecrementResponse>(itemEntity);
+            return res;
+        }
+        public override async Task<ItemResponse> IncreaseQuantityOrderItemBy1(ItemRequest request, ServerCallContext context)
+        {
+            var itemEntity = await _checkAndGetItem(request.OrderId, request.ProductId, true);
+            itemEntity.Quantity += 1;
+            await _repository.SaveAsync();
+
+            return _mapper.Map<ItemResponse>(itemEntity);
+        }
+        public override async Task<Empty> UpdateOrderItem(OrderItemUpdateRequest request, ServerCallContext context)
+        {
+            var itemEntity = await _checkAndGetItem(request.OrderId, request.ProductId, true);
+            _mapper.Map(request, itemEntity);
+            await _repository.SaveAsync();
+            return new Empty();
+        }
+        public override async Task<Empty> DeleteOrderItem(OrderItemDeletionRequest request, ServerCallContext context)
+        {
+            var itemEntity = await _checkAndGetItem(request.OrderId, request.ProductId, true);
+            _repository.OrderItem.DeleteItem(itemEntity);
+            await _repository.SaveAsync();
+            return new Empty();
+        }
+        public override async Task<ItemResponse> CreateOrderItem(OrderItemCreationRequest request, ServerCallContext context)
+        {
+            var itemEntity = _mapper.Map<OrderItem>(request);
+            _repository.OrderItem.AddItem(itemEntity);
+            await _repository.SaveAsync();
+
+            return _mapper.Map<ItemResponse>(itemEntity);
+        }
+        public override async Task<ItemListResponse> GetItemsFromOrder(OrderItemIdRequest request, ServerCallContext context)
+        {
+            var itemsEntity = await _repository.OrderItem.GetItemFromAnOrder(_parseGuid(request.OrderId), false);
+            var items = _mapper.Map<IEnumerable<ItemResponse>>(itemsEntity);
+
+            var res = new ItemListResponse();
+            res.Items.AddRange(items);
+            return res;
+        }
         public override async Task<ItemResponse> GetItem(GetItemRequest request, ServerCallContext context)
         {
             var itemEntity = await _checkAndGetItem(request.OrderId, request.ProductId, false);
