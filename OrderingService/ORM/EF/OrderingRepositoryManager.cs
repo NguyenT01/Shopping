@@ -6,12 +6,17 @@ namespace OrderingService.ORM.EF
     {
         private readonly OrderingContext context;
         private readonly IOrderRepository OrderRepository;
+        private readonly IOrderItemRepository OrderItemRepository;
+
         public IOrderRepository Order => OrderRepository;
+
+        public IOrderItemRepository OrderItem => OrderItemRepository;
 
         public OrderingRepositoryManager(OrderingContext context)
         {
             this.context = context;
             OrderRepository = new OrderRepository(context);
+            OrderItemRepository = new OrderItemRepository(context);
         }
 
         public async Task SaveAsync()

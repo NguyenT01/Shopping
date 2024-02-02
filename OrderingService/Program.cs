@@ -16,5 +16,6 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.MapGrpcService<OrderService>();
+app.MapGrpcService<OrderItemService>();
 
 app.Run();

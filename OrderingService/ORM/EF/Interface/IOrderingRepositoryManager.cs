@@ -3,6 +3,7 @@
     public interface IOrderingRepositoryManager
     {
         IOrderRepository Order { get; }
+        IOrderItemRepository OrderItem { get; }
         Task SaveAsync();
     }
 }

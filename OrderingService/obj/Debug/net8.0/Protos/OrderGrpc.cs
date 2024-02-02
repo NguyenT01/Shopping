@@ -49,6 +49,16 @@ namespace OrderingService.Protos {
     static readonly grpc::Marshaller<global::OrderingService.Protos.OrderIdRequest> __Marshaller_order_OrderIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::OrderingService.Protos.OrderIdRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::OrderingService.Protos.OrderResponse> __Marshaller_order_OrderResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::OrderingService.Protos.OrderResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::OrderingService.Protos.OrderCustomerIdRequest> __Marshaller_order_OrderCustomerIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::OrderingService.Protos.OrderCustomerIdRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::OrderingService.Protos.OrderListResponse> __Marshaller_order_OrderListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::OrderingService.Protos.OrderListResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::OrderingService.Protos.OrderCreationRequest> __Marshaller_order_OrderCreationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::OrderingService.Protos.OrderCreationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::OrderingService.Protos.OrderUpdateRequest> __Marshaller_order_OrderUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::OrderingService.Protos.OrderUpdateRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::OrderingService.Protos.OrderIdRequest, global::OrderingService.Protos.OrderResponse> __Method_GetOrder = new grpc::Method<global::OrderingService.Protos.OrderIdRequest, global::OrderingService.Protos.OrderResponse>(
@@ -57,6 +67,38 @@ namespace OrderingService.Protos {
         "GetOrder",
         __Marshaller_order_OrderIdRequest,
         __Marshaller_order_OrderResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::OrderingService.Protos.OrderCustomerIdRequest, global::OrderingService.Protos.OrderListResponse> __Method_GetOrders = new grpc::Method<global::OrderingService.Protos.OrderCustomerIdRequest, global::OrderingService.Protos.OrderListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetOrders",
+        __Marshaller_order_OrderCustomerIdRequest,
+        __Marshaller_order_OrderListResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::OrderingService.Protos.OrderCreationRequest, global::OrderingService.Protos.OrderResponse> __Method_CreateOrder = new grpc::Method<global::OrderingService.Protos.OrderCreationRequest, global::OrderingService.Protos.OrderResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateOrder",
+        __Marshaller_order_OrderCreationRequest,
+        __Marshaller_order_OrderResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::OrderingService.Protos.OrderIdRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteOrder = new grpc::Method<global::OrderingService.Protos.OrderIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteOrder",
+        __Marshaller_order_OrderIdRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::OrderingService.Protos.OrderUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UpdateOrder = new grpc::Method<global::OrderingService.Protos.OrderUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateOrder",
+        __Marshaller_order_OrderUpdateRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -74,6 +116,30 @@ namespace OrderingService.Protos {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::OrderingService.Protos.OrderListResponse> GetOrders(global::OrderingService.Protos.OrderCustomerIdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::OrderingService.Protos.OrderResponse> CreateOrder(global::OrderingService.Protos.OrderCreationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOrder(global::OrderingService.Protos.OrderIdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UpdateOrder(global::OrderingService.Protos.OrderUpdateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -82,7 +148,11 @@ namespace OrderingService.Protos {
     public static grpc::ServerServiceDefinition BindService(OrderProtoBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetOrder, serviceImpl.GetOrder).Build();
+          .AddMethod(__Method_GetOrder, serviceImpl.GetOrder)
+          .AddMethod(__Method_GetOrders, serviceImpl.GetOrders)
+          .AddMethod(__Method_CreateOrder, serviceImpl.CreateOrder)
+          .AddMethod(__Method_DeleteOrder, serviceImpl.DeleteOrder)
+          .AddMethod(__Method_UpdateOrder, serviceImpl.UpdateOrder).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -93,6 +163,10 @@ namespace OrderingService.Protos {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, OrderProtoBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OrderingService.Protos.OrderIdRequest, global::OrderingService.Protos.OrderResponse>(serviceImpl.GetOrder));
+      serviceBinder.AddMethod(__Method_GetOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OrderingService.Protos.OrderCustomerIdRequest, global::OrderingService.Protos.OrderListResponse>(serviceImpl.GetOrders));
+      serviceBinder.AddMethod(__Method_CreateOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OrderingService.Protos.OrderCreationRequest, global::OrderingService.Protos.OrderResponse>(serviceImpl.CreateOrder));
+      serviceBinder.AddMethod(__Method_DeleteOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OrderingService.Protos.OrderIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteOrder));
+      serviceBinder.AddMethod(__Method_UpdateOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::OrderingService.Protos.OrderUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UpdateOrder));
     }
 
   }

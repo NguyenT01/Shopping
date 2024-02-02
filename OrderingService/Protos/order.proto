@@ -10,6 +10,28 @@ package order;
 
 service OrderProto{
 	rpc GetOrder (OrderIdRequest) returns (OrderResponse);
+	rpc GetOrders (OrderCustomerIdRequest) returns (OrderListResponse);
+	rpc CreateOrder (OrderCreationRequest) returns (OrderResponse);
+	rpc DeleteOrder (OrderIdRequest) returns (google.protobuf.Empty);
+	rpc UpdateOrder (OrderUpdateRequest) returns (google.protobuf.Empty);
+}
+
+message OrderUpdateRequest{
+	string OrderId = 1;
+	google.protobuf.Timestamp OrderDate = 2;
+}
+
+message OrderCreationRequest{
+	string CustomerId = 1;
+	google.protobuf.Timestamp OrderDate = 2;
+}
+
+message OrderCustomerIdRequest{
+	string CustomerId = 1;
+}
+
+message OrderListResponse{
+	repeated OrderResponse Orders = 1;
 }
 
 message OrderIdRequest{

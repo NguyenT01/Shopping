@@ -1,9 +1,36 @@
 ﻿using Grpc.Net.Client;
-using gRPCTesting;
+using gRPCTestings;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
+#region GET 1 ORDER ITEM
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderItemProto.OrderItemProtoClient(channel);
+
+var orderRequest = new GetItemRequest
+{
+    OrderId = "4C91274B-25A6-4F76-9E5E-AA4C07623052",
+    ProductId = "BCDA33A3-476E-40A0-B558-0C14E7C70ED0"
+};
+
+try
+{
+    var serverReply = await client.GetItemAsync(orderRequest);
+    Console.WriteLine($"{serverReply.OrderId} | {serverReply.ProductId} | {serverReply.Quantity}");
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+
+#endregion
+
+
+//------------
 #region GET 1 ORDER
+/*
 var channel = GrpcChannel.ForAddress("https://localhost:7103");
 var client = new OrderProto.OrderProtoClient(channel);
 
@@ -23,11 +50,106 @@ catch (Exception e)
     Console.WriteLine(e.Message);
     Console.ReadKey();
 }
-
+*/
 #endregion
 
+#region GET ORDER LIST
+/*
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderProto.OrderProtoClient(channel);
+var cusId = new OrderCustomerIdRequest
+{
+    CustomerId = "A941BF44-4232-4FE8-D295-08DC207203E0"
+};
 
+try
+{
+    var serverLs = await client.GetOrdersAsync(cusId);
+    foreach (var serverReply in serverLs.Orders)
+    {
+        Console.WriteLine($"{serverReply.OrderId} | {serverReply.CustomerId} | {serverReply.OrderDate}");
+    }
+    Console.ReadLine();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+    Console.ReadKey();
+}
+*/
+#endregion
 
+#region CREATE ORDER
+/*
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderProto.OrderProtoClient(channel);
+
+var orderCreate = new OrderCreationRequest
+{
+    CustomerId = "A941BF44-4232-4FE8-D295-08DC207203E0",
+    OrderDate = Timestamp.FromDateTime(new DateTime(2024, 2, 2, 16, 54, 44, 22, DateTimeKind.Utc))
+};
+
+try
+{
+    var serverReply = await client.CreateOrderAsync(orderCreate);
+    Console.WriteLine($"{serverReply.OrderId} has been created");
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+*/
+#endregion
+
+#region DELETE ORDER
+/*
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderProto.OrderProtoClient(channel);
+
+var orderRequest = new OrderIdRequest
+{
+    OrderId = "E9D79C67-F13F-4B33-8FF5-AE2AB42A401E"
+};
+
+try
+{
+    var serverReply = await client.DeleteOrderAsync(orderRequest);
+    Console.WriteLine($"{orderRequest.OrderId} deleted successfully");
+    Console.ReadKey();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+    Console.ReadKey();
+}
+*/
+#endregion
+
+#region UPDATE ORDER
+/*
+var channel = GrpcChannel.ForAddress("https://localhost:7103");
+var client = new OrderProto.OrderProtoClient(channel);
+var itemPrice = new OrderUpdateRequest
+{
+    OrderId = "4C91274B-25A6-4F76-9E5E-AA4C07623052",
+    OrderDate = Timestamp.FromDateTime(new DateTime(2024, 02, 4, 7, 7, 7, 252, DateTimeKind.Utc))
+};
+try
+{
+    var serverReply = await client.UpdateOrderAsync(itemPrice);
+    Console.WriteLine($"{itemPrice.OrderId} has been updated");
+    Console.ReadLine();
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+    Console.ReadLine();
+}
+*/
+#endregion
 
 //--------------
 #region GET 1 BY PRICE ID

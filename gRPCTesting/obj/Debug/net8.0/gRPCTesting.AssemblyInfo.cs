@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gRPCTesting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4393500b6a63bf4dd6965648868d1122ffbe4bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("gRPCTesting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gRPCTesting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
