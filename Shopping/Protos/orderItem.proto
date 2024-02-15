@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+option csharp_namespace = "Shopping.API";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+package orderItem;
+
+service OrderItemProto{
+	rpc GetItem(GetItemRequest) returns (ItemResponse);
+	rpc GetItemsFromOrder(OrderItemIdRequest) returns (ItemListResponse);
+	rpc CreateOrderItem(OrderItemCreationRequest) returns (ItemResponse);
+	rpc DeleteOrderItem(OrderItemDeletionRequest) returns (google.protobuf.Empty);
+	rpc UpdateOrderItem(OrderItemUpdateRequest) returns (google.protobuf.Empty);
+	rpc IncreaseQuantityOrderItemBy1 (ItemRequest) returns (ItemResponse);
+	rpc DecreaseQuantityOrderItemBy1 (ItemRequest) returns (ItemDecrementResponse);
+}
+
+message ItemDecrementResponse{
+	string OrderId = 1;
+	string ProductId = 2;
+	int32 Quantity = 3;
+	bool IsNull = 4;
+}
+
+message ItemRequest{
+	string OrderId = 1;
+	string ProductId = 2;
+}
+
+message OrderItemUpdateRequest{
+	string OrderId = 1;
+	string ProductId = 2;
+	int32 Quantity = 3;
+}
+
+message OrderItemDeletionRequest{
+	string OrderId = 1;
+	string ProductId = 2;
+}
+
+message OrderItemCreationRequest{
+	string OrderId = 1;
+	string ProductId = 2;
+	int32 Quantity = 3;
+}
+
+message OrderItemIdRequest{
+	string OrderId = 1;
+}
+
+message ItemListResponse{
+	repeated ItemResponse Items = 1;
+}
+
+message GetItemRequest{
+	string OrderId = 1;
+	string ProductId = 2;
+}
+
+message ItemResponse{
+	string OrderId = 1;
+	string ProductId = 2;
+	int32 Quantity = 3;
+}

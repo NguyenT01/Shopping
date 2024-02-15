@@ -19,7 +19,6 @@ var app = builder.Build();
 app.ConfigureExceptionHandler();
 
 // Configure the HTTP request pipeline.
-app.MapGrpcService<GreeterService>();
 app.MapGrpcService<CustomerService>();
 
 app.Run();

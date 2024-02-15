@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping", "Shopping\Shopping.csproj", "{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.API", "Shopping\Shopping.API.csproj", "{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterDataService", "MasterDataService\MasterDataService.csproj", "{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}"
 EndProject

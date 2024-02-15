@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Shopping.API";
+
+package price;
+
+service PriceProto{
+	rpc GetPrice(PriceIdRequest) returns (PriceResponse);
+	rpc GetHistoryPriceListOfProduct (SingleProductIdRequest) returns (PriceListResponse);
+	rpc GetPriceByRangeTime (PriceRangeTimeRequest) returns (PriceListResponse);
+	rpc GetCurrentPrice (SingleProductIdRequest) returns (PriceResponse);
+	rpc CreateNewPrice (PriceCreationRequest) returns (PriceResponse);
+	rpc DeletePrice (PriceIdRequest) returns (google.protobuf.Empty);
+	rpc UpdatePrice (PriceUpdateRequest) returns (google.protobuf.Empty);
+}
+
+message PriceUpdateRequest{
+	string PriceId = 1;
+	double PriceValue = 2;
+	google.protobuf.Timestamp StartDate = 3;
+	google.protobuf.Timestamp EndDate = 4;
+}
+
+message PriceCreationRequest{
+	string ProductId = 1;
+	double PriceValue = 2;
+	google.protobuf.Timestamp StartDate = 3;
+	google.protobuf.Timestamp EndDate = 4;
+}
+
+message PriceRangeTimeRequest{
+	string ProductId = 1;
+	google.protobuf.Timestamp StartDate = 2;
+	google.protobuf.Timestamp EndDate = 3;
+}
+
+message PriceListResponse{
+	repeated PriceResponse PriceList = 1;
+}
+
+message SingleProductIdRequest{
+	string ProductId = 1;
+}
+
+message PriceIdRequest{
+	string PriceId = 1;
+}
+
+message PriceResponse{
+	string PriceId = 1;
+	string ProductId = 2;
+	double PriceValue = 3;
+	google.protobuf.Timestamp StartDate = 4;
+	google.protobuf.Timestamp EndDate = 5;
+}

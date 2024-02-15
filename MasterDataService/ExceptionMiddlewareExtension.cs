@@ -1,6 +1,5 @@
 ﻿using MasterDataService.ErrorModel;
 using Microsoft.AspNetCore.Diagnostics;
-using System.Text.Json;
 
 namespace MasterDataService;
 
@@ -23,11 +22,11 @@ public static class ExceptionMiddlewareExtension
                         _ => StatusCodes.Status500InternalServerError
                     };
 
-                    await context.Response.WriteAsync(JsonSerializer.Serialize(new
+                    await context.Response.WriteAsync(new ErrorDetails
                     {
-                        Code = context.Response.StatusCode,
-                        contextFeatures.Error.Message
-                    }.ToString()));
+                        StatusCode = context.Response.StatusCode,
+                        Message = contextFeatures.Error.Message
+                    }.ToString());
                 }
             });
         });

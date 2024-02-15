@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [Shopping]    Script Date: 02/02/2024 2:33:14 CH ******/
+/****** Object:  Database [Shopping]    Script Date: 15/02/2024 5:18:53 CH ******/
 CREATE DATABASE [Shopping]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -82,10 +82,10 @@ ALTER DATABASE [Shopping] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_
 GO
 USE [Shopping]
 GO
-/****** Object:  User [admin]    Script Date: 02/02/2024 2:33:14 CH ******/
+/****** Object:  User [admin]    Script Date: 15/02/2024 5:18:53 CH ******/
 CREATE USER [admin] FOR LOGIN [admin] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 02/02/2024 2:33:14 CH ******/
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 15/02/2024 5:18:53 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[__EFMigrationsHistory](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Customer]    Script Date: 02/02/2024 2:33:14 CH ******/
+/****** Object:  Table [dbo].[Customer]    Script Date: 15/02/2024 5:18:53 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -120,7 +120,7 @@ CREATE TABLE [dbo].[Customer](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Order]    Script Date: 02/02/2024 2:33:14 CH ******/
+/****** Object:  Table [dbo].[Order]    Script Date: 15/02/2024 5:18:53 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -139,7 +139,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[OrderItem]    Script Date: 02/02/2024 2:33:14 CH ******/
+/****** Object:  Table [dbo].[OrderItem]    Script Date: 15/02/2024 5:18:53 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -159,7 +159,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Price]    Script Date: 02/02/2024 2:33:14 CH ******/
+/****** Object:  Table [dbo].[Price]    Script Date: 15/02/2024 5:18:53 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -180,7 +180,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Products]    Script Date: 02/02/2024 2:33:14 CH ******/
+/****** Object:  Table [dbo].[Products]    Script Date: 15/02/2024 5:18:53 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

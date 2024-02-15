@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+option csharp_namespace = "Shopping.API";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+package order;
+
+service OrderProto{
+	rpc GetOrder (OrderIdRequest) returns (OrderResponse);
+	rpc GetOrders (OrderCustomerIdRequest) returns (OrderListResponse);
+	rpc CreateOrder (OrderCreationRequest) returns (OrderResponse);
+	rpc DeleteOrder (OrderIdRequest) returns (google.protobuf.Empty);
+	rpc UpdateOrder (OrderUpdateRequest) returns (google.protobuf.Empty);
+}
+
+message OrderUpdateRequest{
+	string OrderId = 1;
+	google.protobuf.Timestamp OrderDate = 2;
+}
+
+message OrderCreationRequest{
+	string CustomerId = 1;
+	google.protobuf.Timestamp OrderDate = 2;
+}
+
+message OrderCustomerIdRequest{
+	string CustomerId = 1;
+}
+
+message OrderListResponse{
+	repeated OrderResponse Orders = 1;
+}
+
+message OrderIdRequest{
+	string OrderId = 1;
+}
+
+message OrderResponse{
+	string OrderId = 1;
+	string CustomerId = 2;
+	google.protobuf.Timestamp OrderDate = 3;
+}
+
