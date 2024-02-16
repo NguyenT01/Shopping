@@ -75,7 +75,7 @@ public class CustomerService : CustomerProto.CustomerProtoBase
         var customerEntity = await _repository.Customer.GetCustomerAsync(id, tracking);
 
         if (customerEntity is null)
-            throw new RpcException(new Status(StatusCode.NotFound, $"Basket with buyer id {id} does not exist"));
+            throw new CustomerNotFoundException(id);
         return customerEntity;
     }
     private Guid parseToGuid(string id)

@@ -1,7 +1,9 @@
-﻿namespace MasterDataService.ErrorModel
+﻿using Grpc.Core;
+
+namespace MasterDataService.ErrorModel
 {
-    public abstract class NotFoundException : Exception
+    public abstract class NotFoundException : RpcException
     {
-        protected NotFoundException(string message) : base(message) { }
+        protected NotFoundException(string message) : base(new Status(StatusCode.NotFound, message)) { }
     }
 }
