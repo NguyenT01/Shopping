@@ -43,7 +43,7 @@ namespace Shopping.API {
             "c3BvbnNlEg8KB1ByaWNlSWQYASABKAkSEQoJUHJvZHVjdElkGAIgASgJEhIK",
             "ClByaWNlVmFsdWUYAyABKAESLQoJU3RhcnREYXRlGAQgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcBIrCgdFbmREYXRlGAUgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcDL6AwoKUHJpY2VQcm90bxI3CghHZXRQcmlj",
+            "LnByb3RvYnVmLlRpbWVzdGFtcDLLBAoKUHJpY2VQcm90bxI3CghHZXRQcmlj",
             "ZRIVLnByaWNlLlByaWNlSWRSZXF1ZXN0GhQucHJpY2UuUHJpY2VSZXNwb25z",
             "ZRJXChxHZXRIaXN0b3J5UHJpY2VMaXN0T2ZQcm9kdWN0Eh0ucHJpY2UuU2lu",
             "Z2xlUHJvZHVjdElkUmVxdWVzdBoYLnByaWNlLlByaWNlTGlzdFJlc3BvbnNl",
@@ -54,8 +54,10 @@ namespace Shopping.API {
             "aWNlQ3JlYXRpb25SZXF1ZXN0GhQucHJpY2UuUHJpY2VSZXNwb25zZRI8CgtE",
             "ZWxldGVQcmljZRIVLnByaWNlLlByaWNlSWRSZXF1ZXN0GhYuZ29vZ2xlLnBy",
             "b3RvYnVmLkVtcHR5EkAKC1VwZGF0ZVByaWNlEhkucHJpY2UuUHJpY2VVcGRh",
-            "dGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Qg+qAgxTaG9wcGlu",
-            "Zy5BUEliBnByb3RvMw=="));
+            "dGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ek8KFkRlbGV0ZVBy",
+            "aWNlQnlQcm9kdWN0SWQSHS5wcmljZS5TaW5nbGVQcm9kdWN0SWRSZXF1ZXN0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Qg+qAgxTaG9wcGluZy5BUEliBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -12,7 +12,8 @@ namespace ProductServiceNamespace
             CreateMap<Product, ProductResponse>()
                 .ForMember(d => d.ProductId, opts => opts.MapFrom(s => s.ProductId.ToString()));
 
-            CreateMap<AddProductRequest, Product>();
+            CreateMap<AddProductRequest, Product>()
+                .ForMember(d => d.ProductId, opts => opts.MapFrom(s => Guid.NewGuid()));
 
             CreateMap<UpdateProductRequest, Product>()
                 .ForMember(d => d.ProductId, opts => opts.MapFrom(s => Guid.Parse(s.ProductId)))

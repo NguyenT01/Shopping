@@ -13,10 +13,24 @@ public class PriceService : PriceProto.PriceProtoBase
     private readonly IRepositoryManager _repository;
     private readonly IMapper _mapper;
 
+    private readonly DateTime DEFAULT_TIME = new DateTime(1, 1, 1);
+
     public PriceService(IRepositoryManager repository, IMapper mapper)
     {
         _repository = repository;
         _mapper = mapper;
+    }
+
+    public override async Task<Empty> DeletePriceByProductId(SingleProductIdRequest request, ServerCallContext context)
+    {
+        Guid pid = parseGuid(request.ProductId);
+        await checkProductExists(pid, true);
+        var prices = await _repository.Price.GetPrices(pid, true);
+
+        _repository.Price.DeletePriceByProductId(prices);
+        await _repository.SaveAsync();
+
+        return new Empty();
     }
 
     public override async Task<Empty> UpdatePrice(PriceUpdateRequest request, ServerCallContext context)
@@ -49,6 +63,16 @@ public class PriceService : PriceProto.PriceProtoBase
     {
         Guid id = parseGuid(request.ProductId);
         var priceEntity = await _repository.Price.GetCurrentPrice(id, false);
+        if (priceEntity is null)
+        {
+            priceEntity = new Price()
+            {
+                PriceValue = 999_999_999,
+                ProductId = id,
+                StartDate = DEFAULT_TIME,
+                EndDate = DEFAULT_TIME,
+            };
+        }
         return _mapper.Map<PriceResponse>(priceEntity);
     }
 

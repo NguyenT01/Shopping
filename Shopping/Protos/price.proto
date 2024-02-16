@@ -16,6 +16,7 @@ service PriceProto{
 	rpc CreateNewPrice (PriceCreationRequest) returns (PriceResponse);
 	rpc DeletePrice (PriceIdRequest) returns (google.protobuf.Empty);
 	rpc UpdatePrice (PriceUpdateRequest) returns (google.protobuf.Empty);
+	rpc DeletePriceByProductId (SingleProductIdRequest) returns (google.protobuf.Empty);
 }
 
 message PriceUpdateRequest{

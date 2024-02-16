@@ -14,6 +14,9 @@ namespace ProductServiceNamespace.ORM.EF
         public void DeletePrice(Price price)
             => Delete(price);
 
+        public void DeletePriceByProductId(IEnumerable<Price> prices)
+            => DeleteRange(prices);
+
         public async Task<IEnumerable<Price>> GetPriceByRangeTime(Guid productId, bool tracking, DateTime startDate,
                     DateTime endDate)
             => await FindByCondition(price => price.ProductId.Equals(productId) && (startDate <= price.StartDate

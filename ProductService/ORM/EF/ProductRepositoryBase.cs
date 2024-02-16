@@ -19,6 +19,9 @@ namespace ProductServiceNamespace.ORM.EF
         public void Delete(T entity)
             => ProductRepositoryContext.Set<T>().Remove(entity);
 
+        public void DeleteRange(IEnumerable<T> entities)
+            => ProductRepositoryContext.Set<T>().RemoveRange(entities);
+
         public IQueryable<T> FindAll(bool tracking)
         {
             if (tracking)

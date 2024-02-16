@@ -10,6 +10,7 @@ namespace ProductServiceNamespace.ORM.EF.Interface
                     DateTime endDate);
         Task<Price?> GetCurrentPrice(Guid productId, bool tracking);
         void DeletePrice(Price price);
+        void DeletePriceByProductId(IEnumerable<Price> prices);
         void CreatePrice(Price price);
     }
 }

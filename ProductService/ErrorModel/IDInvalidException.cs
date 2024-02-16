@@ -1,7 +1,9 @@
-﻿namespace ProductServiceNamespace.ErrorModel
+﻿using Grpc.Core;
+
+namespace ProductServiceNamespace.ErrorModel
 {
-    public class IDInvalidException : Exception
+    public class IDInvalidException : RpcException
     {
-        public IDInvalidException(string message) : base(message) { }
+        public IDInvalidException(string message) : base(new Status(StatusCode.InvalidArgument, message)) { }
     }
 }

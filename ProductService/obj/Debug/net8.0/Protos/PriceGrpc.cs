@@ -118,6 +118,14 @@ namespace ProductServiceNamespace.Protos {
         __Marshaller_price_PriceUpdateRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeletePriceByProductId = new grpc::Method<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePriceByProductId",
+        __Marshaller_price_SingleProductIdRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -170,6 +178,12 @@ namespace ProductServiceNamespace.Protos {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeletePriceByProductId(global::ProductServiceNamespace.Protos.SingleProductIdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -184,7 +198,8 @@ namespace ProductServiceNamespace.Protos {
           .AddMethod(__Method_GetCurrentPrice, serviceImpl.GetCurrentPrice)
           .AddMethod(__Method_CreateNewPrice, serviceImpl.CreateNewPrice)
           .AddMethod(__Method_DeletePrice, serviceImpl.DeletePrice)
-          .AddMethod(__Method_UpdatePrice, serviceImpl.UpdatePrice).Build();
+          .AddMethod(__Method_UpdatePrice, serviceImpl.UpdatePrice)
+          .AddMethod(__Method_DeletePriceByProductId, serviceImpl.DeletePriceByProductId).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -201,6 +216,7 @@ namespace ProductServiceNamespace.Protos {
       serviceBinder.AddMethod(__Method_CreateNewPrice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.PriceCreationRequest, global::ProductServiceNamespace.Protos.PriceResponse>(serviceImpl.CreateNewPrice));
       serviceBinder.AddMethod(__Method_DeletePrice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.PriceIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeletePrice));
       serviceBinder.AddMethod(__Method_UpdatePrice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.PriceUpdateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UpdatePrice));
+      serviceBinder.AddMethod(__Method_DeletePriceByProductId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ProductServiceNamespace.Protos.SingleProductIdRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeletePriceByProductId));
     }
 
   }

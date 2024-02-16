@@ -1,7 +1,9 @@
-﻿namespace ProductServiceNamespace.ErrorModel
+﻿using Grpc.Core;
+
+namespace ProductServiceNamespace.ErrorModel
 {
-    public abstract class NotFoundException : Exception
+    public abstract class NotFoundException : RpcException
     {
-        protected NotFoundException(string message) : base(message) { }
+        protected NotFoundException(string message) : base(new Status(StatusCode.NotFound, message)) { }
     }
 }
