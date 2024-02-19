@@ -26,34 +26,34 @@ namespace Shopping.API {
           string.Concat(
             "ChZQcm90b3Mvb3JkZXJJdGVtLnByb3RvEglvcmRlckl0ZW0aHmdvb2dsZS9w",
             "cm90b2J1Zi93cmFwcGVycy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIl0KFUl0",
-            "ZW1EZWNyZW1lbnRSZXNwb25zZRIPCgdPcmRlcklkGAEgASgJEhEKCVByb2R1",
-            "Y3RJZBgCIAEoCRIQCghRdWFudGl0eRgDIAEoBRIOCgZJc051bGwYBCABKAgi",
-            "MQoLSXRlbVJlcXVlc3QSDwoHT3JkZXJJZBgBIAEoCRIRCglQcm9kdWN0SWQY",
-            "AiABKAkiTgoWT3JkZXJJdGVtVXBkYXRlUmVxdWVzdBIPCgdPcmRlcklkGAEg",
-            "ASgJEhEKCVByb2R1Y3RJZBgCIAEoCRIQCghRdWFudGl0eRgDIAEoBSI+ChhP",
-            "cmRlckl0ZW1EZWxldGlvblJlcXVlc3QSDwoHT3JkZXJJZBgBIAEoCRIRCglQ",
-            "cm9kdWN0SWQYAiABKAkiUAoYT3JkZXJJdGVtQ3JlYXRpb25SZXF1ZXN0Eg8K",
-            "B09yZGVySWQYASABKAkSEQoJUHJvZHVjdElkGAIgASgJEhAKCFF1YW50aXR5",
-            "GAMgASgFIiUKEk9yZGVySXRlbUlkUmVxdWVzdBIPCgdPcmRlcklkGAEgASgJ",
-            "IjoKEEl0ZW1MaXN0UmVzcG9uc2USJgoFSXRlbXMYASADKAsyFy5vcmRlckl0",
-            "ZW0uSXRlbVJlc3BvbnNlIjQKDkdldEl0ZW1SZXF1ZXN0Eg8KB09yZGVySWQY",
-            "ASABKAkSEQoJUHJvZHVjdElkGAIgASgJIkQKDEl0ZW1SZXNwb25zZRIPCgdP",
-            "cmRlcklkGAEgASgJEhEKCVByb2R1Y3RJZBgCIAEoCRIQCghRdWFudGl0eRgD",
-            "IAEoBTK6BAoOT3JkZXJJdGVtUHJvdG8SPQoHR2V0SXRlbRIZLm9yZGVySXRl",
-            "bS5HZXRJdGVtUmVxdWVzdBoXLm9yZGVySXRlbS5JdGVtUmVzcG9uc2USTwoR",
-            "R2V0SXRlbXNGcm9tT3JkZXISHS5vcmRlckl0ZW0uT3JkZXJJdGVtSWRSZXF1",
-            "ZXN0Ghsub3JkZXJJdGVtLkl0ZW1MaXN0UmVzcG9uc2USTwoPQ3JlYXRlT3Jk",
-            "ZXJJdGVtEiMub3JkZXJJdGVtLk9yZGVySXRlbUNyZWF0aW9uUmVxdWVzdBoX",
-            "Lm9yZGVySXRlbS5JdGVtUmVzcG9uc2USTgoPRGVsZXRlT3JkZXJJdGVtEiMu",
-            "b3JkZXJJdGVtLk9yZGVySXRlbURlbGV0aW9uUmVxdWVzdBoWLmdvb2dsZS5w",
-            "cm90b2J1Zi5FbXB0eRJMCg9VcGRhdGVPcmRlckl0ZW0SIS5vcmRlckl0ZW0u",
-            "T3JkZXJJdGVtVXBkYXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eRJPChxJbmNyZWFzZVF1YW50aXR5T3JkZXJJdGVtQnkxEhYub3JkZXJJdGVt",
-            "Lkl0ZW1SZXF1ZXN0Ghcub3JkZXJJdGVtLkl0ZW1SZXNwb25zZRJYChxEZWNy",
-            "ZWFzZVF1YW50aXR5T3JkZXJJdGVtQnkxEhYub3JkZXJJdGVtLkl0ZW1SZXF1",
-            "ZXN0GiAub3JkZXJJdGVtLkl0ZW1EZWNyZW1lbnRSZXNwb25zZUIPqgIMU2hv",
-            "cHBpbmcuQVBJYgZwcm90bzM="));
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvImAKFUl0",
+            "ZW1EZWNyZW1lbnRSZXNwb25zZRIQCghvcmRlcl9pZBgBIAEoCRISCgpwcm9k",
+            "dWN0X2lkGAIgASgJEhAKCHF1YW50aXR5GAMgASgFEg8KB2lzX251bGwYBCAB",
+            "KAgiMwoLSXRlbVJlcXVlc3QSEAoIb3JkZXJfaWQYASABKAkSEgoKcHJvZHVj",
+            "dF9pZBgCIAEoCSJQChZPcmRlckl0ZW1VcGRhdGVSZXF1ZXN0EhAKCG9yZGVy",
+            "X2lkGAEgASgJEhIKCnByb2R1Y3RfaWQYAiABKAkSEAoIcXVhbnRpdHkYAyAB",
+            "KAUiQAoYT3JkZXJJdGVtRGVsZXRpb25SZXF1ZXN0EhAKCG9yZGVyX2lkGAEg",
+            "ASgJEhIKCnByb2R1Y3RfaWQYAiABKAkiUgoYT3JkZXJJdGVtQ3JlYXRpb25S",
+            "ZXF1ZXN0EhAKCG9yZGVyX2lkGAEgASgJEhIKCnByb2R1Y3RfaWQYAiABKAkS",
+            "EAoIcXVhbnRpdHkYAyABKAUiJgoST3JkZXJJdGVtSWRSZXF1ZXN0EhAKCG9y",
+            "ZGVyX2lkGAEgASgJIjoKEEl0ZW1MaXN0UmVzcG9uc2USJgoFaXRlbXMYASAD",
+            "KAsyFy5vcmRlckl0ZW0uSXRlbVJlc3BvbnNlIjYKDkdldEl0ZW1SZXF1ZXN0",
+            "EhAKCG9yZGVyX2lkGAEgASgJEhIKCnByb2R1Y3RfaWQYAiABKAkiRgoMSXRl",
+            "bVJlc3BvbnNlEhAKCG9yZGVyX2lkGAEgASgJEhIKCnByb2R1Y3RfaWQYAiAB",
+            "KAkSEAoIcXVhbnRpdHkYAyABKAUyugQKDk9yZGVySXRlbVByb3RvEj0KB0dl",
+            "dEl0ZW0SGS5vcmRlckl0ZW0uR2V0SXRlbVJlcXVlc3QaFy5vcmRlckl0ZW0u",
+            "SXRlbVJlc3BvbnNlEk8KEUdldEl0ZW1zRnJvbU9yZGVyEh0ub3JkZXJJdGVt",
+            "Lk9yZGVySXRlbUlkUmVxdWVzdBobLm9yZGVySXRlbS5JdGVtTGlzdFJlc3Bv",
+            "bnNlEk8KD0NyZWF0ZU9yZGVySXRlbRIjLm9yZGVySXRlbS5PcmRlckl0ZW1D",
+            "cmVhdGlvblJlcXVlc3QaFy5vcmRlckl0ZW0uSXRlbVJlc3BvbnNlEk4KD0Rl",
+            "bGV0ZU9yZGVySXRlbRIjLm9yZGVySXRlbS5PcmRlckl0ZW1EZWxldGlvblJl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSTAoPVXBkYXRlT3JkZXJJ",
+            "dGVtEiEub3JkZXJJdGVtLk9yZGVySXRlbVVwZGF0ZVJlcXVlc3QaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkSTwocSW5jcmVhc2VRdWFudGl0eU9yZGVySXRl",
+            "bUJ5MRIWLm9yZGVySXRlbS5JdGVtUmVxdWVzdBoXLm9yZGVySXRlbS5JdGVt",
+            "UmVzcG9uc2USWAocRGVjcmVhc2VRdWFudGl0eU9yZGVySXRlbUJ5MRIWLm9y",
+            "ZGVySXRlbS5JdGVtUmVxdWVzdBogLm9yZGVySXRlbS5JdGVtRGVjcmVtZW50",
+            "UmVzcG9uc2VCD6oCDFNob3BwaW5nLkFQSWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -120,7 +120,7 @@ namespace Shopping.API {
       return new ItemDecrementResponse(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -132,7 +132,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "ProductId" field.</summary>
+    /// <summary>Field number for the "product_id" field.</summary>
     public const int ProductIdFieldNumber = 2;
     private string productId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -144,7 +144,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "Quantity" field.</summary>
+    /// <summary>Field number for the "quantity" field.</summary>
     public const int QuantityFieldNumber = 3;
     private int quantity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -156,7 +156,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "IsNull" field.</summary>
+    /// <summary>Field number for the "is_null" field.</summary>
     public const int IsNullFieldNumber = 4;
     private bool isNull_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -419,7 +419,7 @@ namespace Shopping.API {
       return new ItemRequest(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -431,7 +431,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "ProductId" field.</summary>
+    /// <summary>Field number for the "product_id" field.</summary>
     public const int ProductIdFieldNumber = 2;
     private string productId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -647,7 +647,7 @@ namespace Shopping.API {
       return new OrderItemUpdateRequest(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -659,7 +659,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "ProductId" field.</summary>
+    /// <summary>Field number for the "product_id" field.</summary>
     public const int ProductIdFieldNumber = 2;
     private string productId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -671,7 +671,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "Quantity" field.</summary>
+    /// <summary>Field number for the "quantity" field.</summary>
     public const int QuantityFieldNumber = 3;
     private int quantity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -910,7 +910,7 @@ namespace Shopping.API {
       return new OrderItemDeletionRequest(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -922,7 +922,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "ProductId" field.</summary>
+    /// <summary>Field number for the "product_id" field.</summary>
     public const int ProductIdFieldNumber = 2;
     private string productId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1138,7 +1138,7 @@ namespace Shopping.API {
       return new OrderItemCreationRequest(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1150,7 +1150,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "ProductId" field.</summary>
+    /// <summary>Field number for the "product_id" field.</summary>
     public const int ProductIdFieldNumber = 2;
     private string productId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1162,7 +1162,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "Quantity" field.</summary>
+    /// <summary>Field number for the "quantity" field.</summary>
     public const int QuantityFieldNumber = 3;
     private int quantity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1400,7 +1400,7 @@ namespace Shopping.API {
       return new OrderItemIdRequest(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1590,7 +1590,7 @@ namespace Shopping.API {
       return new ItemListResponse(this);
     }
 
-    /// <summary>Field number for the "Items" field.</summary>
+    /// <summary>Field number for the "items" field.</summary>
     public const int ItemsFieldNumber = 1;
     private static readonly pb::FieldCodec<global::Shopping.API.ItemResponse> _repeated_items_codec
         = pb::FieldCodec.ForMessage(10, global::Shopping.API.ItemResponse.Parser);
@@ -1770,7 +1770,7 @@ namespace Shopping.API {
       return new GetItemRequest(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1782,7 +1782,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "ProductId" field.</summary>
+    /// <summary>Field number for the "product_id" field.</summary>
     public const int ProductIdFieldNumber = 2;
     private string productId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1998,7 +1998,7 @@ namespace Shopping.API {
       return new ItemResponse(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2010,7 +2010,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "ProductId" field.</summary>
+    /// <summary>Field number for the "product_id" field.</summary>
     public const int ProductIdFieldNumber = 2;
     private string productId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2022,7 +2022,7 @@ namespace Shopping.API {
       }
     }
 
-    /// <summary>Field number for the "Quantity" field.</summary>
+    /// <summary>Field number for the "quantity" field.</summary>
     public const int QuantityFieldNumber = 3;
     private int quantity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

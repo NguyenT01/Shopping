@@ -5,5 +5,7 @@
         public CustomerProto.CustomerProtoClient Customer { get; }
         public ProductProto.ProductProtoClient Product { get; }
         public PriceProto.PriceProtoClient Price { get; }
+        public OrderProto.OrderProtoClient Order { get; }
+        public OrderItemProto.OrderItemProtoClient OrderItem { get; }
     }
 }

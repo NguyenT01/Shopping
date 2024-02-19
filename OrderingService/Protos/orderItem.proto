@@ -18,50 +18,50 @@ service OrderItemProto{
 	rpc DecreaseQuantityOrderItemBy1 (ItemRequest) returns (ItemDecrementResponse);
 }
 
-message ItemDecrementResponse{
-	string OrderId = 1;
-	string ProductId = 2;
-	int32 Quantity = 3;
-	bool IsNull = 4;
+message ItemDecrementResponse{ 
+	string order_id = 1;
+	string product_id = 2;
+	int32 quantity = 3;
+	bool is_null = 4;
 }
 
 message ItemRequest{
-	string OrderId = 1;
-	string ProductId = 2;
+	string order_id = 1;
+	string product_id = 2;
 }
 
-message OrderItemUpdateRequest{
-	string OrderId = 1;
-	string ProductId = 2;
-	int32 Quantity = 3;
+message OrderItemUpdateRequest{ 
+	string order_id = 1;
+	string product_id = 2;
+	int32 quantity = 3;
 }
 
-message OrderItemDeletionRequest{
-	string OrderId = 1;
-	string ProductId = 2;
+message OrderItemDeletionRequest{ 
+	string order_id = 1;
+	string product_id = 2;
 }
 
-message OrderItemCreationRequest{
-	string OrderId = 1;
-	string ProductId = 2;
-	int32 Quantity = 3;
+message OrderItemCreationRequest{ 
+	string order_id = 1;
+	string product_id = 2;
+	int32 quantity = 3;
 }
 
-message OrderItemIdRequest{
-	string OrderId = 1;
+message OrderItemIdRequest{ 
+	string order_id = 1;
 }
 
-message ItemListResponse{
-	repeated ItemResponse Items = 1;
+message ItemListResponse{ 
+	repeated ItemResponse items = 1;
 }
 
-message GetItemRequest{
-	string OrderId = 1;
-	string ProductId = 2;
+message GetItemRequest{ 
+	string order_id = 1;
+	string product_id = 2;
 }
 
-message ItemResponse{
-	string OrderId = 1;
-	string ProductId = 2;
-	int32 Quantity = 3;
+message ItemResponse{ 
+	string order_id = 1;
+	string product_id = 2;
+	int32 quantity = 3;
 }

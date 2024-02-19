@@ -9,11 +9,13 @@ public class ServiceManager : IServiceManager
     public IMasterDataService MasterDataService { get; }
     public IProductService ProductService { get; }
     public IPriceService PriceService { get; }
+    public IOrderService OrderService { get; }
 
     public ServiceManager(IMapper mapper, IProtosManager protosManager)
     {
         MasterDataService = new MasterDataService(mapper, protosManager);
         ProductService = new ProductService(mapper, protosManager);
         PriceService = new PriceService(mapper, protosManager);
+        OrderService = new OrderService(mapper, protosManager);
     }
 }

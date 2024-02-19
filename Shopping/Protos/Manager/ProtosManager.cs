@@ -8,13 +8,19 @@
 
         public PriceProto.PriceProtoClient Price { get; }
 
+        public OrderProto.OrderProtoClient Order { get; }
+        public OrderItemProto.OrderItemProtoClient OrderItem { get; }
+
 
         public ProtosManager(CustomerProto.CustomerProtoClient customerProto, ProductProto.ProductProtoClient productProto,
-            PriceProto.PriceProtoClient price)
+            PriceProto.PriceProtoClient price, OrderProto.OrderProtoClient order,
+            OrderItemProto.OrderItemProtoClient orderItemProto)
         {
             Customer = customerProto;
             Product = productProto;
             Price = price;
+            Order = order;
+            OrderItem = orderItemProto;
         }
     }
 }

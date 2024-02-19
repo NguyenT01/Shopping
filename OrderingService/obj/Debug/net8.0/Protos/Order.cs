@@ -26,25 +26,25 @@ namespace OrderingService.Protos {
           string.Concat(
             "ChJQcm90b3Mvb3JkZXIucHJvdG8SBW9yZGVyGh5nb29nbGUvcHJvdG9idWYv",
             "d3JhcHBlcnMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byJUChJPcmRlclVwZGF0",
-            "ZVJlcXVlc3QSDwoHT3JkZXJJZBgBIAEoCRItCglPcmRlckRhdGUYAiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIlkKFE9yZGVyQ3JlYXRpb25S",
-            "ZXF1ZXN0EhIKCkN1c3RvbWVySWQYASABKAkSLQoJT3JkZXJEYXRlGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIsChZPcmRlckN1c3RvbWVy",
-            "SWRSZXF1ZXN0EhIKCkN1c3RvbWVySWQYASABKAkiOQoRT3JkZXJMaXN0UmVz",
-            "cG9uc2USJAoGT3JkZXJzGAEgAygLMhQub3JkZXIuT3JkZXJSZXNwb25zZSIh",
-            "Cg5PcmRlcklkUmVxdWVzdBIPCgdPcmRlcklkGAEgASgJImMKDU9yZGVyUmVz",
-            "cG9uc2USDwoHT3JkZXJJZBgBIAEoCRISCgpDdXN0b21lcklkGAIgASgJEi0K",
-            "CU9yZGVyRGF0ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAy",
-            "zQIKCk9yZGVyUHJvdG8SNwoIR2V0T3JkZXISFS5vcmRlci5PcmRlcklkUmVx",
-            "dWVzdBoULm9yZGVyLk9yZGVyUmVzcG9uc2USRAoJR2V0T3JkZXJzEh0ub3Jk",
-            "ZXIuT3JkZXJDdXN0b21lcklkUmVxdWVzdBoYLm9yZGVyLk9yZGVyTGlzdFJl",
-            "c3BvbnNlEkAKC0NyZWF0ZU9yZGVyEhsub3JkZXIuT3JkZXJDcmVhdGlvblJl",
-            "cXVlc3QaFC5vcmRlci5PcmRlclJlc3BvbnNlEjwKC0RlbGV0ZU9yZGVyEhUu",
-            "b3JkZXIuT3JkZXJJZFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkS",
-            "QAoLVXBkYXRlT3JkZXISGS5vcmRlci5PcmRlclVwZGF0ZVJlcXVlc3QaFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHlCGaoCFk9yZGVyaW5nU2VydmljZS5Qcm90",
-            "b3NiBnByb3RvMw=="));
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byJWChJPcmRlclVwZGF0",
+            "ZVJlcXVlc3QSEAoIb3JkZXJfaWQYASABKAkSLgoKb3JkZXJfZGF0ZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiWwoUT3JkZXJDcmVhdGlv",
+            "blJlcXVlc3QSEwoLY3VzdG9tZXJfaWQYASABKAkSLgoKb3JkZXJfZGF0ZRgC",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiLQoWT3JkZXJDdXN0",
+            "b21lcklkUmVxdWVzdBITCgtjdXN0b21lcl9pZBgBIAEoCSI5ChFPcmRlckxp",
+            "c3RSZXNwb25zZRIkCgZvcmRlcnMYASADKAsyFC5vcmRlci5PcmRlclJlc3Bv",
+            "bnNlIiIKDk9yZGVySWRSZXF1ZXN0EhAKCG9yZGVyX2lkGAEgASgJImYKDU9y",
+            "ZGVyUmVzcG9uc2USEAoIb3JkZXJfaWQYASABKAkSEwoLY3VzdG9tZXJfaWQY",
+            "AiABKAkSLgoKb3JkZXJfZGF0ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXAyzQIKCk9yZGVyUHJvdG8SNwoIR2V0T3JkZXISFS5vcmRlci5P",
+            "cmRlcklkUmVxdWVzdBoULm9yZGVyLk9yZGVyUmVzcG9uc2USRAoJR2V0T3Jk",
+            "ZXJzEh0ub3JkZXIuT3JkZXJDdXN0b21lcklkUmVxdWVzdBoYLm9yZGVyLk9y",
+            "ZGVyTGlzdFJlc3BvbnNlEkAKC0NyZWF0ZU9yZGVyEhsub3JkZXIuT3JkZXJD",
+            "cmVhdGlvblJlcXVlc3QaFC5vcmRlci5PcmRlclJlc3BvbnNlEjwKC0RlbGV0",
+            "ZU9yZGVyEhUub3JkZXIuT3JkZXJJZFJlcXVlc3QaFi5nb29nbGUucHJvdG9i",
+            "dWYuRW1wdHkSQAoLVXBkYXRlT3JkZXISGS5vcmRlci5PcmRlclVwZGF0ZVJl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHlCGaoCFk9yZGVyaW5nU2Vy",
+            "dmljZS5Qcm90b3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -105,7 +105,7 @@ namespace OrderingService.Protos {
       return new OrderUpdateRequest(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -117,7 +117,7 @@ namespace OrderingService.Protos {
       }
     }
 
-    /// <summary>Field number for the "OrderDate" field.</summary>
+    /// <summary>Field number for the "order_date" field.</summary>
     public const int OrderDateFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp orderDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -340,7 +340,7 @@ namespace OrderingService.Protos {
       return new OrderCreationRequest(this);
     }
 
-    /// <summary>Field number for the "CustomerId" field.</summary>
+    /// <summary>Field number for the "customer_id" field.</summary>
     public const int CustomerIdFieldNumber = 1;
     private string customerId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -352,7 +352,7 @@ namespace OrderingService.Protos {
       }
     }
 
-    /// <summary>Field number for the "OrderDate" field.</summary>
+    /// <summary>Field number for the "order_date" field.</summary>
     public const int OrderDateFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp orderDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -574,7 +574,7 @@ namespace OrderingService.Protos {
       return new OrderCustomerIdRequest(this);
     }
 
-    /// <summary>Field number for the "CustomerId" field.</summary>
+    /// <summary>Field number for the "customer_id" field.</summary>
     public const int CustomerIdFieldNumber = 1;
     private string customerId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -763,7 +763,7 @@ namespace OrderingService.Protos {
       return new OrderListResponse(this);
     }
 
-    /// <summary>Field number for the "Orders" field.</summary>
+    /// <summary>Field number for the "orders" field.</summary>
     public const int OrdersFieldNumber = 1;
     private static readonly pb::FieldCodec<global::OrderingService.Protos.OrderResponse> _repeated_orders_codec
         = pb::FieldCodec.ForMessage(10, global::OrderingService.Protos.OrderResponse.Parser);
@@ -941,7 +941,7 @@ namespace OrderingService.Protos {
       return new OrderIdRequest(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1132,7 +1132,7 @@ namespace OrderingService.Protos {
       return new OrderResponse(this);
     }
 
-    /// <summary>Field number for the "OrderId" field.</summary>
+    /// <summary>Field number for the "order_id" field.</summary>
     public const int OrderIdFieldNumber = 1;
     private string orderId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1144,7 +1144,7 @@ namespace OrderingService.Protos {
       }
     }
 
-    /// <summary>Field number for the "CustomerId" field.</summary>
+    /// <summary>Field number for the "customer_id" field.</summary>
     public const int CustomerIdFieldNumber = 2;
     private string customerId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1156,7 +1156,7 @@ namespace OrderingService.Protos {
       }
     }
 
-    /// <summary>Field number for the "OrderDate" field.</summary>
+    /// <summary>Field number for the "order_date" field.</summary>
     public const int OrderDateFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp orderDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

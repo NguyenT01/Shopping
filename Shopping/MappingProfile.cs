@@ -8,12 +8,15 @@ public class MappingProfle : Profile
 {
     public MappingProfle()
     {
+        #region MASTERDATA(CUSTOMER)
         CreateMap<CustomerCreationDTO, CustomerCreationRequest>();
         CreateMap<CustomerUpdateDTO, CustomerUpdateRequest>()
             .ForMember(des => des.CustomerId, opt => opt.MapFrom(src => src.CustomerId.ToString()))
             .ForMember(des => des.Tracking, opt => opt.MapFrom(src => true));
 
-        //--- PRODUCT, PRICE
+        #endregion
+
+        #region PRODUCT, PRICE
         CreateMap<ProductIdRequest, SingleProductIdRequest>();
         CreateMap<ProductResponse, ProductDTO>()
             .ForMember(d => d.ProductId, opt => opt.MapFrom(s => Guid.Parse(s.ProductId)))
@@ -64,6 +67,28 @@ public class MappingProfle : Profile
                  Timestamp.FromDateTime(DateTime.SpecifyKind(s.StartDate, DateTimeKind.Utc))))
             .ForMember(d => d.EndDate, opt => opt.MapFrom(s =>
                  Timestamp.FromDateTime(DateTime.SpecifyKind(s.EndDate, DateTimeKind.Utc))));
+
+        #endregion
+
+        #endregion
+
+        #region ORDER, ORDER_ITEM
+        CreateMap<OrderResponse, OrderDTO>()
+            .ForMember(d => d.OrderId, opt => opt.MapFrom(s => Guid.Parse(s.OrderId)))
+            .ForMember(d => d.CustomerId, opt => opt.MapFrom(s => Guid.Parse(s.CustomerId)))
+            .ForMember(d => d.OrderDate, opt => opt.MapFrom(s => s.OrderDate.ToDateTime()));
+
+        CreateMap<OrderCreationDTO, OrderCreationRequest>()
+            .ForMember(d => d.CustomerId, opt => opt.MapFrom(s => s.CustomerId.ToString()))
+            .ForMember(d => d.OrderDate, opt => opt.MapFrom(s =>
+                Timestamp.FromDateTime(DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc))));
+
+        CreateMap<OrderItemCreationWithoutOrderId, OrderItemCreationRequest>()
+            .ForMember(d => d.ProductId, opt => opt.MapFrom(s => s.ProductId.ToString()))
+            .ForMember(d => d.OrderId, opt => opt.Ignore());
+
+        CreateMap<ItemResponse, OrderItemDeletionRequest>();
+        CreateMap<OrderItemIdRequest, OrderIdRequest>();
 
         #endregion
 

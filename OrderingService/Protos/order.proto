@@ -16,31 +16,31 @@ service OrderProto{
 	rpc UpdateOrder (OrderUpdateRequest) returns (google.protobuf.Empty);
 }
 
-message OrderUpdateRequest{
-	string OrderId = 1;
-	google.protobuf.Timestamp OrderDate = 2;
+message OrderUpdateRequest{ 
+	string order_id = 1;
+	google.protobuf.Timestamp order_date = 2;
 }
 
-message OrderCreationRequest{
-	string CustomerId = 1;
-	google.protobuf.Timestamp OrderDate = 2;
+message OrderCreationRequest{ 
+	string customer_id = 1;
+	google.protobuf.Timestamp order_date = 2;
 }
 
-message OrderCustomerIdRequest{
-	string CustomerId = 1;
+message OrderCustomerIdRequest{ 
+	string customer_id = 1;
 }
 
 message OrderListResponse{
-	repeated OrderResponse Orders = 1;
+	repeated OrderResponse orders = 1;
 }
 
-message OrderIdRequest{
-	string OrderId = 1;
+message OrderIdRequest{ 
+	string order_id = 1;
 }
 
-message OrderResponse{
-	string OrderId = 1;
-	string CustomerId = 2;
-	google.protobuf.Timestamp OrderDate = 3;
+message OrderResponse{ 
+	string order_id = 1;
+	string customer_id = 2;
+	google.protobuf.Timestamp order_date = 3;
 }
 
