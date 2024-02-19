@@ -41,11 +41,14 @@ public class MappingProfle : Profile
             .ForMember(d => d.ProductId, opt => opt.MapFrom(s => s.ProductId.ToString()));
         CreateMap<PriceResponse, PriceUpdateRequest>()
             .ForMember(d => d.PriceId, opt => opt.MapFrom(s => s.PriceId.ToString()))
-            .ForMember(d => d.StartDate, opt => opt.MapFrom(s =>
-                 s.StartDate.ToDateTime()))
-            .ForMember(d => d.EndDate, opt => opt.MapFrom(s =>
-                 s.EndDate.ToDateTime()))
              .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
+
+        CreateMap<ProductUpdateDTO, PriceUpdateRequest>()
+            .ForMember(d => d.StartDate, opt => opt.MapFrom(s =>
+                    Timestamp.FromDateTime(DateTime.SpecifyKind(s.StartDate, DateTimeKind.Utc))))
+            .ForMember(d => d.EndDate, opt => opt.MapFrom(s =>
+                    Timestamp.FromDateTime(DateTime.SpecifyKind(s.EndDate, DateTimeKind.Utc))))
+            .ForMember(d => d.PriceValue, opt => opt.MapFrom(s => (s.PriceValue > 0) ? s.PriceValue : 999_999_999));
 
         #endregion
 

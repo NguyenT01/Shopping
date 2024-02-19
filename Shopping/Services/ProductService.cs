@@ -103,10 +103,9 @@ namespace Shopping.API.Services
 
             var productIdRequest = _mapper.Map<SingleProductIdRequest>(productDTO);
             var currentPrice = await Protos.Price.GetCurrentPriceAsync(productIdRequest);
-            //TODO:
-            // Chuyen doi kieu du lieu currentPrice
 
             var priceUpdate = _mapper.Map<PriceUpdateRequest>(currentPrice);
+            priceUpdate = _mapper.Map(productDTO, priceUpdate);
             await Protos.Price.UpdatePriceAsync(priceUpdate);
         }
 
