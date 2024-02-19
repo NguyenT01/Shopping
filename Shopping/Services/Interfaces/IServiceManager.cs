@@ -6,5 +6,6 @@
         public IProductService ProductService { get; }
         public IPriceService PriceService { get; }
         public IOrderService OrderService { get; }
+        public IOrderItemService OrderItemService { get; }
     }
 }

@@ -90,6 +90,18 @@ public class MappingProfle : Profile
         CreateMap<ItemResponse, OrderItemDeletionRequest>();
         CreateMap<OrderItemIdRequest, OrderIdRequest>();
 
+        CreateMap<ItemResponse, OrderItemDTO>()
+            .ForMember(d => d.ProductId, opt => opt.MapFrom(s => Guid.Parse(s.ProductId)))
+            .ForMember(d => d.OrderId, opt => opt.MapFrom(s => Guid.Parse(s.OrderId)));
+
+        CreateMap<OrderItemCreationWithoutOrderId, OrderItemUpdateRequest>()
+            .ForMember(d => d.ProductId, opt => opt.MapFrom(s => s.ProductId.ToString()))
+            .ForMember(d => d.OrderId, opt => opt.Ignore());
+
+        CreateMap<OrderItemUpdateDTO, OrderItemCreationRequest>()
+            .ForMember(d => d.ProductId, opt => opt.MapFrom(s => s.ProductId.ToString()))
+            .ForMember(d => d.OrderId, opt => opt.Ignore());
+
         #endregion
 
     }

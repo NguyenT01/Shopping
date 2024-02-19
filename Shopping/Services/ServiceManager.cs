@@ -10,6 +10,7 @@ public class ServiceManager : IServiceManager
     public IProductService ProductService { get; }
     public IPriceService PriceService { get; }
     public IOrderService OrderService { get; }
+    public IOrderItemService OrderItemService { get; }
 
     public ServiceManager(IMapper mapper, IProtosManager protosManager)
     {
@@ -17,5 +18,6 @@ public class ServiceManager : IServiceManager
         ProductService = new ProductService(mapper, protosManager);
         PriceService = new PriceService(mapper, protosManager);
         OrderService = new OrderService(mapper, protosManager);
+        OrderItemService = new OrderItemService(mapper, protosManager);
     }
 }
