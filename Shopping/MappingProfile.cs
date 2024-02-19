@@ -34,6 +34,14 @@ public class MappingProfle : Profile
 
         CreateMap<SingleProductIdRequest, DeleteProductRequest>();
 
+        CreateMap<PriceResponse, PriceDTO>()
+            .ForMember(d => d.StartDate, opt => opt.MapFrom(s => s.StartDate.ToDateTime()))
+            .ForMember(d => d.EndDate, opt => opt.MapFrom(s => s.EndDate.ToDateTime()))
+            .ForMember(d => d.ProductId, opt => opt.MapFrom(s => Guid.Parse(s.ProductId)))
+            .ForMember(d => d.PriceId, opt => opt.MapFrom(s => Guid.Parse(s.PriceId)))
+            .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
+
+
         #region UPDATE
         CreateMap<ProductUpdateDTO, UpdateProductRequest>()
             .ForMember(d => d.ProductId, opt => opt.MapFrom(s => s.ProductId.ToString()));
@@ -49,6 +57,13 @@ public class MappingProfle : Profile
             .ForMember(d => d.EndDate, opt => opt.MapFrom(s =>
                     Timestamp.FromDateTime(DateTime.SpecifyKind(s.EndDate, DateTimeKind.Utc))))
             .ForMember(d => d.PriceValue, opt => opt.MapFrom(s => (s.PriceValue > 0) ? s.PriceValue : 999_999_999));
+
+        CreateMap<PriceUpdateDTO, PriceUpdateRequest>()
+            .ForMember(d => d.PriceId, opt => opt.MapFrom(s => s.PriceId.ToString()))
+            .ForMember(d => d.StartDate, opt => opt.MapFrom(s =>
+                 Timestamp.FromDateTime(DateTime.SpecifyKind(s.StartDate, DateTimeKind.Utc))))
+            .ForMember(d => d.EndDate, opt => opt.MapFrom(s =>
+                 Timestamp.FromDateTime(DateTime.SpecifyKind(s.EndDate, DateTimeKind.Utc))));
 
         #endregion
 

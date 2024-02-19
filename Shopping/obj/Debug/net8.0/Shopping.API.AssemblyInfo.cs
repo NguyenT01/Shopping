@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shopping.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca2e506d0878a71fc7c1ce9a08ff8c62c55fdb9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b08e6d5ca7c5f00e2e6394e4378dff303ca18756")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shopping.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shopping.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

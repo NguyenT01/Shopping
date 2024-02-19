@@ -4,5 +4,6 @@
     {
         public IMasterDataService MasterDataService { get; }
         public IProductService ProductService { get; }
+        public IPriceService PriceService { get; }
     }
 }
