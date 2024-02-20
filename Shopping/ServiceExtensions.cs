@@ -1,6 +1,6 @@
 ﻿using Shopping.API.Protos.Manager;
-using Shopping.API.Services;
-using Shopping.API.Services.Interfaces;
+using Shopping.API.v1.Services;
+using Shopping.API.v1.Services.Interfaces;
 
 namespace Shopping.API
 {

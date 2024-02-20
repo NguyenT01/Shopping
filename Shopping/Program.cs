@@ -10,6 +10,12 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.ConfigureGrpcClient();
 builder.Services.ConfigureDIManager();
 
+// MediatR Registration
+builder.Services.AddMediatR(conf =>
+{
+    conf.RegisterServicesFromAssembly(typeof(Program).Assembly);
+});
+
 builder.Services.AddControllers();
 
 var app = builder.Build();

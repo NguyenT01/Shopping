@@ -35,3 +35,5 @@ C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\refint\Shopping.
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.pdb
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.genruntimeconfig.cache
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\ref\Shopping.API.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\MediatR.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\MediatR.Contracts.dll

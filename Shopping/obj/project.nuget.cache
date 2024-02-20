@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fAyKzbVU1gFCyW30cEZx0HUTJRz2Uo8DGfRze1K921b/gSumNTeeQxCH656uTq9bMVQvx9nwA2TZgjvdOmEJyQ==",
+  "dgSpecHash": "tcATaAY3rf2/2YWwLvxHEEtvN4yqbmenOr/UT5aUczEj8ZoYGUaeTGumOFT9OYQ7l84rG98MXe40b5iX/MrYKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Shopping.API.csproj",
   "expectedPackageFiles": [
@@ -15,9 +15,11 @@
     "C:\\Users\\nguyen\\.nuget\\packages\\grpc.net.clientfactory\\2.60.0\\grpc.net.clientfactory.2.60.0.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\grpc.net.common\\2.60.0\\grpc.net.common.2.60.0.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\grpc.tools\\2.60.0\\grpc.tools.2.60.0.nupkg.sha512",
+    "C:\\Users\\nguyen\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\nguyen\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
-    "C:\\Users\\nguyen\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\nguyen\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\microsoft.extensions.http\\6.0.0\\microsoft.extensions.http.6.0.0.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
