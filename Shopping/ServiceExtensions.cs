@@ -10,22 +10,27 @@ namespace Shopping.API
         {
             services.AddGrpcClient<CustomerProto.CustomerProtoClient>(opts =>
             {
+                ConfigureHttpSupport();
                 opts.Address = new Uri("https://localhost:7101");
             });
             services.AddGrpcClient<PriceProto.PriceProtoClient>(opts =>
             {
+                ConfigureHttpSupport();
                 opts.Address = new Uri("https://localhost:7102");
             });
             services.AddGrpcClient<ProductProto.ProductProtoClient>(opts =>
             {
+                ConfigureHttpSupport();
                 opts.Address = new Uri("https://localhost:7102");
             });
             services.AddGrpcClient<OrderProto.OrderProtoClient>(opts =>
             {
+                ConfigureHttpSupport();
                 opts.Address = new Uri("https://localhost:7103");
             });
             services.AddGrpcClient<OrderItemProto.OrderItemProtoClient>(opts =>
             {
+                ConfigureHttpSupport();
                 opts.Address = new Uri("https://localhost:7103");
             });
 
@@ -35,5 +40,11 @@ namespace Shopping.API
             services.AddTransient<IProtosManager, ProtosManager>();
             services.AddTransient<IServiceManager, ServiceManager>();
         }
+        private static void ConfigureHttpSupport()
+        {
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);
+        }
     }
+
 }
