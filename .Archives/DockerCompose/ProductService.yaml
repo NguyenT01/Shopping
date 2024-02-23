@@ -1,0 +1,11 @@
+services:
+  product.service:
+    image: product-service:latest
+    container_name: product-grpc
+    restart: unless-stopped
+    ports: 
+      - "7102:80"
+    environment:
+        - TZ=Asia/Ho_Chi_Minh
+        - ASPNETCORE_URLS=http://+:80
+

@@ -1,0 +1,1 @@
+docker-compose -f ./DockerCompose/ProductService.yaml up -d
