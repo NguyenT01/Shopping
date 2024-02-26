@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "2QwmWBzCHADPCoFxJFv0p7UZipqN00U3frDORQcaX8E=",
+  "Source": "OrderingService",
+  "BasePath": "_content/OrderingService",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

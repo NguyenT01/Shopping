@@ -8,30 +8,35 @@ namespace Shopping.API
     {
         public static void ConfigureGrpcClient(this IServiceCollection services)
         {
+            string? URI_MASTERDATA = Environment.GetEnvironmentVariable("URI_MASTERDATA");
+            string? URI_PRODUCT = Environment.GetEnvironmentVariable("URI_PRODUCT");
+            string? URI_ORDER = Environment.GetEnvironmentVariable("URI_ORDER");
+
+
             services.AddGrpcClient<CustomerProto.CustomerProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri("https://localhost:7101");
+                opts.Address = new Uri(URI_MASTERDATA!);
             });
             services.AddGrpcClient<PriceProto.PriceProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri("https://localhost:7102");
+                opts.Address = new Uri(URI_PRODUCT!);
             });
             services.AddGrpcClient<ProductProto.ProductProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri("https://localhost:7102");
+                opts.Address = new Uri(URI_PRODUCT!);
             });
             services.AddGrpcClient<OrderProto.OrderProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri("https://localhost:7103");
+                opts.Address = new Uri(URI_ORDER!);
             });
             services.AddGrpcClient<OrderItemProto.OrderItemProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri("https://localhost:7103");
+                opts.Address = new Uri(URI_ORDER!);
             });
 
         }

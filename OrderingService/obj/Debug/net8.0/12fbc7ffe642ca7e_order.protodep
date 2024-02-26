@@ -1,5 +1,5 @@
 obj\Debug\net8.0\Protos/Order.cs \
-obj\Debug\net8.0\Protos/OrderGrpc.cs: C:/Users/nguyen/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/wrappers.proto\
- C:/Users/nguyen/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/empty.proto\
- C:/Users/nguyen/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/timestamp.proto\
+obj\Debug\net8.0\Protos/OrderGrpc.cs: C:/Users/trans/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/trans/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/trans/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/timestamp.proto\
  Protos/order.proto

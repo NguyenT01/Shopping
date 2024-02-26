@@ -1,0 +1,5 @@
+obj\Release\net8.0\Protos/Price.cs \
+obj\Release\net8.0\Protos/PriceGrpc.cs: C:/Users/trans/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/trans/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/trans/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/price.proto

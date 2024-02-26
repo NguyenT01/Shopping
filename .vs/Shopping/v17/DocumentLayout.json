@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\GithubRepository\\Shopping\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|g:\\githubrepository\\shopping\\shopping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|g:\\githubrepository\\shopping\\shopping\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{149BD4A3-DCB0-425F-8ED9-0556A463D9CE}|OrderingService\\OrderingService.csproj|g:\\githubrepository\\shopping\\orderingservice\\extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{149BD4A3-DCB0-425F-8ED9-0556A463D9CE}|OrderingService\\OrderingService.csproj|solutionrelative:orderingservice\\extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD462FF-B457-4E08-A13C-C99FA27F2A33}|ProductService\\ProductService.csproj|g:\\githubrepository\\shopping\\productservice\\extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CD462FF-B457-4E08-A13C-C99FA27F2A33}|ProductService\\ProductService.csproj|solutionrelative:productservice\\extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 241,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 135,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\GithubRepository\\Shopping\\Shopping\\Program.cs",
+              "RelativeDocumentMoniker": "Shopping\\Program.cs",
+              "ToolTip": "G:\\GithubRepository\\Shopping\\Shopping\\Program.cs",
+              "RelativeToolTip": "Shopping\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T17:09:18.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "G:\\GithubRepository\\Shopping\\Shopping\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "Shopping\\ServiceExtensions.cs",
+              "ToolTip": "G:\\GithubRepository\\Shopping\\Shopping\\ServiceExtensions.cs",
+              "RelativeToolTip": "Shopping\\ServiceExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T17:09:07.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Extension.cs",
+              "DocumentMoniker": "G:\\GithubRepository\\Shopping\\OrderingService\\Extension.cs",
+              "RelativeDocumentMoniker": "OrderingService\\Extension.cs",
+              "ToolTip": "G:\\GithubRepository\\Shopping\\OrderingService\\Extension.cs",
+              "RelativeToolTip": "OrderingService\\Extension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T16:45:51.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Extension.cs",
+              "DocumentMoniker": "G:\\GithubRepository\\Shopping\\ProductService\\Extension.cs",
+              "RelativeDocumentMoniker": "ProductService\\Extension.cs",
+              "ToolTip": "G:\\GithubRepository\\Shopping\\ProductService\\Extension.cs",
+              "RelativeToolTip": "ProductService\\Extension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T16:22:58.845Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

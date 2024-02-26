@@ -1,0 +1,13 @@
+services:
+  shopping.api.service:
+    image: shopping-api-service
+    container_name: shopping-api-container
+    restart: unless-stopped
+    ports:
+      - "8888:80"
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+      - ASPNETCORE_URLS=http://+:80
+      - URI_MASTERDATA=http://192.168.1.3:7101
+      - URI_PRODUCT=http://192.168.1.3:7102
+      - URI_ORDER=http://192.168.1.3:7103

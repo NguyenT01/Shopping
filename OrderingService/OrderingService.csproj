@@ -26,4 +26,8 @@
     <Protobuf Include="Protos\orderItem.proto" GrpcServices="Server" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="publish\" />
+  </ItemGroup>
+
 </Project>

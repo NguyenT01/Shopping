@@ -1,0 +1,4 @@
+obj\Release\net8.0/Customer.cs \
+obj\Release\net8.0/CustomerGrpc.cs: C:/Users/trans/.nuget/packages/grpc.tools/2.60.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/trans/.nuget/packages/grpc.tools/2.60.0/build/native/include/google/protobuf/wrappers.proto\
+ customer.proto
