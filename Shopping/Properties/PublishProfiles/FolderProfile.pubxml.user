@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>G:\GithubRepository\Shopping\Shopping\publish</_PublishTargetUrl>
-    <History>True|2024-02-26T17:20:58.2867746Z;</History>
+    <_PublishTargetUrl>C:\Users\nguyen\source\repos\Shopping\Shopping\publish</_PublishTargetUrl>
+    <History>True|2024-02-27T10:26:47.1187155Z;True|2024-02-27T17:24:08.6158079+07:00;True|2024-02-27T17:21:34.0648181+07:00;True|2024-02-27T17:17:40.3186871+07:00;True|2024-02-27T00:20:58.2867746+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

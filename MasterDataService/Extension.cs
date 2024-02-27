@@ -1,4 +1,5 @@
-﻿using MasterDataService.ORM.EF;
+﻿using Consul;
+using MasterDataService.ORM.EF;
 using Microsoft.EntityFrameworkCore;
 
 namespace MasterDataService;
@@ -23,4 +24,21 @@ public static class ServiceExtension
                 builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
             }));
     }
+
+    public static void ConfigureConsulClient(this IServiceCollection services)
+    {
+        var consulConfig = new ConsulClientConfiguration() { Address = new Uri("http://192.168.56.40:8500") };
+        var consulClient = new ConsulClient(consulConfig);
+        var registration = new AgentServiceRegistration()
+        {
+            ID = "masterdata-service-1",
+            Name = "MasterDataService1",
+            Address = "192.168.56.40",
+            Port = 7101,
+            Tags = new string[] { "grpc" }
+        };
+
+        consulClient.Agent.ServiceRegister(registration);
+    }
+
 }

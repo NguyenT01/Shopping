@@ -10,6 +10,8 @@ builder.Services.AddGrpc();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.ConfigureConsulClient();
+
 //Repository
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.ConfigureSqlServer(builder.Configuration);

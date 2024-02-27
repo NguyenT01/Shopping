@@ -8,6 +8,6 @@ services:
     environment:
       - TZ=Asia/Ho_Chi_Minh
       - ASPNETCORE_URLS=http://+:80
-      - URI_MASTERDATA=http://192.168.1.3:7101
-      - URI_PRODUCT=http://192.168.1.3:7102
-      - URI_ORDER=http://192.168.1.3:7103
+      - URI_MASTERDATA=http://192.168.56.40:7101
+      - URI_PRODUCT=http://192.168.56.40:7102
+      - URI_ORDER=http://192.168.56.40:7103
