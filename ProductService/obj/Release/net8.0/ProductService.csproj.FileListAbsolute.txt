@@ -285,3 +285,10 @@ C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Release\net8.0\refint\P
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Release\net8.0\ProductService.pdb
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Release\net8.0\ProductService.genruntimeconfig.cache
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Release\net8.0\ref\ProductService.dll
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\Consul.dll
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\Newtonsoft.Json.dll
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\web.config
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\appsettings.Development.json
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\appsettings.json
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\ProductService.deps.json
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\ProductService.runtimeconfig.json

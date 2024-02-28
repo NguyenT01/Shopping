@@ -285,3 +285,5 @@ C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\refint\
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\OrderingService.pdb
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\OrderingService.genruntimeconfig.cache
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\ref\OrderingService.dll
+C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Release\net8.0\Consul.dll
+C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Release\net8.0\Newtonsoft.Json.dll

@@ -6,6 +6,7 @@ using OrderingService.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+await builder.Services.ConfigureConsulClient();
 builder.Services.AddGrpc();
 builder.Services.ConfigureSqlServer(builder.Configuration);
 

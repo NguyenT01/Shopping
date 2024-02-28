@@ -10,7 +10,7 @@ builder.Services.AddGrpc();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
-builder.Services.ConfigureConsulClient();
+await builder.Services.ConfigureConsulClient();
 
 //Repository
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();

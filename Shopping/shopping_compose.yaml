@@ -8,6 +8,7 @@ services:
     environment:
       - TZ=Asia/Ho_Chi_Minh
       - ASPNETCORE_URLS=http://+:80
-      - URI_MASTERDATA=http://192.168.56.40:7101
-      - URI_PRODUCT=http://192.168.56.40:7102
-      - URI_ORDER=http://192.168.56.40:7103
+      - CONSUL_SERVER=http://192.168.53.215:8500
+      - MASTERDATA_SERVICE_CONSUL=MasterDataService1
+      - PRODUCT_SERVICE_CONSUL=ProductService1
+      - ORDER_SERVICE_CONSUL=OrderService1

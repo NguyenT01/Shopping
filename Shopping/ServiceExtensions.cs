@@ -8,58 +8,65 @@ namespace Shopping.API
 {
     public static class ServiceExtensions
     {
-        public static async Task ConfigureGrpcClient(this IServiceCollection services)
+        private static async Task<IList<string>> GetURIFromConsul(ConsulClient client, string serviceName)
         {
-            var consulClient = new ConsulClient(conf => conf.Address = new Uri("http://192.168.56.40:8500"));
+            IList<string> URIList = new List<string>();
 
-            QueryResult<CatalogService[]> masterdataServiceTask = await consulClient.Catalog.Service("MasterDataService1");
+            QueryResult<CatalogService[]> serviceTask = await client.Catalog.Service(serviceName);
 
-            IList<string> URI_MASTERDATA = new List<string>();
-
-            if (masterdataServiceTask.StatusCode == HttpStatusCode.OK)
+            if (serviceTask.StatusCode == HttpStatusCode.OK)
             {
-                foreach (var service in masterdataServiceTask.Response)
+                foreach (var service in serviceTask.Response)
                 {
                     string address = service.ServiceAddress;
                     string port = service.ServicePort.ToString();
-
                     string url = $"http://{address}:{port}";
-                    URI_MASTERDATA.Append(url);
-                    Console.WriteLine("---> " + url);
+
+                    URIList.Add(url);
                 }
+                if (URIList.Count > 0)
+                    return URIList;
             }
+            URIList.Add("http://0.0.0.0/9000");
+            return URIList;
+        }
 
+        private static string? GetEnv(string envName)
+            => Environment.GetEnvironmentVariable(envName);
 
+        public static async Task ConfigureGrpcClient(this IServiceCollection services)
+        {
+            var consulClient = new ConsulClient(conf => conf.Address = new Uri(GetEnv("CONSUL_SERVER")!));
 
-            //string? URI_MASTERDATA = Environment.GetEnvironmentVariable("URI_MASTERDATA");
-            string? URI_PRODUCT = Environment.GetEnvironmentVariable("URI_PRODUCT");
-            string? URI_ORDER = Environment.GetEnvironmentVariable("URI_ORDER");
-
+            IList<string> URI_MASTERDATA = await GetURIFromConsul(consulClient, GetEnv("MASTERDATA_SERVICE_CONSUL")!);
+            IList<string> URI_PRODUCT = await GetURIFromConsul(consulClient, GetEnv("PRODUCT_SERVICE_CONSUL")!);
+            IList<string> URI_ORDER = await GetURIFromConsul(consulClient, GetEnv("ORDER_SERVICE_CONSUL")!);
 
             services.AddGrpcClient<CustomerProto.CustomerProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri(URI_MASTERDATA[0]);
+                Uri MasterDataURI = new Uri(URI_MASTERDATA.FirstOrDefault()!);
+                opts.Address = MasterDataURI;
             });
             services.AddGrpcClient<PriceProto.PriceProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri(URI_PRODUCT!);
+                opts.Address = new Uri(URI_PRODUCT.FirstOrDefault()!);
             });
             services.AddGrpcClient<ProductProto.ProductProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri(URI_PRODUCT!);
+                opts.Address = new Uri(URI_PRODUCT.FirstOrDefault()!);
             });
             services.AddGrpcClient<OrderProto.OrderProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri(URI_ORDER!);
+                opts.Address = new Uri(URI_ORDER.FirstOrDefault()!);
             });
             services.AddGrpcClient<OrderItemProto.OrderItemProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri(URI_ORDER!);
+                opts.Address = new Uri(URI_ORDER.FirstOrDefault()!);
             });
 
         }

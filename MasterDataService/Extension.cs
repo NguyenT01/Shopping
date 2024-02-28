@@ -25,20 +25,25 @@ public static class ServiceExtension
             }));
     }
 
-    public static void ConfigureConsulClient(this IServiceCollection services)
+    public static async Task ConfigureConsulClient(this IServiceCollection services)
     {
-        var consulConfig = new ConsulClientConfiguration() { Address = new Uri("http://192.168.56.40:8500") };
-        var consulClient = new ConsulClient(consulConfig);
+        var consulClient = new ConsulClient(config =>
+        {
+            config.Address = new Uri(GetEnv("CONSUL_SERVER_URI")!);
+        });
         var registration = new AgentServiceRegistration()
         {
-            ID = "masterdata-service-1",
-            Name = "MasterDataService1",
-            Address = "192.168.56.40",
-            Port = 7101,
+            ID = GetEnv("SERVICE_ID"),
+            Name = GetEnv("SERVICE_NAME"),
+            Address = GetEnv("IP_1"),
+            Port = Int32.Parse(GetEnv("PORT_1")!),
             Tags = new string[] { "grpc" }
         };
 
-        consulClient.Agent.ServiceRegister(registration);
+        await consulClient.Agent.ServiceRegister(registration);
     }
+
+    private static string? GetEnv(string env)
+        => Environment.GetEnvironmentVariable(env);
 
 }
