@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAutoMapper(typeof(Program));
 
-await builder.Services.ConfigureGrpcClient();
+builder.Services.AddConsul("http://192.168.52.72:8500");
+builder.Services.ConfigureGrpcClient();
+
 builder.Services.ConfigureDIManager();
 
 // MediatR Registration

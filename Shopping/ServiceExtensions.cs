@@ -1,5 +1,4 @@
 ﻿using Consul;
-using Shopping.API.Protos.Manager;
 using Shopping.API.v1.Services;
 using Shopping.API.v1.Services.Interfaces;
 using System.Net;
@@ -33,46 +32,57 @@ namespace Shopping.API
 
         private static string? GetEnv(string envName)
             => Environment.GetEnvironmentVariable(envName);
-
-        public static async Task ConfigureGrpcClient(this IServiceCollection services)
+        public static IHttpClientBuilder AddServiceDiscovery(this IHttpClientBuilder builder)
         {
-            var consulClient = new ConsulClient(conf => conf.Address = new Uri(GetEnv("CONSUL_SERVER")!));
+            if (builder == null)
+            {
+                throw new ArgumentNullException(nameof(builder));
+            }
+            builder.AddHttpMessageHandler(serviceProvicer =>
+            {
+                var consulClient = serviceProvicer.GetRequiredService<IConsulClient>();
+                return new ConsulDiscoveryHttpMessageHandler(consulClient);
+            });
+            return builder;
+        }
 
-            IList<string> URI_MASTERDATA = await GetURIFromConsul(consulClient, GetEnv("MASTERDATA_SERVICE_CONSUL")!);
-            IList<string> URI_PRODUCT = await GetURIFromConsul(consulClient, GetEnv("PRODUCT_SERVICE_CONSUL")!);
-            IList<string> URI_ORDER = await GetURIFromConsul(consulClient, GetEnv("ORDER_SERVICE_CONSUL")!);
+        public static void ConfigureGrpcClient(this IServiceCollection services)
+        {
 
             services.AddGrpcClient<CustomerProto.CustomerProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                Uri MasterDataURI = new Uri(URI_MASTERDATA.FirstOrDefault()!);
+                Uri MasterDataURI = new Uri("http://192.168.52.72:7101");
                 opts.Address = MasterDataURI;
             });
+
             services.AddGrpcClient<PriceProto.PriceProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri(URI_PRODUCT.FirstOrDefault()!);
+                opts.Address = new Uri("http://192.168.52.72:7102");
             });
+
             services.AddGrpcClient<ProductProto.ProductProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri(URI_PRODUCT.FirstOrDefault()!);
+                opts.Address = new Uri("http://192.168.52.72:7102");
             });
+
             services.AddGrpcClient<OrderProto.OrderProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri(URI_ORDER.FirstOrDefault()!);
+                opts.Address = new Uri("http://192.168.52.72:7103");
             });
+
             services.AddGrpcClient<OrderItemProto.OrderItemProtoClient>(opts =>
             {
                 ConfigureHttpSupport();
-                opts.Address = new Uri(URI_ORDER.FirstOrDefault()!);
+                opts.Address = new Uri("http://192.168.52.72:7103");
             });
 
         }
         public static void ConfigureDIManager(this IServiceCollection services)
         {
-            services.AddTransient<IProtosManager, ProtosManager>();
             services.AddTransient<IServiceManager, ServiceManager>();
         }
         private static void ConfigureHttpSupport()

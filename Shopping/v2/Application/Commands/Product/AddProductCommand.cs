@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Commands.Product
 {
@@ -13,18 +12,20 @@ namespace Shopping.API.v2.Application.Commands.Product
     public class AddProductHandler : IRequestHandler<AddProductCommand, ProductDTO>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly ProductProto.ProductProtoClient productProto;
+        private readonly PriceProto.PriceProtoClient priceProto;
 
-        public AddProductHandler(IMapper mapper, IProtosManager protos)
+        public AddProductHandler(IMapper mapper, ProductProto.ProductProtoClient productProto, PriceProto.PriceProtoClient priceProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.productProto = productProto;
+            this.priceProto = priceProto;
         }
 
         public async Task<ProductDTO> Handle(AddProductCommand request, CancellationToken cancellationToken)
         {
             var productRequest = _mapper.Map<AddProductRequest>(request.productCreationDTO);
-            var product = await Protos.Product.AddProductAsync(productRequest);
+            var product = await productProto.AddProductAsync(productRequest);
 
             request.productCreationDTO!.ProductId = Guid.Parse(product.ProductId);
 
@@ -34,7 +35,7 @@ namespace Shopping.API.v2.Application.Commands.Product
                 request.productCreationDTO.EndDate = DateTime.MaxValue;
 
             var priceRequest = _mapper.Map<PriceCreationRequest>(request.productCreationDTO);
-            var price = await Protos.Price.CreateNewPriceAsync(priceRequest);
+            var price = await priceProto.CreateNewPriceAsync(priceRequest);
 
             var productDTO = _mapper.Map<ProductDTO>(product);
             productDTO = _mapper.Map(price, productDTO);

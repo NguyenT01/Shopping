@@ -9,12 +9,12 @@ namespace Shopping.API.v1.Services
     public class MasterDataService : IMasterDataService
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly CustomerProto.CustomerProtoClient customerProto;
 
-        public MasterDataService(IMapper mapper, IProtosManager protos)
+        public MasterDataService(IMapper mapper, CustomerProto.CustomerProtoClient customerProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.customerProto = customerProto;
         }
 
         public async Task DeleteCustomer(Guid cid)
@@ -24,13 +24,13 @@ namespace Shopping.API.v1.Services
                 CustomerId = cid.ToString(),
                 Tracking = false
             };
-            await Protos.Customer.DeleteCustomerAsync(customerIdRequest);
+            await customerProto.DeleteCustomerAsync(customerIdRequest);
         }
 
         public async Task<CustomerResponse?> CreateCustomer(CustomerCreationDTO customerDTO)
         {
             var customerRequest = _mapper.Map<CustomerCreationRequest>(customerDTO);
-            var results = await Protos.Customer.CreateCustomerAsync(customerRequest);
+            var results = await customerProto.CreateCustomerAsync(customerRequest);
             return results;
         }
 
@@ -41,20 +41,20 @@ namespace Shopping.API.v1.Services
                 CustomerId = cid.ToString(),
                 Tracking = false
             };
-            var results = await Protos.Customer.GetCustomerByIdAsync(customerIdRequest);
+            var results = await customerProto.GetCustomerByIdAsync(customerIdRequest);
             return results;
         }
 
         public async Task<CustomerListResponse> GetCustomerList()
         {
-            var results = await Protos.Customer.GetCustomerListAsync(new Empty());
+            var results = await customerProto.GetCustomerListAsync(new Empty());
             return results;
         }
 
         public async Task UpdateCustomer(CustomerUpdateDTO customerDTO)
         {
             var customerRequest = _mapper.Map<CustomerUpdateRequest>(customerDTO);
-            await Protos.Customer.UpdateCustomerAsync(customerRequest);
+            await customerProto.UpdateCustomerAsync(customerRequest);
         }
     }
 }

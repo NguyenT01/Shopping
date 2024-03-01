@@ -1,6 +1,7 @@
 ﻿namespace Shopping.API.Protos.Manager
 {
-    public class ProtosManager : IProtosManager
+
+    /*public class ProtosManager : IProtosManager
     {
         public CustomerProto.CustomerProtoClient Customer { get; }
 
@@ -22,5 +23,5 @@
             Order = order;
             OrderItem = orderItemProto;
         }
-    }
+    }*/
 }

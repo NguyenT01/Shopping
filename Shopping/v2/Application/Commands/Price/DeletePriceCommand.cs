@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MediatR;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Commands.Price
 {
@@ -12,12 +11,12 @@ namespace Shopping.API.v2.Application.Commands.Price
     public class DeletePriceHandler : IRequestHandler<DeletePriceCommand, Unit>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly PriceProto.PriceProtoClient priceProto;
 
-        public DeletePriceHandler(IMapper mapper, IProtosManager protos)
+        public DeletePriceHandler(IMapper mapper, PriceProto.PriceProtoClient priceProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.priceProto = priceProto;
         }
 
         public async Task<Unit> Handle(DeletePriceCommand request, CancellationToken cancellationToken)
@@ -27,7 +26,7 @@ namespace Shopping.API.v2.Application.Commands.Price
                 PriceId = request.priceId.ToString()
             };
 
-            await Protos.Price.DeletePriceAsync(priceIdRequest);
+            await priceProto.DeletePriceAsync(priceIdRequest);
             return Unit.Value;
         }
     }

@@ -287,3 +287,8 @@ C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\Orderin
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\ref\OrderingService.dll
 C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Release\net8.0\Consul.dll
 C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Release\net8.0\Newtonsoft.Json.dll
+C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Release\net8.0\publish\publish\web.config
+C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Release\net8.0\publish\publish\appsettings.Development.json
+C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Release\net8.0\publish\publish\appsettings.json
+C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Release\net8.0\publish\publish\OrderingService.deps.json
+C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Release\net8.0\publish\publish\OrderingService.runtimeconfig.json

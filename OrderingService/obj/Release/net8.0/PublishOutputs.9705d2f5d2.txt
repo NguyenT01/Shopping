@@ -1,4 +1,5 @@
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\OrderingService.exe
+C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\publish\publish\web.config
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\publish\web.config
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\appsettings.json
@@ -6,6 +7,10 @@ C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\publish\appsettings.json
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\publish\OrderingService.deps.json
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\publish\OrderingService.runtimeconfig.json
+C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\publish\publish\appsettings.Development.json
+C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\publish\publish\appsettings.json
+C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\publish\publish\OrderingService.deps.json
+C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\publish\publish\OrderingService.runtimeconfig.json
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\OrderingService.dll
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\OrderingService.runtimeconfig.json
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Release\net8.0\PubTmp\Out\OrderingService.pdb

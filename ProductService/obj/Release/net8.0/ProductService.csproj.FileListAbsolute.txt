@@ -292,3 +292,8 @@ C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\
 C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\appsettings.json
 C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\ProductService.deps.json
 C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\ProductService.runtimeconfig.json
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\publish\web.config
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\publish\appsettings.Development.json
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\publish\appsettings.json
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\publish\ProductService.deps.json
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Release\net8.0\publish\publish\publish\ProductService.runtimeconfig.json

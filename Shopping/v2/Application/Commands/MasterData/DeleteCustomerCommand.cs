@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MediatR;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Commands.MasterData
 {
@@ -12,12 +11,12 @@ namespace Shopping.API.v2.Application.Commands.MasterData
     public class DeleteCustomerHandler : IRequestHandler<DeleteCustomerCommand, Unit>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly CustomerProto.CustomerProtoClient customerProto;
 
-        public DeleteCustomerHandler(IMapper mapper, IProtosManager protos)
+        public DeleteCustomerHandler(IMapper mapper, CustomerProto.CustomerProtoClient customerProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.customerProto = customerProto;
         }
 
         public async Task<Unit> Handle(DeleteCustomerCommand request, CancellationToken cancellationToken)
@@ -27,7 +26,7 @@ namespace Shopping.API.v2.Application.Commands.MasterData
                 CustomerId = request.cid.ToString(),
                 Tracking = false
             };
-            await Protos.Customer.DeleteCustomerAsync(customerIdRequest);
+            await customerProto.DeleteCustomerAsync(customerIdRequest);
 
             return Unit.Value;
         }

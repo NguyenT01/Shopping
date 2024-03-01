@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MediatR;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Commands.Order
 {
@@ -12,12 +11,14 @@ namespace Shopping.API.v2.Application.Commands.Order
     public class DeleteOrderHandler : IRequestHandler<DeleteOrderCommand, Unit>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly OrderProto.OrderProtoClient orderProto;
+        private readonly OrderItemProto.OrderItemProtoClient orderItemProto;
 
-        public DeleteOrderHandler(IMapper mapper, IProtosManager protos)
+        public DeleteOrderHandler(IMapper mapper, OrderProto.OrderProtoClient orderProto, OrderItemProto.OrderItemProtoClient orderItemProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.orderProto = orderProto;
+            this.orderItemProto = orderItemProto;
         }
 
         public async Task<Unit> Handle(DeleteOrderCommand request, CancellationToken cancellationToken)
@@ -26,18 +27,18 @@ namespace Shopping.API.v2.Application.Commands.Order
             {
                 OrderId = request.oid.ToString()
             };
-            var orderItems = await Protos.OrderItem.GetItemsFromOrderAsync(orderItemRequest); ;
+            var orderItems = await orderItemProto.GetItemsFromOrderAsync(orderItemRequest); ;
 
             if (orderItems.Items.Count > 0)
             {
                 foreach (var item in orderItems.Items)
                 {
                     var itemDeleteRequest = _mapper.Map<OrderItemDeletionRequest>(item);
-                    await Protos.OrderItem.DeleteOrderItemAsync(itemDeleteRequest);
+                    await orderItemProto.DeleteOrderItemAsync(itemDeleteRequest);
                 }
             }
 
-            await Protos.Order.DeleteOrderAsync(_mapper.Map<OrderIdRequest>(orderItemRequest));
+            await orderProto.DeleteOrderAsync(_mapper.Map<OrderIdRequest>(orderItemRequest));
             return Unit.Value;
         }
     }

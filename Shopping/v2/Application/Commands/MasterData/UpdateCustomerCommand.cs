@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Commands.MasterData
 {
@@ -12,17 +11,17 @@ namespace Shopping.API.v2.Application.Commands.MasterData
     public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, Unit>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly CustomerProto.CustomerProtoClient customerProto;
 
-        public UpdateCustomerHandler(IMapper mapper, IProtosManager protos)
+        public UpdateCustomerHandler(IMapper mapper, CustomerProto.CustomerProtoClient customerProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.customerProto = customerProto;
         }
         public async Task<Unit> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
             var customerRequest = _mapper.Map<CustomerUpdateRequest>(request.CustomerUpdateDTO);
-            await Protos.Customer.UpdateCustomerAsync(customerRequest);
+            await customerProto.UpdateCustomerAsync(customerRequest);
 
             return Unit.Value;
         }

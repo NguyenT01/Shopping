@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Queries.Product
 {
@@ -13,12 +12,14 @@ namespace Shopping.API.v2.Application.Queries.Product
     public class GetProductByIdHandler : IRequestHandler<GetProductByIdQuery, ProductDTO>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly ProductProto.ProductProtoClient productProto;
+        private readonly PriceProto.PriceProtoClient priceProto;
 
-        public GetProductByIdHandler(IMapper mapper, IProtosManager protos)
+        public GetProductByIdHandler(IMapper mapper, ProductProto.ProductProtoClient productProto, PriceProto.PriceProtoClient priceProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.productProto = productProto;
+            this.priceProto = priceProto;
         }
 
         public async Task<ProductDTO> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
@@ -29,8 +30,8 @@ namespace Shopping.API.v2.Application.Queries.Product
                 Tracking = false
             };
 
-            var product = await Protos.Product.GetProductByIdAsync(productId);
-            var price = await Protos.Price.GetCurrentPriceAsync(_mapper.Map<SingleProductIdRequest>(productId));
+            var product = await productProto.GetProductByIdAsync(productId);
+            var price = await priceProto.GetCurrentPriceAsync(_mapper.Map<SingleProductIdRequest>(productId));
 
             var productDTO = _mapper.Map<ProductResponse, ProductDTO>(product);
             productDTO = _mapper.Map(price, productDTO);

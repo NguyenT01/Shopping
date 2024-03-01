@@ -83,3 +83,8 @@ C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Release\net8.0\publish\appset
 C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Release\net8.0\publish\appsettings.json
 C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Release\net8.0\publish\Shopping.API.deps.json
 C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Release\net8.0\publish\Shopping.API.runtimeconfig.json
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Release\net8.0\publish\publish\web.config
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Release\net8.0\publish\publish\appsettings.Development.json
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Release\net8.0\publish\publish\appsettings.json
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Release\net8.0\publish\publish\Shopping.API.deps.json
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Release\net8.0\publish\publish\Shopping.API.runtimeconfig.json

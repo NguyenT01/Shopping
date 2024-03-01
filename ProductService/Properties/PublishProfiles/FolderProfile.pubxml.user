@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\nguyen\source\repos\Shopping\ProductService\publish</_PublishTargetUrl>
-    <History>True|2024-02-28T07:51:23.9652663Z;True|2024-02-28T14:46:08.2419440+07:00;True|2024-02-26T23:26:45.3529311+07:00;</History>
+    <History>True|2024-03-01T02:56:49.0881199Z;True|2024-02-28T14:51:23.9652663+07:00;True|2024-02-28T14:46:08.2419440+07:00;True|2024-02-26T23:26:45.3529311+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
