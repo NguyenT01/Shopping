@@ -1,4 +1,5 @@
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\MasterDataService.exe
+C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\publish\publish\web.config
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\publish\web.config
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\web.config
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\web.config
@@ -31,6 +32,10 @@ C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTm
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\publish\appsettings.json
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\publish\MasterDataService.deps.json
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\publish\MasterDataService.runtimeconfig.json
+C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json
+C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\publish\publish\appsettings.json
+C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\publish\publish\MasterDataService.deps.json
+C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\publish\publish\publish\publish\publish\publish\publish\MasterDataService.runtimeconfig.json
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\MasterDataService.dll
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\MasterDataService.runtimeconfig.json
 C:\Users\nguyen\source\repos\Shopping\MasterDataService\obj\Release\net8.0\PubTmp\Out\MasterDataService.pdb

@@ -8,7 +8,7 @@ services:
     environment:
       - TZ=Asia/Ho_Chi_Minh
       - ASPNETCORE_URLS=http://+:80
-      - CONSUL_SERVER=http://192.168.52.72:8500
-      - MASTERDATA_SERVICE_CONSUL=MasterDataService1
+      - CONSUL_SERVER=http://192.168.57.84:8500
+      - MASTERDATA_SERVICE_CONSUL=masterdata
       - PRODUCT_SERVICE_CONSUL=ProductService1
       - ORDER_SERVICE_CONSUL=OrderService1

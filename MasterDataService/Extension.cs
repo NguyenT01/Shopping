@@ -14,10 +14,6 @@ public static class ServiceExtension
 
         string? ConnectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
 
-        System.Diagnostics.Debug.WriteLine("---> " + ConnectionString);
-
-
-
         services.AddDbContext<MasterDataContext>(opts =>
             opts.UseSqlServer(ConnectionString, builder =>
             {
@@ -36,11 +32,20 @@ public static class ServiceExtension
             ID = GetEnv("SERVICE_ID"),
             Name = GetEnv("SERVICE_NAME"),
             Address = GetEnv("IP_1"),
-            Port = Int32.Parse(GetEnv("PORT_1")!),
-            Tags = new string[] { "grpc" }
+            Port = int.Parse(GetEnv("PORT_1")!)
         };
 
         await consulClient.Agent.ServiceRegister(registration);
+    }
+
+    public static IServiceCollection AddConsul(this IServiceCollection services)
+    {
+        return null;
+    }
+
+    public static IApplicationBuilder UseConsul(this IApplicationBuilder app)
+    {
+        return null;
     }
 
     private static string? GetEnv(string env)

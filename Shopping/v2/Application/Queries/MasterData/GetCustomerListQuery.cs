@@ -1,5 +1,5 @@
-﻿using AutoMapper;
-using Google.Protobuf.WellKnownTypes;
+﻿using Google.Protobuf.WellKnownTypes;
+using Grpc.Net.ClientFactory;
 using MediatR;
 
 namespace Shopping.API.v2.Application.Queries.MasterData
@@ -8,18 +8,16 @@ namespace Shopping.API.v2.Application.Queries.MasterData
 
     public class GetCustomerListHandler : IRequestHandler<GetCustomerListQuery, CustomerListResponse>
     {
-        private readonly IMapper _mapper;
-        private readonly CustomerProto.CustomerProtoClient customerProto;
+        private readonly CustomerProto.CustomerProtoClient _customerClient;
 
-        public GetCustomerListHandler(IMapper mapper, CustomerProto.CustomerProtoClient customerProto)
+        public GetCustomerListHandler(GrpcClientFactory grpcClientFactor)
         {
-            _mapper = mapper;
-            this.customerProto = customerProto;
+            _customerClient = grpcClientFactor.CreateClient<CustomerProto.CustomerProtoClient>("masterdata");
         }
 
         public async Task<CustomerListResponse> Handle(GetCustomerListQuery request, CancellationToken cancellationToken)
         {
-            var results = await customerProto.GetCustomerListAsync(new Empty());
+            var results = await _customerClient.GetCustomerListAsync(new Empty());
             return results;
         }
     }

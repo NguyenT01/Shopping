@@ -8,9 +8,9 @@ services:
     environment:
       - TZ=Asia/Ho_Chi_Minh
       - ASPNETCORE_URLS=http://+:80
-      - DB_CONNECTION_STRING=Server=192.168.52.72,6001;Initial Catalog=Shopping;User ID=sa;Password=P@ssword123;Trusted_Connection=False;TrustServerCertificate=True;Persist Security Info=False;Encrypt=False
+      - DB_CONNECTION_STRING=Server=192.168.57.84,6001;Initial Catalog=Shopping;User ID=sa;Password=P@ssword123;Trusted_Connection=False;TrustServerCertificate=True;Persist Security Info=False;Encrypt=False
       - SERVICE_NAME=ProductService1
       - SERVICE_ID=product-service-1 
-      - IP_1=192.168.52.72
+      - IP_1=192.168.57.84
       - PORT_1=7102 
-      - CONSUL_SERVER_URI=http://192.168.52.72:8500
+      - CONSUL_SERVER_URI=http://192.168.57.84:8500

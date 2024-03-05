@@ -11,7 +11,7 @@ namespace Shopping.API
 
             serviceName = serviceName.Trim();
 
-            var services = await consulClient.Agent.Services();
+            var services = await consulClient.Agent.Services().ConfigureAwait(false);
             var targets = services.Response
                            .Values
                            .Where(x => x.Service == serviceName)
@@ -22,14 +22,17 @@ namespace Shopping.API
             return targets[choice];
 
         }
-        public static IServiceCollection AddConsul(this IServiceCollection services, string addressConsul)
+        public static IServiceCollection AddConsul(this IServiceCollection services)
         {
             services.AddSingleton<IConsulClient, ConsulClient>(p => new ConsulClient(consulConfig =>
             {
-                consulConfig.Address = new Uri(addressConsul);
+                consulConfig.Address = new Uri("http://192.168.57.84:8500");
             }));
 
             return services;
         }
+
+        private static string? GetEnv(string envName)
+            => Environment.GetEnvironmentVariable(envName);
     }
 }

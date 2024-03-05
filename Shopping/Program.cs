@@ -6,8 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddRouting();
+builder.Services.AddConsul();
+builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddConsul("http://192.168.52.72:8500");
+builder.Services.AddGrpc();
 builder.Services.ConfigureGrpcClient();
 
 builder.Services.ConfigureDIManager();
@@ -24,7 +27,9 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
-app.UseHttpsRedirection();
+
+app.UseRouting();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
