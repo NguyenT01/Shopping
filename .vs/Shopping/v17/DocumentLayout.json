@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\masterdataservice\\redis\\cacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\redis\\cacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 241,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Extension.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Extension.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\Extension.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Extension.cs",
+              "RelativeToolTip": "MasterDataService\\Extension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T07:56:02.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\appsettings.json",
+              "RelativeDocumentMoniker": "MasterDataService\\appsettings.json",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\appsettings.json",
+              "RelativeToolTip": "MasterDataService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-06T07:51:39.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Services\\CustomerService.cs",
+              "RelativeToolTip": "MasterDataService\\Services\\CustomerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T06:36:42.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Program.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\Program.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Program.cs",
+              "RelativeToolTip": "MasterDataService\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T06:29:30.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CacheService.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Redis\\CacheService.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\Redis\\CacheService.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Redis\\CacheService.cs",
+              "RelativeToolTip": "MasterDataService\\Redis\\CacheService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T06:17:27.46Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

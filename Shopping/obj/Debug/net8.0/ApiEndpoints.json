@@ -1,0 +1,792 @@
+[
+  {
+    "ContainingType": "Shopping.API.v1.Controller.MasterDataController",
+    "Method": "GetCustomerList",
+    "RelativePath": "customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.MasterDataController",
+    "Method": "CreateCustomer",
+    "RelativePath": "customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerDTO",
+        "Type": "Shopping.API.Dto.CustomerCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.MasterDataController",
+    "Method": "UpdateCustomer",
+    "RelativePath": "customer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerDTO",
+        "Type": "Shopping.API.Dto.CustomerUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.MasterDataController",
+    "Method": "GetCustomerById",
+    "RelativePath": "customer/{cid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.MasterDataController",
+    "Method": "DeleteCustomer",
+    "RelativePath": "customer/{cid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.OrderController",
+    "Method": "CreateOrder",
+    "RelativePath": "order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderDTO",
+        "Type": "Shopping.API.Dto.OrderCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.OrderController",
+    "Method": "GetOrderList",
+    "RelativePath": "order/{cid}/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.OrderController",
+    "Method": "GetOrder",
+    "RelativePath": "order/{oid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.OrderController",
+    "Method": "DeleteOrder",
+    "RelativePath": "order/{oid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.OrderItemController",
+    "Method": "GetItemsFromOrder",
+    "RelativePath": "order/{oid}/item",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.OrderItemController",
+    "Method": "CreateItem",
+    "RelativePath": "order/{oid}/item",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "orderItemCreationWithoutOrderId",
+        "Type": "Shopping.API.Dto.OrderItemCreationWithoutOrderId",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.OrderItemController",
+    "Method": "UpdateItem",
+    "RelativePath": "order/{oid}/item",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "orderItemUpdateDTO",
+        "Type": "Shopping.API.Dto.OrderItemUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.OrderItemController",
+    "Method": "GetItem",
+    "RelativePath": "order/{oid}/item/{pid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.OrderItemController",
+    "Method": "DeleteItem",
+    "RelativePath": "order/{oid}/item/{pid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.PriceController",
+    "Method": "CreatePrice",
+    "RelativePath": "price",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "priceDTO",
+        "Type": "Shopping.API.Dto.PriceCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.PriceController",
+    "Method": "UpdatePrice",
+    "RelativePath": "price",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "priceUpdateDTO",
+        "Type": "Shopping.API.Dto.PriceUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.PriceController",
+    "Method": "GetPricesByProduct",
+    "RelativePath": "price/product/{proId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.PriceController",
+    "Method": "GetPrice",
+    "RelativePath": "price/{pid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.PriceController",
+    "Method": "DeletePrice",
+    "RelativePath": "price/{pid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.ProductController",
+    "Method": "GetProductList",
+    "RelativePath": "product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.ProductController",
+    "Method": "CreateNewProduct",
+    "RelativePath": "product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productCreationDTO",
+        "Type": "Shopping.API.Dto.ProductCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.ProductController",
+    "Method": "UpdateProduct",
+    "RelativePath": "product",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "Shopping.API.Dto.ProductUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.ProductController",
+    "Method": "GetProductById",
+    "RelativePath": "product/{pid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v1.Controller.ProductController",
+    "Method": "DeleteProduct",
+    "RelativePath": "product/{pid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.MasterDataControllerV2",
+    "Method": "GetCustomerList",
+    "RelativePath": "v2/customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.MasterDataControllerV2",
+    "Method": "CreateCustomer",
+    "RelativePath": "v2/customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerDTO",
+        "Type": "Shopping.API.Dto.CustomerCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.MasterDataControllerV2",
+    "Method": "UpdateCustomer",
+    "RelativePath": "v2/customer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerDTO",
+        "Type": "Shopping.API.Dto.CustomerUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.MasterDataControllerV2",
+    "Method": "GetCustomerById",
+    "RelativePath": "v2/customer/{cid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.MasterDataControllerV2",
+    "Method": "DeleteCustomer",
+    "RelativePath": "v2/customer/{cid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.OrderControllerV2",
+    "Method": "CreateOrder",
+    "RelativePath": "v2/order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderDTO",
+        "Type": "Shopping.API.Dto.OrderCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.OrderControllerV2",
+    "Method": "GetOrderList",
+    "RelativePath": "v2/order/{cid}/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.OrderControllerV2",
+    "Method": "GetOrder",
+    "RelativePath": "v2/order/{oid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.OrderControllerV2",
+    "Method": "DeleteOrder",
+    "RelativePath": "v2/order/{oid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.OrderItemControllerV2",
+    "Method": "GetItemsFromOrder",
+    "RelativePath": "v2/order/{oid}/item",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.OrderItemControllerV2",
+    "Method": "CreateItem",
+    "RelativePath": "v2/order/{oid}/item",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "orderItemCreationWithoutOrderId",
+        "Type": "Shopping.API.Dto.OrderItemCreationWithoutOrderId",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.OrderItemControllerV2",
+    "Method": "UpdateItem",
+    "RelativePath": "v2/order/{oid}/item",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "orderItemUpdateDTO",
+        "Type": "Shopping.API.Dto.OrderItemUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.OrderItemControllerV2",
+    "Method": "GetItem",
+    "RelativePath": "v2/order/{oid}/item/{pid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.OrderItemControllerV2",
+    "Method": "DeleteItem",
+    "RelativePath": "v2/order/{oid}/item/{pid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.PriceControllerV2",
+    "Method": "CreatePrice",
+    "RelativePath": "v2/price",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "priceDTO",
+        "Type": "Shopping.API.Dto.PriceCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.PriceControllerV2",
+    "Method": "UpdatePrice",
+    "RelativePath": "v2/price",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "priceUpdateDTO",
+        "Type": "Shopping.API.Dto.PriceUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.PriceControllerV2",
+    "Method": "GetPricesByProduct",
+    "RelativePath": "v2/price/product/{proId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.PriceControllerV2",
+    "Method": "GetPrice",
+    "RelativePath": "v2/price/{pid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.PriceControllerV2",
+    "Method": "DeletePrice",
+    "RelativePath": "v2/price/{pid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.ProductControllerV2",
+    "Method": "GetProductList",
+    "RelativePath": "v2/product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productCreationDTO",
+        "Type": "Shopping.API.Dto.ProductCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.ProductControllerV2",
+    "Method": "CreateNewProduct",
+    "RelativePath": "v2/product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productCreationDto",
+        "Type": "Shopping.API.Dto.ProductCreationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.ProductControllerV2",
+    "Method": "UpdateProduct",
+    "RelativePath": "v2/product",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "Shopping.API.Dto.ProductUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.ProductControllerV2",
+    "Method": "GetProductById",
+    "RelativePath": "v2/product/{pid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopping.API.v2.Controller.ProductControllerV2",
+    "Method": "DeleteProduct",
+    "RelativePath": "v2/product/{pid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

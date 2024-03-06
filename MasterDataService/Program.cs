@@ -1,6 +1,7 @@
 using MasterDataService;
 using MasterDataService.ORM.EF;
 using MasterDataService.ORM.EF.Interface;
+using MasterDataService.Redis;
 using MasterDataService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 //Repository
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+builder.Services.AddScoped<ICacheService, CacheService>();
 builder.Services.ConfigureSqlServer(builder.Configuration);
 
 var app = builder.Build();
