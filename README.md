@@ -16,7 +16,9 @@ Call the API: **https://localhost:8888/v2/customer** with **GET method** to quer
 After calling it successfully, the list of the customers from DB will be return to the client side.
 
 After that, from **Redis CLI**, type these commands below:
+
 **GET customer** : get the list of customers from the cache.
+
 **TTL customer** : The time that the customer data will be disposed of the cache after the remaining time.
 
 You can call this API again, note that the *Response time* has been reduced due to using Reddis cache.
