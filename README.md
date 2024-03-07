@@ -1,4 +1,4 @@
-# Sample ASP.NET Core API prject with Microservices
+# Sample ASP.NET Core API project with Microservices
 This is a sample ASP.NET Core project that I have been working on during my self-study period.😊
 It implements a simple backend for managing an online store (e-commerce).There are 4 main attributes: **Customer, Product, Order and Price**.
 
