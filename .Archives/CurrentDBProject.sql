@@ -1,7 +1,11 @@
 USE [Shopping]
 GO
-/****** Object:  User [admin]    Script Date: 19/02/2024 5:19:20 CH ******/
-CREATE USER [admin] FOR LOGIN [admin] WITH DEFAULT_SCHEMA=[dbo]
+/****** CHECK SHOPPING DB IF IT NOT EXISTS ***********/
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'Shopping')
+BEGIN
+  CREATE DATABASE Shopping;
+END;
+
 GO
 /****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 19/02/2024 5:19:20 CH ******/
 SET ANSI_NULLS ON
