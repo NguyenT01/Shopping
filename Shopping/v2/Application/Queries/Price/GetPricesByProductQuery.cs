@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Queries.Price
 {
@@ -13,12 +12,12 @@ namespace Shopping.API.v2.Application.Queries.Price
     public class GetPricesByProductHandler : IRequestHandler<GetPricesByProductQuery, IEnumerable<PriceDTO>>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly PriceProto.PriceProtoClient priceProto;
 
-        public GetPricesByProductHandler(IMapper mapper, IProtosManager protos)
+        public GetPricesByProductHandler(IMapper mapper, PriceProto.PriceProtoClient priceProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.priceProto = priceProto;
         }
 
         public async Task<IEnumerable<PriceDTO>> Handle(GetPricesByProductQuery request, CancellationToken cancellationToken)
@@ -28,7 +27,7 @@ namespace Shopping.API.v2.Application.Queries.Price
                 ProductId = request.productId.ToString()
             };
 
-            var priceListResponse = await Protos.Price.GetHistoryPriceListOfProductAsync(productIdRequest);
+            var priceListResponse = await priceProto.GetHistoryPriceListOfProductAsync(productIdRequest);
             var priceList = _mapper.Map<IEnumerable<PriceDTO>>(priceListResponse.PriceList);
             return priceList;
         }

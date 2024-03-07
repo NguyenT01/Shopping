@@ -1,7 +1,5 @@
-﻿using AutoMapper;
-using Google.Protobuf.WellKnownTypes;
+﻿using Google.Protobuf.WellKnownTypes;
 using MediatR;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Queries.MasterData
 {
@@ -9,18 +7,16 @@ namespace Shopping.API.v2.Application.Queries.MasterData
 
     public class GetCustomerListHandler : IRequestHandler<GetCustomerListQuery, CustomerListResponse>
     {
-        private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly CustomerProto.CustomerProtoClient _customerClient;
 
-        public GetCustomerListHandler(IMapper mapper, IProtosManager protos)
+        public GetCustomerListHandler(CustomerProto.CustomerProtoClient customerProto)
         {
-            _mapper = mapper;
-            Protos = protos;
+            _customerClient = customerProto;
         }
 
         public async Task<CustomerListResponse> Handle(GetCustomerListQuery request, CancellationToken cancellationToken)
         {
-            var results = await Protos.Customer.GetCustomerListAsync(new Empty());
+            var results = await _customerClient.GetCustomerListAsync(new Empty());
             return results;
         }
     }

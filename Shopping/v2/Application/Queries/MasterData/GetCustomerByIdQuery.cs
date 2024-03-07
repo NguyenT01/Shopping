@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MediatR;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Queries.MasterData
 {
@@ -12,12 +11,12 @@ namespace Shopping.API.v2.Application.Queries.MasterData
     public class GetCustomerByIdHandler : IRequestHandler<GetCustomerByIdQuery, CustomerResponse>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly CustomerProto.CustomerProtoClient customerProto;
 
-        public GetCustomerByIdHandler(IMapper mapper, IProtosManager protos)
+        public GetCustomerByIdHandler(IMapper mapper, CustomerProto.CustomerProtoClient customerProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.customerProto = customerProto;
         }
 
         public async Task<CustomerResponse> Handle(GetCustomerByIdQuery query, CancellationToken cancellationToken)
@@ -27,7 +26,7 @@ namespace Shopping.API.v2.Application.Queries.MasterData
                 CustomerId = query.cid.ToString(),
                 Tracking = false
             };
-            var results = await Protos.Customer.GetCustomerByIdAsync(customerIdRequest);
+            var results = await customerProto.GetCustomerByIdAsync(customerIdRequest);
             return results;
         }
 

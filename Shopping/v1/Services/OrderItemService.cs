@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 using Shopping.API.v1.Services.Interfaces;
 
 namespace Shopping.API.v1.Services
@@ -8,12 +7,12 @@ namespace Shopping.API.v1.Services
     public class OrderItemService : IOrderItemService
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly OrderItemProto.OrderItemProtoClient orderItemProto;
 
-        public OrderItemService(IMapper mapper, IProtosManager protos)
+        public OrderItemService(IMapper mapper, OrderItemProto.OrderItemProtoClient orderItemProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.orderItemProto = orderItemProto;
         }
 
         public async Task<OrderItemDTO> CreateOrderItem(Guid oid, OrderItemCreationWithoutOrderId orderItemCreationWithoutOrderId)
@@ -21,7 +20,7 @@ namespace Shopping.API.v1.Services
             var item = _mapper.Map<OrderItemCreationRequest>(orderItemCreationWithoutOrderId);
             item.OrderId = oid.ToString();
 
-            var itemResponse = await Protos.OrderItem.CreateOrderItemAsync(item);
+            var itemResponse = await orderItemProto.CreateOrderItemAsync(item);
             return _mapper.Map<OrderItemDTO>(itemResponse);
         }
 
@@ -33,7 +32,7 @@ namespace Shopping.API.v1.Services
                 ProductId = pid.ToString()
             };
 
-            await Protos.OrderItem.DeleteOrderItemAsync(itemRequest);
+            await orderItemProto.DeleteOrderItemAsync(itemRequest);
         }
 
         public async Task<OrderItemDTO> GetOrderItem(Guid oid, Guid pid)
@@ -44,7 +43,7 @@ namespace Shopping.API.v1.Services
                 ProductId = pid.ToString()
             };
 
-            var item = await Protos.OrderItem.GetItemAsync(itemRequest);
+            var item = await orderItemProto.GetItemAsync(itemRequest);
             return _mapper.Map<OrderItemDTO>(item);
         }
 
@@ -55,7 +54,7 @@ namespace Shopping.API.v1.Services
                 OrderId = oid.ToString()
             };
 
-            var items = await Protos.OrderItem.GetItemsFromOrderAsync(orderRequest);
+            var items = await orderItemProto.GetItemsFromOrderAsync(orderRequest);
             return _mapper.Map<IEnumerable<OrderItemDTO>>(items.Items);
         }
 
@@ -64,7 +63,7 @@ namespace Shopping.API.v1.Services
             var item = _mapper.Map<OrderItemUpdateRequest>(orderItemUpdateDTO);
             item.OrderId = oid.ToString();
 
-            await Protos.OrderItem.UpdateOrderItemAsync(item);
+            await orderItemProto.UpdateOrderItemAsync(item);
         }
     }
 }

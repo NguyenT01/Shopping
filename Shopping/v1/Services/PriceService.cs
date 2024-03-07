@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 using Shopping.API.v1.Services.Interfaces;
 
 namespace Shopping.API.v1.Services
@@ -8,18 +7,18 @@ namespace Shopping.API.v1.Services
     public class PriceService : IPriceService
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly PriceProto.PriceProtoClient priceProto;
 
-        public PriceService(IMapper mapper, IProtosManager protos)
+        public PriceService(IMapper mapper, PriceProto.PriceProtoClient priceProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.priceProto = priceProto;
         }
 
         public async Task<PriceDTO> CreatePrice(PriceCreationDTO priceCreationDTO)
         {
             var priceRequest = _mapper.Map<PriceCreationRequest>(priceCreationDTO);
-            var price = await Protos.Price.CreateNewPriceAsync(priceRequest);
+            var price = await priceProto.CreateNewPriceAsync(priceRequest);
             var priceDTO = _mapper.Map<PriceDTO>(price);
             return priceDTO;
         }
@@ -31,7 +30,7 @@ namespace Shopping.API.v1.Services
                 PriceId = priceId.ToString()
             };
 
-            await Protos.Price.DeletePriceAsync(priceIdRequest);
+            await priceProto.DeletePriceAsync(priceIdRequest);
         }
 
         public async Task<IEnumerable<PriceDTO>> GetAllPrices(Guid productId)
@@ -41,7 +40,7 @@ namespace Shopping.API.v1.Services
                 ProductId = productId.ToString()
             };
 
-            var priceListResponse = await Protos.Price.GetHistoryPriceListOfProductAsync(productIdRequest);
+            var priceListResponse = await priceProto.GetHistoryPriceListOfProductAsync(productIdRequest);
             var priceList = _mapper.Map<IEnumerable<PriceDTO>>(priceListResponse.PriceList);
             return priceList;
         }
@@ -52,7 +51,7 @@ namespace Shopping.API.v1.Services
             {
                 PriceId = priceId.ToString()
             };
-            var price = await Protos.Price.GetPriceAsync(priceIdRequest);
+            var price = await priceProto.GetPriceAsync(priceIdRequest);
             var priceDTO = _mapper.Map<PriceDTO>(price);
             return priceDTO;
         }
@@ -60,7 +59,7 @@ namespace Shopping.API.v1.Services
         public async Task UpdatePrice(PriceUpdateDTO priceDTO)
         {
             var price = _mapper.Map<PriceUpdateRequest>(priceDTO);
-            await Protos.Price.UpdatePriceAsync(price);
+            await priceProto.UpdatePriceAsync(price);
         }
     }
 }

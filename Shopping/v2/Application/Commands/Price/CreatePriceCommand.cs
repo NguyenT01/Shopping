@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Commands.Price
 {
@@ -13,18 +12,18 @@ namespace Shopping.API.v2.Application.Commands.Price
     public class CreatePriceHandler : IRequestHandler<CreatePriceCommand, PriceDTO>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly PriceProto.PriceProtoClient priceProto;
 
-        public CreatePriceHandler(IMapper mapper, IProtosManager protos)
+        public CreatePriceHandler(IMapper mapper, PriceProto.PriceProtoClient priceProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.priceProto = priceProto;
         }
 
         public async Task<PriceDTO> Handle(CreatePriceCommand request, CancellationToken cancellationToken)
         {
             var priceRequest = _mapper.Map<PriceCreationRequest>(request.priceCreationDTO);
-            var price = await Protos.Price.CreateNewPriceAsync(priceRequest);
+            var price = await priceProto.CreateNewPriceAsync(priceRequest);
             var priceDTO = _mapper.Map<PriceDTO>(price);
             return priceDTO;
         }

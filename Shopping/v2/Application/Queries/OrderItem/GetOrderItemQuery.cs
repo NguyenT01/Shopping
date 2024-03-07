@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Queries.OrderItem
 {
@@ -14,12 +13,12 @@ namespace Shopping.API.v2.Application.Queries.OrderItem
     public class GetOrderItemHandler : IRequestHandler<GetOrderItemQuery, OrderItemDTO>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly OrderItemProto.OrderItemProtoClient orderItemProto;
 
-        public GetOrderItemHandler(IMapper mapper, IProtosManager protos)
+        public GetOrderItemHandler(IMapper mapper, OrderItemProto.OrderItemProtoClient orderItemProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.orderItemProto = orderItemProto;
         }
 
         public async Task<OrderItemDTO> Handle(GetOrderItemQuery request, CancellationToken cancellationToken)
@@ -30,7 +29,7 @@ namespace Shopping.API.v2.Application.Queries.OrderItem
                 ProductId = request.pid.ToString()
             };
 
-            var item = await Protos.OrderItem.GetItemAsync(itemRequest);
+            var item = await orderItemProto.GetItemAsync(itemRequest);
             return _mapper.Map<OrderItemDTO>(item);
         }
     }

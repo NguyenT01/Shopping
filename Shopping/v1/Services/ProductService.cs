@@ -2,7 +2,6 @@
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 using Shopping.API.v1.Services.Interfaces;
 
 namespace Shopping.API.v1.Services
@@ -10,18 +9,20 @@ namespace Shopping.API.v1.Services
     public class ProductService : IProductService
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly ProductProto.ProductProtoClient productProto;
+        private readonly PriceProto.PriceProtoClient priceProto;
 
-        public ProductService(IMapper mapper, IProtosManager protos)
+        public ProductService(IMapper mapper, ProductProto.ProductProtoClient productProto, PriceProto.PriceProtoClient priceProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.productProto = productProto;
+            this.priceProto = priceProto;
         }
 
         public async Task<ProductDTO> AddProduct(ProductCreationDTO productCreationDTO)
         {
             var productRequest = _mapper.Map<AddProductRequest>(productCreationDTO);
-            var product = await Protos.Product.AddProductAsync(productRequest);
+            var product = await productProto.AddProductAsync(productRequest);
 
             productCreationDTO.ProductId = Guid.Parse(product.ProductId);
 
@@ -31,7 +32,7 @@ namespace Shopping.API.v1.Services
                 productCreationDTO.EndDate = DateTime.MaxValue;
 
             var priceRequest = _mapper.Map<PriceCreationRequest>(productCreationDTO);
-            var price = await Protos.Price.CreateNewPriceAsync(priceRequest);
+            var price = await priceProto.CreateNewPriceAsync(priceRequest);
 
             var productDTO = _mapper.Map<ProductDTO>(product);
             productDTO = _mapper.Map(price, productDTO);
@@ -46,11 +47,11 @@ namespace Shopping.API.v1.Services
                 ProductId = pid.ToString()
             };
 
-            await Protos.Price.DeletePriceByProductIdAsync(productIDRequest);
+            await priceProto.DeletePriceByProductIdAsync(productIDRequest);
 
             var productIdRequest2 = _mapper.Map<DeleteProductRequest>(productIDRequest);
 
-            await Protos.Product.DeleteProductAsync(productIdRequest2);
+            await productProto.DeleteProductAsync(productIdRequest2);
         }
 
         public async Task<ProductDTO> GetProductById(Guid pid)
@@ -61,8 +62,8 @@ namespace Shopping.API.v1.Services
                 Tracking = false
             };
 
-            var product = await Protos.Product.GetProductByIdAsync(productId);
-            var price = await Protos.Price.GetCurrentPriceAsync(_mapper.Map<SingleProductIdRequest>(productId));
+            var product = await productProto.GetProductByIdAsync(productId);
+            var price = await priceProto.GetCurrentPriceAsync(_mapper.Map<SingleProductIdRequest>(productId));
 
             var productDTO = _mapper.Map<ProductResponse, ProductDTO>(product);
             productDTO = _mapper.Map(price, productDTO);
@@ -72,7 +73,7 @@ namespace Shopping.API.v1.Services
 
         public async Task<IEnumerable<ProductDTO>> GetProductList()
         {
-            var productsResponse = await Protos.Product.GetProductListAsync(new Empty());
+            var productsResponse = await productProto.GetProductListAsync(new Empty());
             var products = productsResponse.Products;
 
             var productDTOList = _mapper.Map<RepeatedField<ProductResponse>, IList<ProductDTO>>(products);
@@ -87,7 +88,7 @@ namespace Shopping.API.v1.Services
                     Tracking = false
                 };
 
-                var price = await Protos.Price.GetCurrentPriceAsync(_mapper.Map<SingleProductIdRequest>(pid));
+                var price = await priceProto.GetCurrentPriceAsync(_mapper.Map<SingleProductIdRequest>(pid));
                 product = _mapper.Map(price, product);
 
                 productDTOList[i] = product;
@@ -99,14 +100,14 @@ namespace Shopping.API.v1.Services
         public async Task UpdateProduct(ProductUpdateDTO productDTO)
         {
             var product = _mapper.Map<UpdateProductRequest>(productDTO);
-            await Protos.Product.UpdateProductAsync(product);
+            await productProto.UpdateProductAsync(product);
 
             var productIdRequest = _mapper.Map<SingleProductIdRequest>(productDTO);
-            var currentPrice = await Protos.Price.GetCurrentPriceAsync(productIdRequest);
+            var currentPrice = await priceProto.GetCurrentPriceAsync(productIdRequest);
 
             var priceUpdate = _mapper.Map<PriceUpdateRequest>(currentPrice);
             priceUpdate = _mapper.Map(productDTO, priceUpdate);
-            await Protos.Price.UpdatePriceAsync(priceUpdate);
+            await priceProto.UpdatePriceAsync(priceUpdate);
         }
 
         #region PRIVATE FUNCTIONS

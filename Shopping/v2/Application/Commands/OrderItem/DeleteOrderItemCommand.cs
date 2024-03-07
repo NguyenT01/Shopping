@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MediatR;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Commands.OrderItem
 {
@@ -13,12 +12,12 @@ namespace Shopping.API.v2.Application.Commands.OrderItem
     public class DeleOrderItemHandler : IRequestHandler<DeleteOrderItemCommand, Unit>
     {
         private readonly IMapper _mapper;
-        private readonly IProtosManager Protos;
+        private readonly OrderItemProto.OrderItemProtoClient orderItemProto;
 
-        public DeleOrderItemHandler(IMapper mapper, IProtosManager protos)
+        public DeleOrderItemHandler(IMapper mapper, OrderItemProto.OrderItemProtoClient orderItemProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.orderItemProto = orderItemProto;
         }
 
         public async Task<Unit> Handle(DeleteOrderItemCommand request, CancellationToken cancellationToken)
@@ -29,7 +28,7 @@ namespace Shopping.API.v2.Application.Commands.OrderItem
                 ProductId = request.pid.ToString()
             };
 
-            await Protos.OrderItem.DeleteOrderItemAsync(itemRequest);
+            await orderItemProto.DeleteOrderItemAsync(itemRequest);
             return Unit.Value;
         }
     }

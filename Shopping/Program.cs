@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAutoMapper(typeof(Program));
 
-builder.Services.ConfigureGrpcClient();
+builder.Services.ConfigureGrpcClient(builder.Configuration);
 builder.Services.ConfigureDIManager();
 
 // MediatR Registration

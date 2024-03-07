@@ -3,7 +3,6 @@ using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using MediatR;
 using Shopping.API.Dto;
-using Shopping.API.Protos.Manager;
 
 namespace Shopping.API.v2.Application.Queries.Product
 {
@@ -15,17 +14,19 @@ namespace Shopping.API.v2.Application.Queries.Product
     public class GetProductListHandler : IRequestHandler<GetProductListQuery, IEnumerable<ProductDTO>>
     {
         private IMapper _mapper;
-        private IProtosManager Protos;
+        private readonly ProductProto.ProductProtoClient productProto;
+        private readonly PriceProto.PriceProtoClient priceProto;
 
-        public GetProductListHandler(IMapper mapper, IProtosManager protos)
+        public GetProductListHandler(IMapper mapper, ProductProto.ProductProtoClient productProto, PriceProto.PriceProtoClient priceProto)
         {
             _mapper = mapper;
-            Protos = protos;
+            this.productProto = productProto;
+            this.priceProto = priceProto;
         }
 
         public async Task<IEnumerable<ProductDTO>> Handle(GetProductListQuery request, CancellationToken cancellationToken)
         {
-            var productsResponse = await Protos.Product.GetProductListAsync(new Empty());
+            var productsResponse = await productProto.GetProductListAsync(new Empty());
             var products = productsResponse.Products;
 
             var productDTOList = _mapper.Map<RepeatedField<ProductResponse>, IList<ProductDTO>>(products);
@@ -40,7 +41,7 @@ namespace Shopping.API.v2.Application.Queries.Product
                     Tracking = false
                 };
 
-                var price = await Protos.Price.GetCurrentPriceAsync(_mapper.Map<SingleProductIdRequest>(pid));
+                var price = await priceProto.GetCurrentPriceAsync(_mapper.Map<SingleProductIdRequest>(pid));
                 product = _mapper.Map(price, product);
 
                 productDTOList[i] = product;

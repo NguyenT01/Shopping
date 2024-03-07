@@ -29,7 +29,6 @@ C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\staticwebassets\
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Shopping.API.props
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\scopedcss\bundle\Shopping.API.styles.css
-C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.csproj.CopyComplete
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.dll
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\refint\Shopping.API.dll
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.pdb
@@ -37,3 +36,4 @@ C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.gen
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\ref\Shopping.API.dll
 C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\MediatR.dll
 C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\Shopping.A48D4323.Up2Date

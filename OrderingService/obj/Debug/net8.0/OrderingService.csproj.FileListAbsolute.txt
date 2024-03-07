@@ -133,9 +133,9 @@ C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\staticweb
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.OrderingService.props
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\scopedcss\bundle\OrderingService.styles.css
-C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\OrderingService.csproj.CopyComplete
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\OrderingService.dll
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\refint\OrderingService.dll
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\OrderingService.pdb
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\OrderingService.genruntimeconfig.cache
 C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\ref\OrderingService.dll
+C:\Users\nguyen\source\repos\Shopping\OrderingService\obj\Debug\net8.0\Ordering.09F9AF7C.Up2Date

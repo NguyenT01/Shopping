@@ -133,9 +133,9 @@ C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\staticweba
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ProductService.props
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\scopedcss\bundle\ProductService.styles.css
-C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\ProductService.csproj.CopyComplete
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\ProductService.dll
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\refint\ProductService.dll
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\ProductService.pdb
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\ProductService.genruntimeconfig.cache
 C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\ref\ProductService.dll
+C:\Users\nguyen\source\repos\Shopping\ProductService\obj\Debug\net8.0\ProductS.A0FC5512.Up2Date
