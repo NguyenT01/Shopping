@@ -10,6 +10,9 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.ConfigureGrpcClient(builder.Configuration);
 builder.Services.ConfigureDIManager();
 
+builder.Services.ConfigureFluentValidation();
+
+
 // MediatR Registration
 builder.Services.AddMediatR(conf =>
 {

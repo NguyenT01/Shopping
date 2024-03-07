@@ -5,62 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\masterdata\\getcustomerlistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\masterdata\\getcustomerlistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\masterdata\\getcustomerbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\masterdata\\getcustomerbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\product\\getproductlistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\product\\getproductlistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\product\\getproductbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\product\\getproductbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\price\\getpricesbyproductquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\price\\getpricesbyproductquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\price\\getpricequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\price\\getpricequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\orderitem\\getorderitemquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\orderitem\\getorderitemquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\orderitem\\getitemsfromorderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\orderitem\\getitemsfromorderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\order\\getorderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\order\\getorderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\v2\\application\\queries\\order\\getorderlistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v2\\application\\queries\\order\\getorderlistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\shopping\\v1\\services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\v1\\services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -69,8 +13,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 241,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 163,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -79,65 +23,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 135,
-          "SelectedChildIndex": 4,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "OrderItemService.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v1\\Services\\OrderItemService.cs",
-              "RelativeDocumentMoniker": "Shopping\\v1\\Services\\OrderItemService.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v1\\Services\\OrderItemService.cs",
-              "RelativeToolTip": "Shopping\\v1\\Services\\OrderItemService.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAiwDUAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-20T09:21:46.243Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Shopping\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\appsettings.Development.json",
-              "RelativeToolTip": "Shopping\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-07T02:31:11.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\appsettings.json",
-              "RelativeDocumentMoniker": "Shopping\\appsettings.json",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\appsettings.json",
-              "RelativeToolTip": "Shopping\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-07T02:30:57.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Program.cs",
-              "RelativeDocumentMoniker": "Shopping\\Program.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Program.cs",
-              "RelativeToolTip": "Shopping\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:24:27.315Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -147,139 +32,9 @@
               "RelativeDocumentMoniker": "Shopping\\ServiceExtensions.cs",
               "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\ServiceExtensions.cs",
               "RelativeToolTip": "Shopping\\ServiceExtensions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAPAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCQAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:24:26.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetProductListQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Product\\GetProductListQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\Product\\GetProductListQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Product\\GetProductListQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\Product\\GetProductListQuery.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAABwAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:23:49.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetProductByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Product\\GetProductByIdQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\Product\\GetProductByIdQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Product\\GetProductByIdQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\Product\\GetProductByIdQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:23:10.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetCustomerListQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\MasterData\\GetCustomerListQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\MasterData\\GetCustomerListQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\MasterData\\GetCustomerListQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\MasterData\\GetCustomerListQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:20:54.203Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetCustomerByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\MasterData\\GetCustomerByIdQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\MasterData\\GetCustomerByIdQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\MasterData\\GetCustomerByIdQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\MasterData\\GetCustomerByIdQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:19:16.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetPricesByProductQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Price\\GetPricesByProductQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\Price\\GetPricesByProductQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Price\\GetPricesByProductQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\Price\\GetPricesByProductQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:22:52.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GetPriceQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Price\\GetPriceQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\Price\\GetPriceQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Price\\GetPriceQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\Price\\GetPriceQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:22:17.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GetOrderItemQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\OrderItem\\GetOrderItemQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\OrderItem\\GetOrderItemQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\OrderItem\\GetOrderItemQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\OrderItem\\GetOrderItemQuery.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAswBUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:22:06.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GetItemsFromOrderQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\OrderItem\\GetItemsFromOrderQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\OrderItem\\GetItemsFromOrderQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\OrderItem\\GetItemsFromOrderQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\OrderItem\\GetItemsFromOrderQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:21:54.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GetOrderQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Order\\GetOrderQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\Order\\GetOrderQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Order\\GetOrderQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\Order\\GetOrderQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:21:34.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GetOrderListQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Order\\GetOrderListQuery.cs",
-              "RelativeDocumentMoniker": "Shopping\\v2\\Application\\Queries\\Order\\GetOrderListQuery.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\v2\\Application\\Queries\\Order\\GetOrderListQuery.cs",
-              "RelativeToolTip": "Shopping\\v2\\Application\\Queries\\Order\\GetOrderListQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:21:19.871Z",
+              "WhenOpened": "2024-03-07T04:48:53.587Z",
               "EditorCaption": ""
             }
           ]

@@ -1,5 +1,8 @@
-﻿using Shopping.API.v1.Services;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+using Shopping.API.v1.Services;
 using Shopping.API.v1.Services.Interfaces;
+using System.Reflection;
 
 namespace Shopping.API
 {
@@ -33,6 +36,13 @@ namespace Shopping.API
                 opts.Address = new Uri(conf.GetSection("gRPCAddress:Ordering").Value!);
             });
 
+        }
+
+        // Auto Validation with FluentValidation
+        public static void ConfigureFluentValidation(this IServiceCollection services)
+        {
+            services.AddFluentValidationAutoValidation();
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         }
         public static void ConfigureDIManager(this IServiceCollection services)
         {

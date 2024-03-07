@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Mpj4dY9Bata1/mtxP5rXksT5swoKCw/tsV8naL7iRKkqfq/OR85ah9YI8j5XDX/aIjquV3TXTUMcMOk5HzZRng==",
+  "dgSpecHash": "qvvbkvSkBLAbLwzFOHrNSqQwtvFuQE0MfRb0iHXnkPdYI7WljFJp6NopEwccw6CXh0QKVMSvxkTCuohugSfkww==",
   "success": true,
   "projectFilePath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Shopping.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nguyen\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\nguyen\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\nguyen\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\nguyen\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\google.protobuf\\3.25.2\\google.protobuf.3.25.2.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\grpc.aspnetcore\\2.60.0\\grpc.aspnetcore.2.60.0.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\grpc.aspnetcore.server\\2.60.0\\grpc.aspnetcore.server.2.60.0.nupkg.sha512",

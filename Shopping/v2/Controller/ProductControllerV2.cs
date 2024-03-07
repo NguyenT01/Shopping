@@ -26,7 +26,7 @@ namespace Shopping.API.v2.Controller
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProductList([FromBody] ProductCreationDTO productCreationDTO)
+        public async Task<IActionResult> GetProductList()
         {
             var product = await _mediator.Send(new GetProductListQuery());
             return Ok(product);

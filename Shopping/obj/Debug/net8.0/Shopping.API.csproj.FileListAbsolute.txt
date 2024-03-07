@@ -37,3 +37,7 @@ C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\ref\Shopping.API
 C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\MediatR.dll
 C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\Shopping.A48D4323.Up2Date
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.MvcApplicationPartsAssemblyInfo.cs
