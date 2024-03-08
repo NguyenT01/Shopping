@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vT/BhF4bWvjeiTKtRw3gjkpCnB39Z6RuODd6HhqWkMV+hBm9y+dHu2X81dtufI+rQVH1/7heUHg1juJvfS6L8g==",
+  "dgSpecHash": "M/uCW2AWtkko3u02I29pi5ndbcWjG8UA4ENUPdWKfVXF4rD0e/KV7Ce2j1Blz2WHuJ1cGHmixJxwkzWghbuPyA==",
   "success": true,
   "projectFilePath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\MasterDataService.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\nguyen\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\nguyen\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\google.protobuf\\3.23.1\\google.protobuf.3.23.1.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\grpc.aspnetcore\\2.57.0\\grpc.aspnetcore.2.57.0.nupkg.sha512",
     "C:\\Users\\nguyen\\.nuget\\packages\\grpc.aspnetcore.server\\2.57.0\\grpc.aspnetcore.server.2.57.0.nupkg.sha512",

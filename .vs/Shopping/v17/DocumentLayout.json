@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\orm\\ef\\masterdatarepositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\orm\\ef\\masterdatarepositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\shopping\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E751AAC-DAC7-4EF9-B6BE-B6422BF6EB4D}|Shopping\\Shopping.API.csproj|solutionrelative:shopping\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\orm\\ef\\masterdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\orm\\ef\\masterdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\extension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|c:\\users\\nguyen\\source\\repos\\shopping\\masterdataservice\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\orm\\dapper\\icustomerdapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\orm\\dapper\\icustomerdapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|C:\\Users\\nguyen\\source\\repos\\Shopping\\masterdataservice\\orm\\dapper\\customerdapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3389E4-B5FF-42FE-9471-5C985C7DD6AB}|MasterDataService\\MasterDataService.csproj|solutionrelative:masterdataservice\\orm\\dapper\\customerdapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 163,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +50,93 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICustomerDapper.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\ORM\\Dapper\\ICustomerDapper.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\ORM\\Dapper\\ICustomerDapper.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\ORM\\Dapper\\ICustomerDapper.cs",
+              "RelativeToolTip": "MasterDataService\\ORM\\Dapper\\ICustomerDapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T09:02:54.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerDapper.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\ORM\\Dapper\\CustomerDapper.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\ORM\\Dapper\\CustomerDapper.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\ORM\\Dapper\\CustomerDapper.cs",
+              "RelativeToolTip": "MasterDataService\\ORM\\Dapper\\CustomerDapper.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T07:59:08.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Program.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\Program.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Program.cs",
+              "RelativeToolTip": "MasterDataService\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T07:54:31.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Extension.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Extension.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\Extension.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Extension.cs",
+              "RelativeToolTip": "MasterDataService\\Extension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T07:48:20.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\Services\\CustomerService.cs",
+              "RelativeToolTip": "MasterDataService\\Services\\CustomerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T07:39:49.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Shopping\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Shopping\\Properties\\launchSettings.json",
+              "Title": "MasterDataRepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\ORM\\EF\\MasterDataRepositoryBase.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\ORM\\EF\\MasterDataRepositoryBase.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\ORM\\EF\\MasterDataRepositoryBase.cs",
+              "RelativeToolTip": "MasterDataService\\ORM\\EF\\MasterDataRepositoryBase.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-07T09:37:22.278Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T07:38:20.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ServiceExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\ServiceExtensions.cs",
-              "RelativeDocumentMoniker": "Shopping\\ServiceExtensions.cs",
-              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\ServiceExtensions.cs",
-              "RelativeToolTip": "Shopping\\ServiceExtensions.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBoAAAAPAAAA",
+              "Title": "MasterDataContext.cs",
+              "DocumentMoniker": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\ORM\\EF\\MasterDataContext.cs",
+              "RelativeDocumentMoniker": "MasterDataService\\ORM\\EF\\MasterDataContext.cs",
+              "ToolTip": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\ORM\\EF\\MasterDataContext.cs",
+              "RelativeToolTip": "MasterDataService\\ORM\\EF\\MasterDataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T04:48:53.587Z",
+              "WhenOpened": "2024-03-08T07:38:19.521Z",
               "EditorCaption": ""
             }
           ]

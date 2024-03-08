@@ -13,6 +13,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 //Repository
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.ConfigureSqlServer(builder.Configuration);
+builder.Services.ConfigureDapperConnection(builder.Configuration);
 
 var app = builder.Build();
 

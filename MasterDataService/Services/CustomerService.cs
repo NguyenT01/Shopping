@@ -2,6 +2,7 @@
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using MasterDataService.ErrorModel;
+using MasterDataService.ORM.Dapper;
 using MasterDataService.ORM.EF.Interface;
 using MasterDataService.ORM.EF.Model;
 
@@ -12,16 +13,24 @@ public class CustomerService : CustomerProto.CustomerProtoBase
     private readonly ILogger<CustomerService> _logger;
     private readonly IMapper _mapper;
     private readonly IRepositoryManager _repository;
-    public CustomerService(ILogger<CustomerService> logger, IMapper mapper, IRepositoryManager repository)
+    private readonly ICustomerDapper _customerDapper;
+    public CustomerService(ILogger<CustomerService> logger, IMapper mapper, IRepositoryManager repository, ICustomerDapper customerDapper)
     {
         _logger = logger;
         _mapper = mapper;
         _repository = repository;
+        _customerDapper = customerDapper;
     }
 
     public override async Task<CustomerListResponse> GetCustomerList(Empty request, ServerCallContext context)
     {
-        var customersEntity = await _repository.Customer.GetAllCustomersAsync(false);
+        // YOU CAN CHOOSE 1 OF 2 METHODS TO GET RETRUEVE FROM THE DATABASE
+        //Using EF Core
+        //var customersEntity = await _repository.Customer.GetAllCustomersAsync(false);
+
+        //Using Dapper
+        var customersEntity = await _customerDapper.GetAllCustomers();
+
         var customers = _mapper.Map<IEnumerable<CustomerResponse>>(customersEntity);
 
         var response = new CustomerListResponse();
@@ -72,7 +81,11 @@ public class CustomerService : CustomerProto.CustomerProtoBase
     // PRIVATE METHODS
     private async Task<Customer> GetCustomerAndCheckIfExists(Guid id, bool tracking)
     {
-        var customerEntity = await _repository.Customer.GetCustomerAsync(id, tracking);
+        // EF CORE
+        //var customerEntity = await _repository.Customer.GetCustomerAsync(id, tracking);
+
+        // DAPPER
+        var customerEntity = await _customerDapper.GetCustomer(id);
 
         if (customerEntity is null)
             throw new CustomerNotFoundException(id);
