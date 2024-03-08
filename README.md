@@ -1,8 +1,14 @@
 # Sample ASP.NET Core API project with Microservices
-This is a sample ASP.NET Core project that I have been working on during my self-study period.😊
+This is a sample ASP.NET Core project that I have been working on during my self-study period😊.
+
 It implements a simple backend for managing an online store (e-commerce).There are 4 main attributes: **Customer, Product, Order and Price**.
 
-## Which techonologies or libraries did I use for this project? 🔍
+At the moment, there are 3 branches in this project. Each branch has its own features and also uses typical situation.
+- **main**: *(You are here ⬆️)*. It is the main branch. It only focus on how a microservice communicates with ASP.NET Core API.
+- **[redis🟥](https://github.com/NguyenT01/Shopping/tree/redis)**: This branch focuses on how to use and store cache data in Redis and how to apply it in ASP.NET Core API.
+- **[docker-deployment🐳](https://github.com/NguyenT01/Shopping/tree/docker-deployment)**: This branch focuses on how to deploy this project in Docker.
+
+## Which technologies or libraries did I use for this project? 🔍
 I will list in chronological order the things I have done starting from when I began this project.
 
 - ASP.NET Core 8.0
@@ -13,7 +19,7 @@ I will list in chronological order the things I have done starting from when I b
 - FluentValidation
 
 ## Which resources did I learn from? 📕
-Reading books is my a cup of tea. Therefore, there are some books and online docs which I read during self-learning:
+Reading books is my cup of tea. Therefore, there are some books and online docs which I read during self-learning:
 
 For learning C# basic knowledge.
 - **[1] [C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals.](https://www.amazon.com/12-NET-Cross-Platform-Development-Fundamentals/dp/1837635870) - Mark J. Price** *(Chapter 1 - 12).*
@@ -49,7 +55,7 @@ For learning ASP.NET Core API.
 - If you don't know how to use SQL Command, just learn from [this](https://www.w3schools.com/sql/sql_syntax.asp).
 
 **Postman**
-- In this project, I use [Postman](https://www.postman.com/downloads/) to test APIs.
+- In this project, I use [Postman✒️](https://www.postman.com/downloads/) to test APIs.
 
 ### 2. Run the project ▶️
 - Open Visual Studio and open this project.
