@@ -50,8 +50,10 @@ Reading books is my cup of tea. Therefore, there are some books and online docs 
 
 - Open SSMS and import Database structure in this project from ***.Archives/CurrentDBProject.sql*** (inside .Archives Folder).
 
-- You need to add some sample data by using SQL Command 
-``INSERT INTO _TABLE_NAME VALUES (value1, value2, value3, ...)`` in SSMS.
+- You need to add some sample data by using SQL Command in SSMS.
+```sql
+INSERT INTO _TABLE_NAME VALUES (value1, value2, value3, ...)
+```
 - If you don't know how to use SQL Command, just learn from [this](https://www.w3schools.com/sql/sql_syntax.asp).
 
 **Postman**
