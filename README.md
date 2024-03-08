@@ -61,6 +61,7 @@ Reading books is my cup of tea. Therefore, there are some books and online docs 
 - In this project, I use [Postman✒️](https://www.postman.com/downloads/) to test APIs.
 
 **Redis**
+
 Run **Redis Server and its CLI** from the following steps:
 - Step 1: Run (double-click) **redis-server.exe**
 - Step 2: Run (double-click) **redis-cli.exe**
