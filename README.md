@@ -21,10 +21,10 @@ I will list in chronological order the things I have done starting from when I b
 ## Which resources did I learn from? 📕
 Reading books is my cup of tea. Therefore, there are some books and online docs which I read during self-learning:
 
-For learning C# basic knowledge.
+**For learning C# basic knowledge.**
 - **[1] [C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals.](https://www.amazon.com/12-NET-Cross-Platform-Development-Fundamentals/dp/1837635870) - Mark J. Price** *(Chapter 1 - 12).*
 
-For learning ASP.NET Core API.
+**For learning ASP.NET Core API.**
 - **[2] [Ultimate ASP.NET Core Web API - From Zero To Six-Figure Backend Developer (2nd edition).](https://code-maze.com/ultimate-aspnetcore-webapi-second-edition/) - Marinko Spasojevic**
 
 - **[3] [ASP.NET Core in Action, 3rd Edition.](https://www.manning.com/books/asp-net-core-in-action-third-edition) - Andrew Lock**
