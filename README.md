@@ -1,17 +1,17 @@
-# Sample ASP.NET Core API project with Microservices
-This is a sample ASP.NET Core project that I have been working on during my self-study period😊.
+# Sample .NET Core API project with Microservices
+This is a sample .NET Core project that I have been working on during my self-study period😊.
 
 It implements a simple backend for managing an online store (e-commerce).There are 4 main attributes: **Customer, Product, Order and Price**.
 
 At the moment, there are 3 branches in this project. Each branch has its own features and also uses typical situation.
-- **[main🌿](https://github.com/NguyenT01/Shopping)**: It is the main branch. It only focus on how a microservice communicates with ASP.NET Core API.
-- **redis** *(You are here ⬆️)*: This branch focuses on how to use and store cache data in Redis and how to apply it in ASP.NET Core API.
+- **[main🌿](https://github.com/NguyenT01/Shopping)**: It is the main branch. It only focus on how a microservice communicates with .NET Core API.
+- **redis** *(You are here ⬆️)*: This branch focuses on how to use and store cache data in Redis and how to apply it in .NET Core API.
 - **[docker-deployment🐳](https://github.com/NguyenT01/Shopping/tree/docker-deployment)**: This branch focuses on how to deploy this project in Docker.
 
 ## Which technologies or libraries did I use for this project? 🔍
 I will list in chronological order the things I have done starting from when I began this project.
 
-- ASP.NET Core 8.0
+- .NET Core 8.0
 - Entity Framework Core
 - SQL Server 2022
 - MediatR
@@ -24,7 +24,7 @@ Reading books is my cup of tea. Therefore, there are some books and online docs 
 **For learning C# basic knowledge.**
 - **[1] [C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals.](https://www.amazon.com/12-NET-Cross-Platform-Development-Fundamentals/dp/1837635870) - Mark J. Price** *(Chapter 1 - 12).*
 
-**For learning ASP.NET Core API.**
+**For learning .NET Core API.**
 - **[2] [Ultimate ASP.NET Core Web API - From Zero To Six-Figure Backend Developer (2nd edition).](https://code-maze.com/ultimate-aspnetcore-webapi-second-edition/) - Marinko Spasojevic**
 
 - **[3] [ASP.NET Core in Action, 3rd Edition.](https://www.manning.com/books/asp-net-core-in-action-third-edition) - Andrew Lock**
@@ -40,7 +40,7 @@ Reading books is my cup of tea. Therefore, there are some books and online docs 
 
 ## How to run this project? 🚀
 ### 1. Setup environments 🦖
-**ASP.NET Core**
+**.NET Core**
 - Download and Install [Visual Studio.](https://visualstudio.microsoft.com/downloads/)
 - Open Visual Studio Installer, in Installed tab, click Modify button.
 - In **Workloads tab**, Select (tick) ASP.NET and web development and .NET Desktop Development.
