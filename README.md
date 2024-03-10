@@ -5,7 +5,7 @@ It implements a simple backend for managing an online store (e-commerce).There a
 
 At the moment, there are 3 branches in this project. Each branch has its own features and also uses typical situation.
 - **main**: *(You are here ⬆️)*. It is the main branch. It only focus on how a microservice communicates with .NET Core API.
-- **[redis🟥](https://github.com/NguyenT01/Shopping/tree/redis)**: This branch focuses on how to use and store cache data in Redis and how to apply it in .NET Core API.
+- **[redis🟥](https://github.com/NguyenT01/Shopping/tree/redis)**: This branch concentrates on how to use and store cache data in Redis and how to apply it in .NET Core API.
 - **[docker-deployment🐳](https://github.com/NguyenT01/Shopping/tree/docker-deployment)**: This branch focuses on how to deploy this project in Docker.
 
 ## Which technologies or libraries did I use for this project? 🔍
@@ -17,6 +17,7 @@ I will list in chronological order the things I have done starting from when I b
 - MediatR
 - gRPC
 - FluentValidation
+- Dapper
 
 ## Which resources did I learn from? 📕
 Reading books is my cup of tea. Therefore, there are some books and online docs which I read during self-learning:
@@ -31,9 +32,13 @@ Reading books is my cup of tea. Therefore, there are some books and online docs 
 
 - **[4] [gRPC on ASP.NET Core 8.0](https://learn.microsoft.com/en-us/aspnet/core/grpc/?view=aspnetcore-8.0)** (Microsoft Docs).
 
-- **[5] [Protobuf Buffers Docs](https://protobuf.dev/)** (For learning how to use Protobuf and its variables and types).
+- **[5] [Protobuf Buffers Docs](https://protobuf.dev/)** (For learning how to use Protobuf and also its variables and types).
 
 - **[6] [FluentValidation Docs](https://docs.fluentvalidation.net/en/latest/aspnet.html)**
+
+- **[7] [Dapper Docs](https://dappertutorial.net/dapper)**
+
+- **[8] [Apply Dapper in .NET Core API](https://code-maze.com/using-dapper-with-asp-net-core-web-api/)**
 
 ## How to run this project? 🚀
 ### 1. Setup environments 🦖
@@ -62,7 +67,7 @@ INSERT INTO _TABLE_NAME VALUES (value1, value2, value3, ...)
 ### 2. Run the project ▶️
 - Open Visual Studio and open this project.
 - Click **Run ▶ button** or hit **F5 button** to run this project.
-- You will be see 4 terminals appear while running this project.
+- You will see 4 terminals appear while running this project.
 
 To provide more detailed explanation, there are 4 projects running simultaneously and they are:
 - **MasterDataService**: Listen to the port ``localhost:7101``. It will be used to provide Customer data to the client.
