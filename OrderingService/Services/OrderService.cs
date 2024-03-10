@@ -2,6 +2,7 @@
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using OrderingService.ErrorModel;
+using OrderingService.ORM.Dapper;
 using OrderingService.ORM.EF.Interface;
 using OrderingService.ORM.EF.Model;
 using OrderingService.Protos;
@@ -12,11 +13,13 @@ public class OrderService : OrderProto.OrderProtoBase
 {
     private IMapper _mapper;
     private IOrderingRepositoryManager _repository;
+    private readonly IOrderDapper _orderDapper;
 
-    public OrderService(IMapper mapper, IOrderingRepositoryManager repository)
+    public OrderService(IMapper mapper, IOrderingRepositoryManager repository, IOrderDapper orderDapper)
     {
         _mapper = mapper;
         _repository = repository;
+        _orderDapper = orderDapper;
     }
 
     public override async Task<Empty> UpdateOrder(OrderUpdateRequest request, ServerCallContext context)
@@ -42,7 +45,9 @@ public class OrderService : OrderProto.OrderProtoBase
     }
     public override async Task<OrderListResponse> GetOrders(OrderCustomerIdRequest request, ServerCallContext context)
     {
-        var orderEntities = await _repository.Order.GetOrders(_parseGuid(request.CustomerId), false);
+        //var orderEntities = await _repository.Order.GetOrders(_parseGuid(request.CustomerId), false);
+        var orderEntities = await _orderDapper.GetOrders(_parseGuid(request.CustomerId));
+        
         var orderList = _mapper.Map<IEnumerable<OrderResponse>>(orderEntities);
 
         var orderListResult = new OrderListResponse();
@@ -59,7 +64,9 @@ public class OrderService : OrderProto.OrderProtoBase
     //--- PRIVATE METHODS
     private async Task<Order> _checkAndGetOrder(Guid orderId, bool tracking)
     {
-        var orderEntity = await _repository.Order.GetOrder(orderId, tracking) ?? throw new OrderNotFoundException(orderId);
+        //var orderEntity = await _repository.Order.GetOrder(orderId, tracking) ?? throw new OrderNotFoundException(orderId);
+        var orderEntity = await _orderDapper.GetOrder(orderId) ?? throw new OrderNotFoundException(orderId);
+        
         return orderEntity;
     }
 

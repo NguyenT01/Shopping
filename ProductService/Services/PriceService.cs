@@ -2,6 +2,7 @@
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using ProductServiceNamespace.ErrorModel;
+using ProductServiceNamespace.ORM.Dapper;
 using ProductServiceNamespace.ORM.EF.Interface;
 using ProductServiceNamespace.ORM.EF.Model;
 using ProductServiceNamespace.Protos;
@@ -12,13 +13,15 @@ public class PriceService : PriceProto.PriceProtoBase
 {
     private readonly IRepositoryManager _repository;
     private readonly IMapper _mapper;
+    private readonly IPriceDapper _priceDapper;
 
     private readonly DateTime DEFAULT_TIME = new DateTime(1, 1, 1);
 
-    public PriceService(IRepositoryManager repository, IMapper mapper)
+    public PriceService(IRepositoryManager repository, IMapper mapper, IPriceDapper priceDapper)
     {
         _repository = repository;
         _mapper = mapper;
+        _priceDapper = priceDapper;
     }
 
     public override async Task<Empty> DeletePriceByProductId(SingleProductIdRequest request, ServerCallContext context)
@@ -62,7 +65,9 @@ public class PriceService : PriceProto.PriceProtoBase
     public override async Task<PriceResponse> GetCurrentPrice(SingleProductIdRequest request, ServerCallContext context)
     {
         Guid id = parseGuid(request.ProductId);
-        var priceEntity = await _repository.Price.GetCurrentPrice(id, false);
+        //var priceEntity = await _repository.Price.GetCurrentPrice(id, false);
+        var priceEntity = await _priceDapper.GetCurrentPrice(id);
+
         if (priceEntity is null)
         {
             priceEntity = new Price()
@@ -79,8 +84,11 @@ public class PriceService : PriceProto.PriceProtoBase
     public override async Task<PriceListResponse> GetPriceByRangeTime(PriceRangeTimeRequest request, ServerCallContext context)
     {
         Guid id = parseGuid(request.ProductId);
+        /*
         var priceEntities = await _repository.Price.GetPriceByRangeTime(id, false,
             request.StartDate.ToDateTime(), request.EndDate.ToDateTime());
+        */
+        var priceEntities = await _priceDapper.GetPriceByRangeTime(id, request.StartDate.ToDateTime(), request.EndDate.ToDateTime());
 
         var priceList = _mapper.Map<IEnumerable<PriceResponse>>(priceEntities);
 
@@ -93,7 +101,9 @@ public class PriceService : PriceProto.PriceProtoBase
     public override async Task<PriceListResponse> GetHistoryPriceListOfProduct(SingleProductIdRequest request, ServerCallContext context)
     {
         Guid id = parseGuid(request.ProductId);
-        var priceEntity = await _repository.Price.GetPrices(id, false);
+        //var priceEntity = await _repository.Price.GetPrices(id, false);
+        var priceEntity = await _priceDapper.GetPrices(id);
+
         var priceList = _mapper.Map<IEnumerable<PriceResponse>>(priceEntity);
 
         var response = new PriceListResponse();
@@ -106,6 +116,7 @@ public class PriceService : PriceProto.PriceProtoBase
     {
         Guid pid = parseGuid(request.PriceId);
         var priceEntity = await checkAndGetPrice(pid, false);
+        
         var priceReturn = _mapper.Map<PriceResponse>(priceEntity);
         return priceReturn;
     }
@@ -124,7 +135,9 @@ public class PriceService : PriceProto.PriceProtoBase
     }
     private async Task<Price> checkAndGetPrice(Guid priceId, bool tracking)
     {
-        var priceEntity = await _repository.Price.GetPrice(priceId, tracking);
+        //var priceEntity = await _repository.Price.GetPrice(priceId, tracking);
+        var priceEntity = await _priceDapper.GetPrice(priceId);
+        
         if (priceEntity is null)
             throw new PriceNotFoundException(priceId);
         return priceEntity;

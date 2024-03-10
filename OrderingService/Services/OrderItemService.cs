@@ -2,6 +2,7 @@
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using OrderingService.ErrorModel;
+using OrderingService.ORM.Dapper;
 using OrderingService.ORM.EF.Interface;
 using OrderingService.ORM.EF.Model;
 using OrderingService.Protos;
@@ -12,11 +13,13 @@ namespace OrderingService.Services
     {
         private IOrderingRepositoryManager _repository;
         private IMapper _mapper;
+        private readonly IOrderItemDapper _orderItemDapper;
 
-        public OrderItemService(IMapper mapper, IOrderingRepositoryManager repository)
+        public OrderItemService(IMapper mapper, IOrderingRepositoryManager repository, IOrderItemDapper orderItemDapper)
         {
             _mapper = mapper;
             _repository = repository;
+            _orderItemDapper = orderItemDapper;
         }
 
         public override async Task<ItemDecrementResponse> DecreaseQuantityOrderItemBy1(ItemRequest request, ServerCallContext context)
@@ -73,7 +76,9 @@ namespace OrderingService.Services
         }
         public override async Task<ItemListResponse> GetItemsFromOrder(OrderItemIdRequest request, ServerCallContext context)
         {
-            var itemsEntity = await _repository.OrderItem.GetItemFromAnOrder(_parseGuid(request.OrderId), false);
+            //var itemsEntity = await _repository.OrderItem.GetItemFromAnOrder(_parseGuid(request.OrderId), false);
+            var itemsEntity = await _orderItemDapper.GetItemFromAnOrder(_parseGuid(request.OrderId));
+            
             var items = _mapper.Map<IEnumerable<ItemResponse>>(itemsEntity);
 
             var res = new ItemListResponse();
@@ -99,7 +104,9 @@ namespace OrderingService.Services
         {
             var oid = _parseGuid(orderId);
             var pid = _parseGuid(productId);
-            var itemEntity = await _repository.OrderItem.GetItem(oid, pid, tracking);
+            //var itemEntity = await _repository.OrderItem.GetItem(oid, pid, tracking);
+            var itemEntity = await _orderItemDapper.GetItem(oid, pid);
+            
             return itemEntity is not null ? itemEntity : throw new ItemNotFoundException(oid, pid);
         }
         #endregion

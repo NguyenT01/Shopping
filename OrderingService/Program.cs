@@ -8,9 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddGrpc();
 builder.Services.ConfigureSqlServer(builder.Configuration);
+builder.Services.ConfigureDapperConnection(builder.Configuration);
 
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddScoped<IOrderingRepositoryManager, OrderingRepositoryManager>();
+
 
 var app = builder.Build();
 

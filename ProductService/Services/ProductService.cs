@@ -2,6 +2,7 @@
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using ProductServiceNamespace.ErrorModel;
+using ProductServiceNamespace.ORM.Dapper;
 using ProductServiceNamespace.ORM.EF.Interface;
 using ProductServiceNamespace.ORM.EF.Model;
 using ProductServiceNamespace.Protos;
@@ -13,17 +14,21 @@ namespace ProductServiceNamespace.Services
         private readonly ILogger<ProductService> _logger;
         private readonly IMapper _mapper;
         private readonly IRepositoryManager _repository;
+        private readonly IProductDapper _productDapper;
 
-        public ProductService(ILogger<ProductService> logger, IMapper mapper, IRepositoryManager repository)
+        public ProductService(ILogger<ProductService> logger, IMapper mapper, IRepositoryManager repository, IProductDapper productDapper)
         {
             _logger = logger;
             _mapper = mapper;
             _repository = repository;
+            _productDapper = productDapper;
         }
 
         public override async Task<ProductListResponse> GetProductList(Empty request, ServerCallContext context)
         {
-            var productEntityList = await _repository.Product.GetAllProducts(false);
+            //var productEntityList = await _repository.Product.GetAllProducts(false); 
+            var productEntityList = await _productDapper.GetAllProducts();
+
             var productList = _mapper.Map<IEnumerable<ProductResponse>>(productEntityList);
 
             var response = new ProductListResponse();
@@ -80,7 +85,9 @@ namespace ProductServiceNamespace.Services
         }
         private async Task<Product> checkProductIdAsync(Guid id, bool tracking)
         {
-            var product = await _repository.Product.GetProduct(id, tracking);
+            //var product = await _repository.Product.GetProduct(id, tracking);
+            var product = await _productDapper.GetProduct(id);
+            
             if (product is null)
                 throw new ProductNotFoundException(id);
             return product;

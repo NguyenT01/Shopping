@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nguyen\\source\\repos\\Shopping\\ProductService\\ProductService.csproj": {}
+    "G:\\GithubRepository\\Shopping\\ProductService\\ProductService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nguyen\\source\\repos\\Shopping\\ProductService\\ProductService.csproj": {
+    "G:\\GithubRepository\\Shopping\\ProductService\\ProductService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nguyen\\source\\repos\\Shopping\\ProductService\\ProductService.csproj",
+        "projectUniqueName": "G:\\GithubRepository\\Shopping\\ProductService\\ProductService.csproj",
         "projectName": "ProductService",
-        "projectPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\ProductService\\ProductService.csproj",
-        "packagesPath": "C:\\Users\\nguyen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\ProductService\\obj\\",
+        "projectPath": "G:\\GithubRepository\\Shopping\\ProductService\\ProductService.csproj",
+        "packagesPath": "C:\\Users\\trans\\.nuget\\packages\\",
+        "outputPath": "G:\\GithubRepository\\Shopping\\ProductService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\trans\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,6 +48,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
             },
             "Grpc.AspNetCore": {
               "target": "Package",

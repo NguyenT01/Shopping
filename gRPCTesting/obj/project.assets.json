@@ -300,19 +300,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nguyen\\.nuget\\packages\\": {}
+    "C:\\Users\\trans\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nguyen\\source\\repos\\Shopping\\gRPCTesting\\gRPCTesting.csproj",
+      "projectUniqueName": "G:\\GithubRepository\\Shopping\\gRPCTesting\\gRPCTesting.csproj",
       "projectName": "gRPCTesting",
-      "projectPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\gRPCTesting\\gRPCTesting.csproj",
-      "packagesPath": "C:\\Users\\nguyen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\gRPCTesting\\obj\\",
+      "projectPath": "G:\\GithubRepository\\Shopping\\gRPCTesting\\gRPCTesting.csproj",
+      "packagesPath": "C:\\Users\\trans\\.nuget\\packages\\",
+      "outputPath": "G:\\GithubRepository\\Shopping\\gRPCTesting\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\trans\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

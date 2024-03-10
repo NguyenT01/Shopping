@@ -75,6 +75,19 @@
           }
         }
       },
+      "Dapper/2.1.35": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Google.Protobuf/3.23.1": {
         "type": "package",
         "compile": {
@@ -1730,6 +1743,27 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Dapper/2.1.35": {
+      "sha512": "YKRwjVfrG7GYOovlGyQoMvr1/IJdn+7QzNXJxyMh0YfFF5yvDmTYaJOVYWsckreNjGsGSEtrMTpnzxTUq/tZQw==",
+      "type": "package",
+      "path": "dapper/2.1.35",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.35.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/net7.0/Dapper.dll",
+        "lib/net7.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
       ]
     },
     "Google.Protobuf/3.23.1": {
@@ -4486,25 +4520,26 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "Dapper >= 2.1.35",
       "Grpc.AspNetCore >= 2.57.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nguyen\\.nuget\\packages\\": {}
+    "C:\\Users\\trans\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nguyen\\source\\repos\\Shopping\\OrderingService\\OrderingService.csproj",
+      "projectUniqueName": "G:\\GithubRepository\\Shopping\\OrderingService\\OrderingService.csproj",
       "projectName": "OrderingService",
-      "projectPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\OrderingService\\OrderingService.csproj",
-      "packagesPath": "C:\\Users\\nguyen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\OrderingService\\obj\\",
+      "projectPath": "G:\\GithubRepository\\Shopping\\OrderingService\\OrderingService.csproj",
+      "packagesPath": "C:\\Users\\trans\\.nuget\\packages\\",
+      "outputPath": "G:\\GithubRepository\\Shopping\\OrderingService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\trans\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4538,6 +4573,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.1, )"
+          },
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.1.35, )"
           },
           "Grpc.AspNetCore": {
             "target": "Package",
