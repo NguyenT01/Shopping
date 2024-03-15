@@ -7,6 +7,7 @@ At the moment, there are 3 branches in this project. Each branch has its own fea
 - **[main🌿](https://github.com/NguyenT01/Shopping)**: It is the main branch. It only focus on how a microservice communicates with .NET Core API.
 - **redis** *(You are here ⬆️)*: This branch focuses on how to use and store cache data in Redis and how to apply it in .NET Core API.
 - **[docker-deployment🐳](https://github.com/NguyenT01/Shopping/tree/docker-deployment)**: This branch focuses on how to deploy this project in Docker.
+**[no-jwt🏃](https://github.com/NguyenT01/Shopping/tree/no-jwt)**: This branch concentrates on **Hit and Run**. There is no Json Web Token configuration applied for it.
 
 ## Which technologies or libraries did I use for this project? 🔍
 I will list in chronological order the things I have done starting from when I began this project.
@@ -61,7 +62,7 @@ INSERT INTO _TABLE_NAME VALUES (value1, value2, value3, ...)
 - If you don't know how to use SQL Command, just learn from [this](https://www.w3schools.com/sql/sql_syntax.asp).
 
 **Postman**
-- In this project, I use [Postman✒️](https://www.postman.com/downloads/) to test APIs.
+- In this project, I use [Postman](https://www.postman.com/downloads/) to test APIs.
 
 **Redis**
 
@@ -84,7 +85,7 @@ To provide more detailed explanation, there are 4 projects running simultaneousl
 
 
 ### 3. Test the project 🧪
-You can test the APIs by using **Postman✒️**.
+You can test the APIs by using **Postman**.
 
 Call the API: ```GET``` ```https://localhost:8888/v2/customer``` to query the list of customers.
 (Using **Postman** to test this API or any equivalent programs)
