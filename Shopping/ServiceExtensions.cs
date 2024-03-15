@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using AspNetCoreRateLimit;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Shopping.API.v1.Services;
 using Shopping.API.v1.Services.Interfaces;
@@ -36,6 +37,32 @@ namespace Shopping.API
                 opts.Address = new Uri(conf.GetSection("gRPCAddress:Ordering").Value!);
             });
 
+        }
+
+        // Add Rate Limit
+        public static void ConfigureRateLimiting(this IServiceCollection services, IConfiguration config)
+        {
+            var rateLimitConfig = config.GetSection("RateLimiting");
+
+            var rateLimitRules = new List<RateLimitRule>
+            {
+                new RateLimitRule
+                {
+                    Endpoint = rateLimitConfig.GetSection("HostsAllowed").Value,
+                    Limit = int.Parse(rateLimitConfig.GetSection("RequestLimit").Value!),
+                    Period = rateLimitConfig.GetSection("RetryTime").Value
+                }
+            };
+
+            services.AddMemoryCache();
+            services.Configure<IpRateLimitOptions>(opt =>
+            {
+                opt.GeneralRules = rateLimitRules;
+            });
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+            services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
         }
 
         // Auto Validation with FluentValidation

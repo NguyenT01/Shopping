@@ -4528,19 +4528,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trans\\.nuget\\packages\\": {}
+    "C:\\Users\\nguyen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\GithubRepository\\Shopping\\ProductService\\ProductService.csproj",
+      "projectUniqueName": "C:\\Users\\nguyen\\source\\repos\\Shopping\\ProductService\\ProductService.csproj",
       "projectName": "ProductService",
-      "projectPath": "G:\\GithubRepository\\Shopping\\ProductService\\ProductService.csproj",
-      "packagesPath": "C:\\Users\\trans\\.nuget\\packages\\",
-      "outputPath": "G:\\GithubRepository\\Shopping\\ProductService\\obj\\",
+      "projectPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\ProductService\\ProductService.csproj",
+      "packagesPath": "C:\\Users\\nguyen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\ProductService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\trans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

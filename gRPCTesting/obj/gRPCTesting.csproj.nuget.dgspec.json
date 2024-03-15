@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\GithubRepository\\Shopping\\gRPCTesting\\gRPCTesting.csproj": {}
+    "C:\\Users\\nguyen\\source\\repos\\Shopping\\gRPCTesting\\gRPCTesting.csproj": {}
   },
   "projects": {
-    "G:\\GithubRepository\\Shopping\\gRPCTesting\\gRPCTesting.csproj": {
+    "C:\\Users\\nguyen\\source\\repos\\Shopping\\gRPCTesting\\gRPCTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\GithubRepository\\Shopping\\gRPCTesting\\gRPCTesting.csproj",
+        "projectUniqueName": "C:\\Users\\nguyen\\source\\repos\\Shopping\\gRPCTesting\\gRPCTesting.csproj",
         "projectName": "gRPCTesting",
-        "projectPath": "G:\\GithubRepository\\Shopping\\gRPCTesting\\gRPCTesting.csproj",
-        "packagesPath": "C:\\Users\\trans\\.nuget\\packages\\",
-        "outputPath": "G:\\GithubRepository\\Shopping\\gRPCTesting\\obj\\",
+        "projectPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\gRPCTesting\\gRPCTesting.csproj",
+        "packagesPath": "C:\\Users\\nguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\gRPCTesting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\trans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

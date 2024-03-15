@@ -281,3 +281,4 @@ G:\GithubRepository\Shopping\ProductService\obj\Debug\net8.0\ProductService.pdb
 G:\GithubRepository\Shopping\ProductService\obj\Debug\net8.0\ProductService.genruntimeconfig.cache
 G:\GithubRepository\Shopping\ProductService\obj\Debug\net8.0\ref\ProductService.dll
 G:\GithubRepository\Shopping\ProductService\bin\Debug\net8.0\Dapper.dll
+C:\Users\nguyen\source\repos\Shopping\ProductService\bin\Debug\net8.0\Dapper.dll

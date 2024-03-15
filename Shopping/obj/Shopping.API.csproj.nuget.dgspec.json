@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\GithubRepository\\Shopping\\Shopping\\Shopping.API.csproj": {}
+    "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Shopping.API.csproj": {}
   },
   "projects": {
-    "G:\\GithubRepository\\Shopping\\Shopping\\Shopping.API.csproj": {
+    "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Shopping.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\GithubRepository\\Shopping\\Shopping\\Shopping.API.csproj",
+        "projectUniqueName": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Shopping.API.csproj",
         "projectName": "Shopping.API",
-        "projectPath": "G:\\GithubRepository\\Shopping\\Shopping\\Shopping.API.csproj",
-        "packagesPath": "C:\\Users\\trans\\.nuget\\packages\\",
-        "outputPath": "G:\\GithubRepository\\Shopping\\Shopping\\obj\\",
+        "projectPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\Shopping.API.csproj",
+        "packagesPath": "C:\\Users\\nguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\Shopping\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\trans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AspNetCoreRateLimit": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"

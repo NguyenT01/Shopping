@@ -1,3 +1,4 @@
+using AspNetCoreRateLimit;
 using MasterDataService;
 using Shopping.API;
 
@@ -11,7 +12,7 @@ builder.Services.ConfigureGrpcClient(builder.Configuration);
 builder.Services.ConfigureDIManager();
 
 builder.Services.ConfigureFluentValidation();
-
+builder.Services.ConfigureRateLimiting(builder.Configuration);
 
 // MediatR Registration
 builder.Services.AddMediatR(conf =>
@@ -26,6 +27,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
+
+// Create RateLimit Middleware
+app.UseIpRateLimiting();
 
 app.UseAuthorization();
 

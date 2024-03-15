@@ -281,3 +281,4 @@ G:\GithubRepository\Shopping\OrderingService\obj\Debug\net8.0\OrderingService.pd
 G:\GithubRepository\Shopping\OrderingService\obj\Debug\net8.0\OrderingService.genruntimeconfig.cache
 G:\GithubRepository\Shopping\OrderingService\obj\Debug\net8.0\ref\OrderingService.dll
 G:\GithubRepository\Shopping\OrderingService\bin\Debug\net8.0\Dapper.dll
+C:\Users\nguyen\source\repos\Shopping\OrderingService\bin\Debug\net8.0\Dapper.dll

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\GithubRepository\\Shopping\\MasterDataService\\MasterDataService.csproj": {}
+    "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\MasterDataService.csproj": {}
   },
   "projects": {
-    "G:\\GithubRepository\\Shopping\\MasterDataService\\MasterDataService.csproj": {
+    "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\MasterDataService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\GithubRepository\\Shopping\\MasterDataService\\MasterDataService.csproj",
+        "projectUniqueName": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\MasterDataService.csproj",
         "projectName": "MasterDataService",
-        "projectPath": "G:\\GithubRepository\\Shopping\\MasterDataService\\MasterDataService.csproj",
-        "packagesPath": "C:\\Users\\trans\\.nuget\\packages\\",
-        "outputPath": "G:\\GithubRepository\\Shopping\\MasterDataService\\obj\\",
+        "projectPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\MasterDataService.csproj",
+        "packagesPath": "C:\\Users\\nguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nguyen\\source\\repos\\Shopping\\MasterDataService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\trans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

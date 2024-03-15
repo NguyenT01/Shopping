@@ -84,3 +84,5 @@ G:\GithubRepository\Shopping\Shopping\obj\Debug\net8.0\refint\Shopping.API.dll
 G:\GithubRepository\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.pdb
 G:\GithubRepository\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.genruntimeconfig.cache
 G:\GithubRepository\Shopping\Shopping\obj\Debug\net8.0\ref\Shopping.API.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\AspNetCoreRateLimit.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\Newtonsoft.Json.dll

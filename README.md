@@ -18,6 +18,7 @@ I will list in chronological order the things I have done starting from when I b
 - gRPC
 - FluentValidation
 - Dapper
+- Rate Limiting
 
 ## Which resources did I learn from? 📕
 Reading books is my cup of tea. Therefore, there are some books and online docs which I read during self-learning:
@@ -39,6 +40,8 @@ Reading books is my cup of tea. Therefore, there are some books and online docs 
 - **[7] [Dapper Docs](https://dappertutorial.net/dapper)**
 
 - **[8] [Apply Dapper in .NET Core API](https://code-maze.com/using-dapper-with-asp-net-core-web-api/)**
+
+- **[9] [Rate Limiting in .NET Core API](https://code-maze.com/aspnetcore-web-api-rate-limiting/)**
 
 ## How to run this project? 🚀
 ### 1. Setup environments 🦖
@@ -91,4 +94,8 @@ Inside the **body of the request**, you need to provide the following informatio
     "address": "Random Street, Earth" 
 }
 ```
+
+- Please note that this project has added Rate Limiting feature, which restricts the number of requests a client can send within a specific period of time. By default, the limit is set to accept **15 requests per 30 seconds**. You can modify it in ```appsetting.json``` file which located in ```Shopping.API``` project.
+
+
 - Moreover, ```Shopping.API``` project has a multitude of APIs waiting to be discovered. You can explore them by locating the ```Controller``` files in either the ```v1``` and ```v2``` folders. 🎁⛏️
