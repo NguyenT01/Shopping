@@ -93,7 +93,7 @@ Open **Postman✒️** and navigate to ```POST``` ```https://localhost:8888/logi
     "password": "your_password"
 }
 ```
-- Note that, you can use any both *username* and *password* you like. In this project, it only checks if the username and password are not empty or null.
+- Note that, you can use any *username* and *password* of your choice. In this project, it only checks if the username and password are not empty or null.
 
 Then, click **Send** button to get JWT key.
 
@@ -103,7 +103,7 @@ You will see the following response looks like this:
     "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTA0ODYyODcsImlzcyI6Ik5ndXllblQwMSIsImF1ZCI6IkNyM2RlbnRpQGxzIn0.af6BV5ScqVl27XABJ7nRmog-iWXiS_wJSgdkn0_iX8w"
 }
 ```
-- **⚠️The token value is always different from this example but their structure are the same.**
+- **⚠️The token value is always different from this example but their structures are the same.**
 ```json
 {
     "token": "Bearer <token>"
