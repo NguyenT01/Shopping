@@ -149,7 +149,7 @@ Moreover, ```Shopping.API``` project has a multitude of APIs waiting to be disco
 
 ### Packages used in this project 📦
 
-- **gRPC for each 3 services**
+- **gRPC for 3 services**
     - Grpc.AspNetCore
     - Microsoft.EntityFrameworkCore
     - Microsoft.EntityFrameworkCore.SqlServer
