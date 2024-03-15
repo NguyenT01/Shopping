@@ -70,7 +70,7 @@ INSERT INTO _TABLE_NAME VALUES (value1, value2, value3, ...)
 - If you don't know how to use SQL Command, just learn from [this](https://www.w3schools.com/sql/sql_syntax.asp).
 
 **Postman**
-- In this project, I use [Postman✒️](https://www.postman.com/downloads/) to test APIs.
+- In this project, I use [Postman](https://www.postman.com/downloads/) to test APIs.
 
 ### 2. Run the project ▶️
 - Open Visual Studio and open this project.
@@ -84,10 +84,10 @@ To provide more detailed explanation, there are 4 projects running simultaneousl
 - **Shopping.API**: Listen to the port ``https://localhost:8888``. It will be used to get Request and return Response to the client. Furthermore, it plays a key role in communicating with 3 services above.
 
 ### 3. Get the JWT Key 🔑
-Using **Postman✒️** or equivalent programs to get the JWT key.
+Using **Postman** or equivalent programs to get the JWT key.
 
 **Step 1:**
-Open **Postman✒️** and navigate to ```POST``` ```https://localhost:8888/login```. In the body of this Request, you need to provide the following information:
+Open **Postman** and navigate to ```POST``` ```https://localhost:8888/login```. In the body of this Request, you need to provide the following information:
 ```json
 {
     "username": "your_username",
@@ -115,7 +115,7 @@ You will see the following response looks like this:
 **Step 2:**
 Copy **the value of JWT token** from the Response you did in ***Step 1***.
 
-- In **Postman✒️**, select **Headers tab**.
+- In **Postman**, select **Headers tab**.
 - You need to fill in the following information from the table below
 
 |       | Key   | Value |
@@ -126,7 +126,7 @@ Copy **the value of JWT token** from the Response you did in ***Step 1***.
 😊 Everything is done, you can start using the APIs in this project. Please note that, every **Jwt token** is only valid for 10 minutes. You can change its configuration in ```appsetting.json``` which located in ```Shopping.API``` project.
 
 ### 4. Test the APIs 🧪
-You can test the APIs by using **Postman✒️**.
+You can test the APIs by using **Postman**.
 Here are some sample APIs that you can test with:
 - ```GET``` ```https://localhost:8888/v2/customer```: Get a list of the Customers in the database.
 - ```GET``` ```https://localhost:8888/v2/customer/_customerID_```: Retrieve Customer information based on their ID.
