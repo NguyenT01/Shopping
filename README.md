@@ -7,7 +7,7 @@ At the moment, there are 3 branches in this project. Each branch has its own fea
 - **[main🌿](https://github.com/NguyenT01/Shopping)**: It is the main branch. It only focus on how a microservice communicates with .NET Core API.
 - **redis** *(You are here ⬆️)*: This branch focuses on how to use and store cache data in Redis and how to apply it in .NET Core API.
 - **[docker-deployment🐳](https://github.com/NguyenT01/Shopping/tree/docker-deployment)**: This branch focuses on how to deploy this project in Docker.
-**[no-jwt🏃](https://github.com/NguyenT01/Shopping/tree/no-jwt)**: This branch concentrates on **Hit and Run**. There is no Json Web Token configuration applied for it.
+- **[no-jwt🏃](https://github.com/NguyenT01/Shopping/tree/no-jwt)**: This branch concentrates on **Hit and Run**. There is no Json Web Token configuration applied for it.
 
 ## Which technologies or libraries did I use for this project? 🔍
 I will list in chronological order the things I have done starting from when I began this project.
