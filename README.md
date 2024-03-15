@@ -21,6 +21,7 @@ I will list in chronological order the things I have done starting from when I b
 - FluentValidation
 - Dapper
 - Rate Limiting
+- JSON Web Token (Jwt)
 
 ## Which resources did I learn from? 📕
 Reading books is my cup of tea. Therefore, there are some books and online docs which I read during self-learning:
@@ -115,7 +116,7 @@ You will see the following response looks like this:
 Copy **the value of JWT token** from the Response you did in ***Step 1***.
 
 - In **Postman✒️**, select **Headers tab**.
-- You need to fill in the following information from the table below"
+- You need to fill in the following information from the table below
 
 |       | Key   | Value |
 |-------|-------|-------|
