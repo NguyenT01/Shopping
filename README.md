@@ -4,9 +4,10 @@ This is a sample .NET Core project that I have been working on during my self-st
 It implements a simple backend for managing an online store (e-commerce).There are 4 main attributes: **Customer, Product, Order and Price**.
 
 At the moment, there are 3 branches in this project. Each branch has its own features and also uses typical situation.
-- **main**: *(You are here ⬆️)*. It is the main branch. It only focus on how a microservice communicates with .NET Core API.
+- **[main🌿](https://github.com/NguyenT01/Shopping)**: It is the main branch. It only focus on how a microservice communicates with .NET Core API.
 - **[redis🟥](https://github.com/NguyenT01/Shopping/tree/redis)**: This branch concentrates on how to use and store cache data in Redis and how to apply it in .NET Core API.
 - **[docker-deployment🐳](https://github.com/NguyenT01/Shopping/tree/docker-deployment)**: This branch focuses on how to deploy this project in Docker.
+- **no-jwt** *(You are here ⬆️)*: This branch concentrates on **Hit and Run**. There is no Json Web Token configuration applied for it.
 
 ## Which technologies or libraries did I use for this project? 🔍
 I will list in chronological order the things I have done starting from when I began this project.
@@ -65,7 +66,7 @@ INSERT INTO _TABLE_NAME VALUES (value1, value2, value3, ...)
 - If you don't know how to use SQL Command, just learn from [this](https://www.w3schools.com/sql/sql_syntax.asp).
 
 **Postman**
-- In this project, I use [Postman✒️](https://www.postman.com/downloads/) to test APIs.
+- In this project, I use [Postman](https://www.postman.com/downloads/) to test APIs.
 
 ### 2. Run the project ▶️
 - Open Visual Studio and open this project.
@@ -79,7 +80,7 @@ To provide more detailed explanation, there are 4 projects running simultaneousl
 - **Shopping.API**: Listen to the port ``https://localhost:8888``. It will be used to get Request and return Response to the client. Furthermore, it plays a key role in communicating with 3 services above.
 
 ### 3. Test the project 🧪
-You can test the APIs by using **Postman✒️**.
+You can test the APIs by using **Postman**.
 Here are some sample APIs that you can test with:
 - ```GET``` ```https://localhost:8888/v2/customer```: Get a list of the Customers in the database.
 - ```GET``` ```https://localhost:8888/v2/customer/_customerID_```: Retrieve Customer information based on their ID.
