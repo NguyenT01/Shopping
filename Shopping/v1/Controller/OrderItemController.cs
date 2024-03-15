@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Shopping.API.Dto;
 using Shopping.API.v1.Services.Interfaces;
 
 namespace Shopping.API.v1.Controller
 {
-    [Route("order/{oid:guid}/item")]
+    [Route("v1/order/{oid:guid}/item")]
+    [Authorize]
     [ApiController]
     public class OrderItemController : ControllerBase
     {

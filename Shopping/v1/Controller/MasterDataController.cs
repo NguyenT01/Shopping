@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Shopping.API.Dto;
 using Shopping.API.v1.Services.Interfaces;
 
 namespace Shopping.API.v1.Controller;
 
-[Route("customer")]
+[Route("v1/customer")]
+[Authorize]
 [ApiController]
 public class MasterDataController : ControllerBase
 {

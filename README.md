@@ -8,6 +8,8 @@ At the moment, there are 3 branches in this project. Each branch has its own fea
 - **[redis🟥](https://github.com/NguyenT01/Shopping/tree/redis)**: This branch concentrates on how to use and store cache data in Redis and how to apply it in .NET Core API.
 - **[docker-deployment🐳](https://github.com/NguyenT01/Shopping/tree/docker-deployment)**: This branch focuses on how to deploy this project in Docker.
 
+- **[no-jwt🏃](https://github.com/NguyenT01/Shopping/tree/no-jwt)**: This branch concentrates on **Hit and Run**. There is no Json Web Token configuration applied for it.
+
 ## Which technologies or libraries did I use for this project? 🔍
 I will list in chronological order the things I have done starting from when I began this project.
 
@@ -42,6 +44,8 @@ Reading books is my cup of tea. Therefore, there are some books and online docs 
 - **[8] [Apply Dapper in .NET Core API](https://code-maze.com/using-dapper-with-asp-net-core-web-api/)**
 
 - **[9] [Rate Limiting in .NET Core API](https://code-maze.com/aspnetcore-web-api-rate-limiting/)**
+
+- **[10] [JSON Web Token](https://www.c-sharpcorner.com/article/jwt-json-web-token-authentication-in-asp-net-core/)**
 
 ## How to run this project? 🚀
 ### 1. Setup environments 🦖
@@ -78,7 +82,49 @@ To provide more detailed explanation, there are 4 projects running simultaneousl
 - **OrderService**: Listen to the port ``localhost:7103``. It will be used to provide Order and OrderItem data to the client.
 - **Shopping.API**: Listen to the port ``https://localhost:8888``. It will be used to get Request and return Response to the client. Furthermore, it plays a key role in communicating with 3 services above.
 
-### 3. Test the project 🧪
+### 3. Get the JWT Key 🔑
+Using **Postman✒️** or equivalent programs to get the JWT key.
+
+**Step 1:**
+Open **Postman✒️** and navigate to ```POST``` ```https://localhost:8888/login```. In the body of this Request, you need to provide the following information:
+```json
+{
+    "username": "your_username",
+    "password": "your_password"
+}
+```
+- Note that, you can use any both *username* and *password* you like. In this project, it only checks if the username and password are not empty or null.
+
+Then, click **Send** button to get JWT key.
+
+You will see the following response looks like this:
+```json
+{
+    "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTA0ODYyODcsImlzcyI6Ik5ndXllblQwMSIsImF1ZCI6IkNyM2RlbnRpQGxzIn0.af6BV5ScqVl27XABJ7nRmog-iWXiS_wJSgdkn0_iX8w"
+}
+```
+- **⚠️The token value is always different from this example but their structure are the same.**
+```json
+{
+    "token": "Bearer <token>"
+}
+```
+
+
+**Step 2:**
+Copy **the value of JWT token** from the Response you did in ***Step 1***.
+
+- In **Postman✒️**, select **Headers tab**.
+- You need to fill in the following information from the table below"
+
+|       | Key   | Value |
+|-------|-------|-------|
+|✅ | Authorization | Bearer \<token\> |
+
+
+😊 Everything is done, you can start using the APIs in this project. Please note that, every **Jwt token** is only valid for 10 minutes. You can change its configuration in ```appsetting.json``` which located in ```Shopping.API``` project.
+
+### 4. Test the APIs 🧪
 You can test the APIs by using **Postman✒️**.
 Here are some sample APIs that you can test with:
 - ```GET``` ```https://localhost:8888/v2/customer```: Get a list of the Customers in the database.
@@ -98,4 +144,32 @@ Inside the **body of the request**, you need to provide the following informatio
 - Please note that this project has added Rate Limiting feature, which restricts the number of requests a client can send within a specific period of time. By default, the limit is set to accept **15 requests per 30 seconds**. You can modify it in ```appsetting.json``` file which located in ```Shopping.API``` project.
 
 
-- Moreover, ```Shopping.API``` project has a multitude of APIs waiting to be discovered. You can explore them by locating the ```Controller``` files in either the ```v1``` and ```v2``` folders. 🎁⛏️
+Moreover, ```Shopping.API``` project has a multitude of APIs waiting to be discovered. You can explore them by locating the ```Controller``` files in either the ```v1``` and ```v2``` folders. 🎁⛏️
+
+### Packages used in this project 📦
+
+- **gRPC for each 3 services**
+    - Grpc.AspNetCore
+    - Microsoft.EntityFrameworkCore
+    - Microsoft.EntityFrameworkCore.SqlServer
+    - Microsoft.EntityFrameworkCore.Tools
+
+- **gRPC BFF (Backend for Frontend) Project.** (Shopping.API Project)
+    - Google.Protobuf
+    - Grpc.AspNetCore
+    - Grpc.Net.Client
+    - Grpc.Tools
+
+- **AutoMapper**
+    - AutoMapper.Extensions.Microsoft.DependencyInjection. *(deprecated♻️)*
+    - AutoMapper *(this is an alternative package which integrated with Dependency Injection).*
+
+- **FluentValidation**
+    - FluentValidation.AspNetCore
+
+- **RateLimiting**
+    - AspNetCoreRateLimit
+
+- **JWT Authentication**
+    - Microsoft.AspNetCore.Authentication.JwtBearer
+    - System.IdentityModel.Tokens.Jwt

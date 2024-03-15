@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Shopping.API.Dto;
 using Shopping.API.v1.Services.Interfaces;
 
 namespace Shopping.API.v1.Controller
 {
-    [Route("price")]
+    [Route("v1/price")]
+    [Authorize]
     [ApiController]
     public class PriceController : ControllerBase
     {

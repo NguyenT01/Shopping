@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Shopping.API.Dto;
 using Shopping.API.v2.Application.Commands.Order;
@@ -7,6 +8,7 @@ using Shopping.API.v2.Application.Queries.Order;
 namespace Shopping.API.v2.Controller
 {
     [Route("v2/order")]
+    [Authorize]
     [ApiController]
     public class OrderControllerV2 : ControllerBase
     {

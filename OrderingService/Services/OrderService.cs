@@ -47,7 +47,7 @@ public class OrderService : OrderProto.OrderProtoBase
     {
         //var orderEntities = await _repository.Order.GetOrders(_parseGuid(request.CustomerId), false);
         var orderEntities = await _orderDapper.GetOrders(_parseGuid(request.CustomerId));
-        
+
         var orderList = _mapper.Map<IEnumerable<OrderResponse>>(orderEntities);
 
         var orderListResult = new OrderListResponse();
@@ -66,7 +66,7 @@ public class OrderService : OrderProto.OrderProtoBase
     {
         //var orderEntity = await _repository.Order.GetOrder(orderId, tracking) ?? throw new OrderNotFoundException(orderId);
         var orderEntity = await _orderDapper.GetOrder(orderId) ?? throw new OrderNotFoundException(orderId);
-        
+
         return orderEntity;
     }
 

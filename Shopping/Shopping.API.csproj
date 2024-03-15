@@ -27,6 +27,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.4.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +37,10 @@
     <Protobuf Include="Protos\orderItem.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\price.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\product.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Jwt\Service\" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,12 @@
 ﻿using AspNetCoreRateLimit;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Shopping.API.v1.Services;
 using Shopping.API.v1.Services.Interfaces;
 using System.Reflection;
+using System.Text;
 
 namespace Shopping.API
 {
@@ -37,6 +40,27 @@ namespace Shopping.API
                 opts.Address = new Uri(conf.GetSection("gRPCAddress:Ordering").Value!);
             });
 
+        }
+
+        // Add JWT Authentication
+        public static void ConfigureJwtAuthentication(this IServiceCollection services, IConfiguration config)
+        {
+            var jwtConfig = config.GetSection("JwtConfig");
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(opts =>
+                {
+                    opts.TokenValidationParameters = new()
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = jwtConfig.GetSection("Issuer").Value,
+                        ValidAudience = jwtConfig.GetSection("Audience").Value,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfig.GetSection("Key").Value!))
+                    };
+                });
         }
 
         // Add Rate Limit

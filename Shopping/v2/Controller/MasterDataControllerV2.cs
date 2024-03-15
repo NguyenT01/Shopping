@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Shopping.API.Dto;
 using Shopping.API.v2.Application.Commands.MasterData;
@@ -7,6 +8,7 @@ using Shopping.API.v2.Application.Queries.MasterData;
 namespace Shopping.API.v2.Controller
 {
     [Route("v2/customer")]
+    [Authorize]
     [ApiController]
     public class MasterDataControllerV2 : ControllerBase
     {

@@ -86,3 +86,11 @@ G:\GithubRepository\Shopping\Shopping\obj\Debug\net8.0\Shopping.API.genruntimeco
 G:\GithubRepository\Shopping\Shopping\obj\Debug\net8.0\ref\Shopping.API.dll
 C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\AspNetCoreRateLimit.dll
 C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\nguyen\source\repos\Shopping\Shopping\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

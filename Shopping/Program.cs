@@ -14,6 +14,8 @@ builder.Services.ConfigureDIManager();
 builder.Services.ConfigureFluentValidation();
 builder.Services.ConfigureRateLimiting(builder.Configuration);
 
+builder.Services.ConfigureJwtAuthentication(builder.Configuration);
+
 // MediatR Registration
 builder.Services.AddMediatR(conf =>
 {
@@ -25,13 +27,16 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-
 app.UseHttpsRedirection();
 
 // Create RateLimit Middleware
 app.UseIpRateLimiting();
 
+// Use Authentication
+app.UseAuthentication();
+
 app.UseAuthorization();
+
 
 app.ConfigureExceptionHandler();
 
